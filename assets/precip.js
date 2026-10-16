@@ -1,4 +1,4 @@
-if(location.hash==="#only-precip"){document.querySelectorAll("main>section:not(#precip),header,.banner").forEach(e=>e.style.display="none")}
+if(location.hash.startsWith("#only-")){const id=location.hash.slice(6);document.querySelectorAll("main>section:not(#"+id+"),header,.banner").forEach(e=>e.style.display="none")}
 (function(){const P=window.PRECIP;if(!P)return;const el=document.getElementById('cPT');if(!window.Chart){el.replaceWith('Chart unavailable (Chart.js CDN failed)');return}
 const C=['#0b4f8a','#d7263d','#2a9d8f','#f5a623','#7b2cbf','#4cc9f0','#555','#000'];let ch;
 function draw(t){const d=P.totals[t]||{};const ks=Object.keys(d);if(ch)ch.destroy();

@@ -1,16 +1,6 @@
 {
- "generated": "2026-10-16T09:04:31.344424-05:00",
+ "generated": "2026-10-16T09:28:54.560152-05:00",
  "status": [
-  {
-   "source": "NWS EAX AFD",
-   "ok": true,
-   "detail": "2026-10-16T11:51:00+00:00"
-  },
-  {
-   "source": "Open-Meteo ECMWF IFS",
-   "ok": true,
-   "detail": "run 2026-10-16 06 UTC"
-  },
   {
    "source": "SPC Day 1 outlook",
    "ok": true,
@@ -37,17 +27,12 @@
    "detail": "EAX/39,60"
   },
   {
-   "source": "Open-Meteo ECMWF AIFS",
+   "source": "Open-Meteo ECMWF IFS",
    "ok": true,
    "detail": "run 2026-10-16 06 UTC"
   },
   {
-   "source": "Open-Meteo NBM",
-   "ok": true,
-   "detail": "run 2026-10-16 12 UTC"
-  },
-  {
-   "source": "Open-Meteo NOAA AI GFS",
+   "source": "Open-Meteo ECMWF AIFS",
    "ok": true,
    "detail": "run 2026-10-16 06 UTC"
   },
@@ -57,44 +42,24 @@
    "detail": "EAX/34,81"
   },
   {
+   "source": "Open-Meteo NOAA AI GFS",
+   "ok": true,
+   "detail": "run 2026-10-16 06 UTC"
+  },
+  {
    "source": "NWS gridpoint Lawrence",
    "ok": true,
    "detail": "TOP/97,45"
   },
   {
-   "source": "NWS gridpoint Chillicothe",
+   "source": "Open-Meteo HRRR",
    "ok": true,
-   "detail": "EAX/79,82"
+   "detail": "run 2026-10-16 12 UTC"
   },
   {
-   "source": "NWS active alerts (EAX+TOP via DMA points)",
+   "source": "Open-Meteo NBM",
    "ok": true,
-   "detail": "3 active"
-  },
-  {
-   "source": "NWS point forecast Kansas City (KCI)",
-   "ok": true,
-   "detail": "office EAX"
-  },
-  {
-   "source": "NWS gridpoint Sedalia",
-   "ok": true,
-   "detail": "EAX/91,33"
-  },
-  {
-   "source": "NWS point forecast St. Joseph",
-   "ok": true,
-   "detail": "office EAX"
-  },
-  {
-   "source": "NWS KMCI latest obs",
-   "ok": true,
-   "detail": "2026-10-16T13:40:00+00:00"
-  },
-  {
-   "source": "NWS gridpoint Clinton",
-   "ok": true,
-   "detail": "EAX/72,18"
+   "detail": "run 2026-10-16 12 UTC"
   },
   {
    "source": "Open-Meteo ICON",
@@ -102,9 +67,29 @@
    "detail": "run 2026-10-16 06 UTC"
   },
   {
-   "source": "Open-Meteo HRRR",
+   "source": "Open-Meteo GFS",
    "ok": true,
-   "detail": "run 2026-10-16 12 UTC"
+   "detail": "run 2026-10-16 06 UTC"
+  },
+  {
+   "source": "NWS gridpoint Chillicothe",
+   "ok": true,
+   "detail": "EAX/79,82"
+  },
+  {
+   "source": "NWS gridpoint Sedalia",
+   "ok": true,
+   "detail": "EAX/91,33"
+  },
+  {
+   "source": "NWS EAX AFD",
+   "ok": true,
+   "detail": "2026-10-16T11:51:00+00:00"
+  },
+  {
+   "source": "NWS gridpoint Clinton",
+   "ok": true,
+   "detail": "EAX/72,18"
   },
   {
    "source": "NWS gridpoint Butler",
@@ -117,19 +102,34 @@
    "detail": "EAX/35,41"
   },
   {
-   "source": "Open-Meteo GFS",
-   "ok": true,
-   "detail": "run 2026-10-16 06 UTC"
-  },
-  {
    "source": "NWS gridpoint Lee's Summit",
    "ok": true,
    "detail": "EAX/51,42"
   },
   {
-   "source": "WeatherNext 3",
-   "ok": false,
-   "detail": "access pending Google approval"
+   "source": "NWS active alerts (EAX+TOP via DMA points)",
+   "ok": true,
+   "detail": "3 active"
+  },
+  {
+   "source": "NWS point forecast Kansas City (KCI)",
+   "ok": true,
+   "detail": "office EAX"
+  },
+  {
+   "source": "NWS point forecast St. Joseph",
+   "ok": true,
+   "detail": "office EAX"
+  },
+  {
+   "source": "NWS KMCI latest obs",
+   "ok": true,
+   "detail": "2026-10-16T14:10:00+00:00"
+  },
+  {
+   "source": "WeatherNext 3 (GCS Zarr stats, ensemble mean/p10/p90)",
+   "ok": true,
+   "detail": "run 2026-10-16 06 UTC; 504 chunks, 7.78 GB streamed; no gusts or precip-type fields in product"
   }
  ],
  "models": [
@@ -348,7 +348,7 @@
     "hi": 63.5,
     "lo": 41.0,
     "precip": 0.0,
-    "gust": 22.1,
+    "gust": 21.5,
     "snow": 0.0,
     "ice": false,
     "complete": true
@@ -357,7 +357,7 @@
     "hi": 66.0,
     "lo": 46.2,
     "precip": 0.0,
-    "gust": 19.7,
+    "gust": 15.4,
     "snow": 0.0,
     "ice": false,
     "complete": true
@@ -366,7 +366,7 @@
     "hi": 70.0,
     "lo": 51.2,
     "precip": 0.0,
-    "gust": 13.2,
+    "gust": 11.9,
     "snow": 0.0,
     "ice": false,
     "complete": true
@@ -375,7 +375,7 @@
     "hi": 72.9,
     "lo": 51.8,
     "precip": 0.0,
-    "gust": 22.4,
+    "gust": 19.9,
     "snow": 0.0,
     "ice": false,
     "complete": true
@@ -384,7 +384,7 @@
     "hi": 76.0,
     "lo": 56.6,
     "precip": 0.0,
-    "gust": 17.4,
+    "gust": 23.3,
     "snow": 0.0,
     "ice": false,
     "complete": true
@@ -393,7 +393,7 @@
     "hi": 78.5,
     "lo": 58.3,
     "precip": 0.0,
-    "gust": 20.6,
+    "gust": 16.8,
     "snow": 0.0,
     "ice": false,
     "complete": true
@@ -737,7 +737,7 @@
     6
    ],
    "gust": [
-    22.5,
+    22.1,
     18.8,
     23.5,
     4
@@ -766,7 +766,7 @@
     6
    ],
    "gust": [
-    17.9,
+    15.8,
     13.0,
     19.7,
     4
@@ -795,7 +795,7 @@
     6
    ],
    "gust": [
-    16.4,
+    15.7,
     10.7,
     23.3,
     4
@@ -824,9 +824,9 @@
     6
    ],
    "gust": [
-    18.1,
+    18.0,
     13.9,
-    22.4,
+    20.1,
     4
    ]
   },
@@ -855,7 +855,7 @@
    "gust": [
     13.8,
     11.0,
-    17.4,
+    23.3,
     4
    ]
   },
@@ -882,9 +882,9 @@
     5
    ],
    "gust": [
-    19.2,
     17.7,
-    20.6,
+    16.8,
+    19.2,
     3
    ]
   }
@@ -899,6 +899,17 @@
    "low": "NBM",
    "high": "ECMWF IFS",
    "min": 10.7,
+   "max": 23.3
+  },
+  {
+   "day": "2026-10-22",
+   "var": "Peak gust",
+   "unit": "mph",
+   "spread": 12.3,
+   "score": 8.200000000000001,
+   "low": "ICON",
+   "high": "GFS",
+   "min": 11.0,
    "max": 23.3
   },
   {
@@ -966,17 +977,6 @@
    "high": "NBM",
    "min": 53.9,
    "max": 60.1
-  },
-  {
-   "day": "2026-10-22",
-   "var": "High",
-   "unit": "\u00b0F",
-   "spread": 5.8,
-   "score": 5.799999999999997,
-   "low": "ECMWF IFS",
-   "high": "NBM",
-   "min": 72.9,
-   "max": 78.7
   }
  ],
  "stories": [
@@ -3615,13 +3615,13 @@
    ]
   },
   "obs": {
-   "time": "2026-10-16T13:40:00+00:00",
+   "time": "2026-10-16T14:10:00+00:00",
    "text": "Cloudy",
-   "temp": 48,
+   "temp": 50,
    "dew": 39,
-   "wind": 9,
+   "wind": 13,
    "gust": null,
-   "dir": 310
+   "dir": 320
   }
  },
  "afd_time": "2026-10-16T11:51:00+00:00"

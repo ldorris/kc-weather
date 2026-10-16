@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-16T16:52:43.859879-05:00",
+ "generated": "2026-10-16T17:07:35.842517-05:00",
  "status": [
   {
    "source": "SPC Day 1 outlook",
@@ -12,14 +12,14 @@
    "detail": "None"
   },
   {
-   "source": "NWS EAX AFD",
-   "ok": true,
-   "detail": "2026-10-16T18:59:00+00:00"
-  },
-  {
    "source": "SPC Day 3 outlook",
    "ok": true,
    "detail": "None"
+  },
+  {
+   "source": "NWS EAX AFD",
+   "ok": true,
+   "detail": "2026-10-16T18:59:00+00:00"
   },
   {
    "source": "RRFS (NOMADS)",
@@ -32,14 +32,14 @@
    "detail": "EAX/39,60"
   },
   {
-   "source": "Open-Meteo HRRR",
-   "ok": true,
-   "detail": "run 2026-10-16 20 UTC"
-  },
-  {
    "source": "NWS gridpoint St. Joseph",
    "ok": true,
    "detail": "EAX/34,81"
+  },
+  {
+   "source": "Open-Meteo ECMWF AIFS",
+   "ok": true,
+   "detail": "run 2026-10-16 12 UTC"
   },
   {
    "source": "Open-Meteo NBM",
@@ -52,21 +52,6 @@
    "detail": "TOP/97,45"
   },
   {
-   "source": "Open-Meteo ECMWF AIFS",
-   "ok": true,
-   "detail": "run 2026-10-16 12 UTC"
-  },
-  {
-   "source": "Open-Meteo ICON",
-   "ok": true,
-   "detail": "run 2026-10-16 12 UTC"
-  },
-  {
-   "source": "Open-Meteo ECMWF IFS",
-   "ok": true,
-   "detail": "run 2026-10-16 12 UTC"
-  },
-  {
    "source": "Open-Meteo GFS",
    "ok": true,
    "detail": "run 2026-10-16 12 UTC"
@@ -77,7 +62,22 @@
    "detail": "EAX/79,82"
   },
   {
+   "source": "Open-Meteo ECMWF IFS",
+   "ok": true,
+   "detail": "run 2026-10-16 12 UTC"
+  },
+  {
+   "source": "Open-Meteo HRRR",
+   "ok": true,
+   "detail": "run 2026-10-16 20 UTC"
+  },
+  {
    "source": "Open-Meteo NOAA AI GFS",
+   "ok": true,
+   "detail": "run 2026-10-16 12 UTC"
+  },
+  {
+   "source": "Open-Meteo ICON",
    "ok": true,
    "detail": "run 2026-10-16 12 UTC"
   },
@@ -92,24 +92,9 @@
    "detail": "EAX/72,18"
   },
   {
-   "source": "NWS active alerts (EAX+TOP via DMA points)",
-   "ok": true,
-   "detail": "3 active"
-  },
-  {
    "source": "NWS gridpoint Butler",
    "ok": true,
    "detail": "EAX/53,13"
-  },
-  {
-   "source": "WeatherNext 3",
-   "ok": false,
-   "detail": "404 Client Error: Not Found for url: https://storage.googleapis.com/weathernext3_statistics_spatial/weathernext_3_0_0_statistics/zarr/2026_to_present/20261016_12hr_01_preds/predictions.zarr/temperatur"
-  },
-  {
-   "source": "NWS point forecast Kansas City (KCI)",
-   "ok": true,
-   "detail": "office EAX"
   },
   {
    "source": "NWS gridpoint Olathe",
@@ -117,19 +102,34 @@
    "detail": "EAX/35,41"
   },
   {
-   "source": "NWS point forecast St. Joseph",
-   "ok": true,
-   "detail": "office EAX"
-  },
-  {
    "source": "NWS gridpoint Lee's Summit",
    "ok": true,
    "detail": "EAX/51,42"
   },
   {
+   "source": "NWS active alerts (EAX+TOP via DMA points)",
+   "ok": true,
+   "detail": "3 active"
+  },
+  {
+   "source": "NWS point forecast Kansas City (KCI)",
+   "ok": true,
+   "detail": "office EAX"
+  },
+  {
+   "source": "NWS point forecast St. Joseph",
+   "ok": true,
+   "detail": "office EAX"
+  },
+  {
    "source": "NWS KMCI latest obs",
    "ok": true,
-   "detail": "2026-10-16T21:30:00+00:00"
+   "detail": "2026-10-16T21:50:00+00:00"
+  },
+  {
+   "source": "WeatherNext 3 (GCS Zarr stats, ensemble mean/p10/p90)",
+   "ok": true,
+   "detail": "run 2026-10-16 06 UTC; 504 chunks, 7.78 GB streamed; no gusts or precip-type fields in product"
   }
  ],
  "models": [
@@ -3588,7 +3588,7 @@
      "name": "This Afternoon",
      "temp": 52,
      "short": "Mostly Cloudy",
-     "wind": "20 mph N",
+     "wind": "21 mph NNW",
      "pop": 9
     },
     {
@@ -3701,13 +3701,13 @@
    ]
   },
   "obs": {
-   "time": "2026-10-16T21:30:00+00:00",
+   "time": "2026-10-16T21:50:00+00:00",
    "text": "Cloudy",
    "temp": 50,
-   "dew": 36,
-   "wind": 16,
-   "gust": 24,
-   "dir": 350
+   "dew": 37,
+   "wind": 15,
+   "gust": 21,
+   "dir": 360
   }
  },
  "afd_time": "2026-10-16T18:59:00+00:00"

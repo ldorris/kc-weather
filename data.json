@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-19T02:12:00.445895-05:00",
+ "generated": "2026-10-19T02:13:06.036287-05:00",
  "status": [
   {
    "source": "SPC Day 1 outlook",
@@ -12,19 +12,24 @@
    "detail": "None"
   },
   {
-   "source": "NWS EAX AFD",
-   "ok": true,
-   "detail": "2026-10-19T03:50:00+00:00"
-  },
-  {
    "source": "SPC Day 3 outlook",
    "ok": true,
    "detail": "None"
   },
   {
+   "source": "NWS EAX AFD",
+   "ok": true,
+   "detail": "2026-10-19T03:50:00+00:00"
+  },
+  {
    "source": "RRFS (NOMADS)",
    "ok": false,
    "detail": "skipped: data reachable (v1.0, latest day 20261019) but GRIB2 point decoding not implemented"
+  },
+  {
+   "source": "Open-Meteo ECMWF AIFS",
+   "ok": true,
+   "detail": "run 2026-10-19 00 UTC"
   },
   {
    "source": "Open-Meteo NOAA AI GFS",
@@ -37,7 +42,17 @@
    "detail": "EAX/39,60"
   },
   {
-   "source": "Open-Meteo ECMWF AIFS",
+   "source": "Open-Meteo ECMWF IFS",
+   "ok": true,
+   "detail": "run 2026-10-18 18 UTC"
+  },
+  {
+   "source": "Open-Meteo HRRR",
+   "ok": true,
+   "detail": "run 2026-10-19 05 UTC"
+  },
+  {
+   "source": "Open-Meteo GFS",
    "ok": true,
    "detail": "run 2026-10-19 00 UTC"
   },
@@ -47,34 +62,19 @@
    "detail": "run 2026-10-19 00 UTC"
   },
   {
+   "source": "Open-Meteo NBM",
+   "ok": true,
+   "detail": "run 2026-10-19 05 UTC"
+  },
+  {
    "source": "NWS gridpoint St. Joseph",
    "ok": true,
    "detail": "EAX/34,81"
   },
   {
-   "source": "Open-Meteo HRRR",
-   "ok": true,
-   "detail": "run 2026-10-19 05 UTC"
-  },
-  {
    "source": "NWS gridpoint Lawrence",
    "ok": true,
    "detail": "TOP/97,45"
-  },
-  {
-   "source": "Open-Meteo ECMWF IFS",
-   "ok": true,
-   "detail": "run 2026-10-18 18 UTC"
-  },
-  {
-   "source": "Open-Meteo NBM",
-   "ok": true,
-   "detail": "run 2026-10-19 06 UTC"
-  },
-  {
-   "source": "Open-Meteo GFS",
-   "ok": true,
-   "detail": "run 2026-10-19 00 UTC"
   },
   {
    "source": "NWS gridpoint Chillicothe",
@@ -97,24 +97,24 @@
    "detail": "EAX/53,13"
   },
   {
-   "source": "NWS active alerts (EAX+TOP via DMA points)",
-   "ok": true,
-   "detail": "0 active"
-  },
-  {
    "source": "NWS gridpoint Olathe",
    "ok": true,
    "detail": "EAX/35,41"
   },
   {
-   "source": "NWS point forecast Kansas City (KCI)",
+   "source": "NWS active alerts (EAX+TOP via DMA points)",
    "ok": true,
-   "detail": "office EAX"
+   "detail": "0 active"
   },
   {
    "source": "NWS gridpoint Lee's Summit",
    "ok": true,
    "detail": "EAX/51,42"
+  },
+  {
+   "source": "NWS point forecast Kansas City (KCI)",
+   "ok": true,
+   "detail": "office EAX"
   },
   {
    "source": "NWS point forecast St. Joseph",
@@ -167,7 +167,7 @@
   {
    "id": "ncep_nbm_conus",
    "label": "NBM",
-   "run": "2026-10-19 06 UTC",
+   "run": "2026-10-19 05 UTC",
    "error": null
   }
  ],

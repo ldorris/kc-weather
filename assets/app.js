@@ -1,5 +1,5 @@
 document.querySelectorAll('#mt th').forEach((th,i)=>th.onclick=()=>{const tb=document.querySelector('#mt tbody');const rows=[...tb.rows];const dir=th.dataset.d=th.dataset.d==='a'?'d':'a';
-rows.sort((a,b)=>{let x=a.cells[i].innerText,y=b.cells[i].innerText;const nx=parseFloat(x),ny=parseFloat(y);const r=(!isNaN(nx)&&!isNaN(ny))?nx-ny:x.localeCompare(y);return dir==='a'?r:-r});rows.forEach(r=>tb.appendChild(r))});
+rows.sort((a,b)=>{let x=a.cells[i].dataset.sort||a.cells[i].innerText,y=b.cells[i].dataset.sort||b.cells[i].innerText;const nx=parseFloat(x),ny=parseFloat(y);const r=a.cells[i].dataset.sort?x.localeCompare(y):(!isNaN(nx)&&!isNaN(ny))?nx-ny:x.localeCompare(y);return dir==='a'?r:-r});rows.forEach(r=>tb.appendChild(r))});
 const C=['#0b4f8a','#d7263d','#2a9d8f','#f5a623','#7b2cbf','#4cc9f0','#555'];
 const T=window.TOP||{},TK={temp:'tmax',precip:'pcpn'};
 function mcol(k,i,m){return (m&&T[m]===k)?'#39FF14':C[i%7]}function mw(k,m){return (m&&T[m]===k)?3.5:2}function mo(k,m){return (m&&T[m]===k)?-1:0}

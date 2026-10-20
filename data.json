@@ -1,8 +1,13 @@
 {
- "generated": "2026-10-20T03:09:34.636438-05:00",
+ "generated": "2026-10-20T03:15:40.570216-05:00",
  "status": [
   {
    "source": "SPC Day 1 outlook",
+   "ok": true,
+   "detail": "None"
+  },
+  {
+   "source": "SPC Day 2 outlook",
    "ok": true,
    "detail": "None"
   },
@@ -12,14 +17,14 @@
    "detail": "2026-10-20T07:33:00+00:00"
   },
   {
-   "source": "SPC Day 2 outlook",
+   "source": "SPC Day 3 outlook",
    "ok": true,
    "detail": "None"
   },
   {
-   "source": "SPC Day 3 outlook",
+   "source": "Open-Meteo ECMWF IFS",
    "ok": true,
-   "detail": "None"
+   "detail": "run 2026-10-20 00 UTC"
   },
   {
    "source": "RRFS (NOMADS)",
@@ -32,7 +37,7 @@
    "detail": "EAX/39,60"
   },
   {
-   "source": "Open-Meteo ECMWF IFS",
+   "source": "Open-Meteo NOAA AI GFS",
    "ok": true,
    "detail": "run 2026-10-20 00 UTC"
   },
@@ -42,29 +47,9 @@
    "detail": "run 2026-10-20 00 UTC"
   },
   {
-   "source": "Open-Meteo HRRR",
-   "ok": true,
-   "detail": "run 2026-10-20 06 UTC"
-  },
-  {
-   "source": "Open-Meteo NOAA AI GFS",
-   "ok": true,
-   "detail": "run 2026-10-20 00 UTC"
-  },
-  {
    "source": "Open-Meteo GFS",
    "ok": true,
    "detail": "run 2026-10-20 00 UTC"
-  },
-  {
-   "source": "Open-Meteo NBM",
-   "ok": true,
-   "detail": "run 2026-10-20 06 UTC"
-  },
-  {
-   "source": "NWS gridpoint St. Joseph",
-   "ok": true,
-   "detail": "EAX/34,81"
   },
   {
    "source": "Open-Meteo ICON",
@@ -72,14 +57,29 @@
    "detail": "run 2026-10-20 00 UTC"
   },
   {
+   "source": "NWS gridpoint St. Joseph",
+   "ok": true,
+   "detail": "EAX/34,81"
+  },
+  {
    "source": "NWS gridpoint Lawrence",
    "ok": true,
    "detail": "TOP/97,45"
   },
   {
+   "source": "Open-Meteo NBM",
+   "ok": true,
+   "detail": "run 2026-10-20 06 UTC"
+  },
+  {
    "source": "NWS gridpoint Chillicothe",
    "ok": true,
    "detail": "EAX/79,82"
+  },
+  {
+   "source": "Open-Meteo HRRR",
+   "ok": true,
+   "detail": "run 2026-10-20 06 UTC"
   },
   {
    "source": "NWS gridpoint Sedalia",
@@ -92,6 +92,16 @@
    "detail": "EAX/72,18"
   },
   {
+   "source": "NWS gridpoint Butler",
+   "ok": true,
+   "detail": "EAX/53,13"
+  },
+  {
+   "source": "NWS gridpoint Olathe",
+   "ok": true,
+   "detail": "EAX/35,41"
+  },
+  {
    "source": "NWS active alerts (EAX+TOP via DMA points)",
    "ok": true,
    "detail": "0 active"
@@ -102,9 +112,9 @@
    "detail": "office EAX"
   },
   {
-   "source": "NWS gridpoint Butler",
+   "source": "NWS gridpoint Lee's Summit",
    "ok": true,
-   "detail": "EAX/53,13"
+   "detail": "EAX/51,42"
   },
   {
    "source": "NWS point forecast St. Joseph",
@@ -112,19 +122,9 @@
    "detail": "office EAX"
   },
   {
-   "source": "NWS gridpoint Olathe",
-   "ok": true,
-   "detail": "EAX/35,41"
-  },
-  {
    "source": "NWS KMCI latest obs",
    "ok": true,
-   "detail": "2026-10-20T07:45:00+00:00"
-  },
-  {
-   "source": "NWS gridpoint Lee's Summit",
-   "ok": true,
-   "detail": "EAX/51,42"
+   "detail": "2026-10-20T07:53:00+00:00"
   },
   {
    "source": "Caution notes",
@@ -327,8 +327,8 @@
   },
   "GFS": {
    "2026-10-20": {
-    "hi": 69.1,
-    "lo": 47.4,
+    "hi": 68.7,
+    "lo": 47.6,
     "precip": 0.0,
     "gust": 16.3,
     "snow": 0.0,
@@ -336,10 +336,10 @@
     "complete": true
    },
    "2026-10-21": {
-    "hi": 73.4,
-    "lo": 54.2,
+    "hi": 72.9,
+    "lo": 55.5,
     "precip": 0.0,
-    "gust": 14.3,
+    "gust": 12.8,
     "snow": 0.0,
     "ice": false,
     "complete": true
@@ -677,7 +677,7 @@
    "level": 0,
    "reasons": [],
    "hi": [
-    73.4,
+    73.2,
     71.9,
     74.1,
     7
@@ -685,7 +685,7 @@
    "lo": [
     52.3,
     50.5,
-    54.2,
+    55.5,
     7
    ],
    "precip": [
@@ -695,7 +695,7 @@
     7
    ],
    "gust": [
-    13.2,
+    12.8,
     6.7,
     14.3,
     5
@@ -2961,7 +2961,7 @@
      0.13
     ],
     "GFS": [
-     0.02,
+     0.03,
      0,
      0,
      0,
@@ -2981,7 +2981,7 @@
      0.02
     ],
     "HRRR": [
-     0.02,
+     0.03,
      0,
      null,
      null,
@@ -3372,7 +3372,7 @@
     ],
     "GFS": [
      0.02,
-     0,
+     0.02,
      0,
      0,
      0,
@@ -3392,7 +3392,7 @@
     ],
     "HRRR": [
      0.02,
-     0,
+     0.02,
      null,
      null,
      null,
@@ -3453,8 +3453,8 @@
      0.14
     ],
     "GFS": [
-     0.02,
-     0.02,
+     0.06,
+     0,
      0,
      0,
      0,
@@ -3473,8 +3473,8 @@
      0
     ],
     "HRRR": [
-     0.02,
-     0.02,
+     0.06,
+     0,
      null,
      null,
      null,
@@ -3637,13 +3637,13 @@
    ]
   },
   "obs": {
-   "time": "2026-10-20T07:45:00+00:00",
-   "text": "Clear",
-   "temp": 52,
+   "time": "2026-10-20T07:53:00+00:00",
+   "text": "Mostly Clear",
+   "temp": 51,
    "dew": 43,
    "wind": 6,
    "gust": null,
-   "dir": 100
+   "dir": 110
   }
  },
  "afd_time": "2026-10-20T07:33:00+00:00"

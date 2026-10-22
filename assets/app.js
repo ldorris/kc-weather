@@ -15,12 +15,29 @@ function register(id,title,cfg,getChart){reg[id]={title,cfg,chart:getChart};cons
 const b=document.createElement('button');b.type='button';b.className='cx';b.title='Expand chart (or click/tap inside the plot)';b.setAttribute('aria-label','Expand '+title);b.textContent='⤢ Expand';b.onclick=()=>open(id);h.appendChild(b)}
 function fs(big){return big?15:12}
 return {register,open,close,inArea,opts,fs,get big(){return big}}})();window.KCX=KCX;
-function ttitle(items){const l=items.length?items[0].label:'';const d=new Date(l);return isNaN(d)?l:d.toLocaleString('en-US',{weekday:'short',month:'numeric',day:'numeric',hour:'numeric'})}
+// Time axis: every series is plotted at its TRUE valid time. Series times are Central wall-clock strings
+// ('YYYY-MM-DDTHH:00'); they are mapped to ms as if UTC and always formatted in UTC, so the axis shows Central time
+// for every viewer regardless of the browser's own zone. (The old category axis + mode:'index' tooltip picked the
+// same ARRAY INDEX in every dataset; a series starting at its init+1h, hours before the others' local-midnight
+// start, had its hover dot 4-10 h away from the time in the tooltip title.)
+function tms(s){return Date.parse(s+':00Z')}
+const TFMT=new Intl.DateTimeFormat('en-US',{timeZone:'UTC',weekday:'short',month:'numeric',day:'numeric',hour:'numeric'}),DFMT=new Intl.DateTimeFormat('en-US',{timeZone:'UTC',weekday:'short',month:'numeric',day:'numeric'});
+function ttitle(items){return items.length?TFMT.format(new Date(items[0].parsed.x))+' CT':''}
+if(window.Chart&&!Chart.Interaction.modes.xsync){Chart.Interaction.modes.xsync=function(chart,e){
+const a=chart.chartArea,xs=chart.scales.x;if(!a||!xs||e.x<a.left||e.x>a.right)return [];const v=xs.getValueForPixel(e.x);let best=null,bd=Infinity;
+chart.data.datasets.forEach((d,i)=>{if(!chart.isDatasetVisible(i))return;for(const p of d.data){if(p.y==null)continue;const q=Math.abs(p.x-v);if(q<bd){bd=q;best=p.x}}});
+if(best===null)return [];const out=[];
+chart.data.datasets.forEach((d,i)=>{if(!chart.isDatasetVisible(i))return;const k=d.data.findIndex(p=>p.x===best&&p.y!=null);if(k>=0)out.push({element:chart.getDatasetMeta(i).data[k],datasetIndex:i,index:k})});
+return out}}
+const XHAIR={id:'xhair',afterDatasetsDraw(c){const a=c.tooltip&&c.tooltip.getActiveElements&&c.tooltip.getActiveElements();if(!a||!a.length)return;const x=a[0].element.x,ctx=c.ctx;ctx.save();ctx.strokeStyle='rgba(19,37,58,.35)';ctx.lineWidth=1;ctx.setLineDash([4,3]);ctx.beginPath();ctx.moveTo(x,c.chartArea.top);ctx.lineTo(x,c.chartArea.bottom);ctx.stroke();ctx.restore()}};
 const CH={};
-function cfgLine(id,key,big){const S=window.SERIES,ks=Object.keys(S),f=KCX.fs(big);
-return {type:'line',data:{datasets:ks.map((k,i)=>({label:k+(TK[key]&&T[TK[key]]===k?' ★ top performer':''),data:S[k].map(h=>({x:h.t,y:h[key]})),borderColor:mcol(k,i,TK[key]),backgroundColor:mcol(k,i,TK[key]),pointRadius:0,pointHoverRadius:big?5:3,borderWidth:mw(k,TK[key])*(big?1.3:1),order:mo(k,TK[key])}))},
-options:{...KCX.opts(id,big),maintainAspectRatio:false,animation:big?false:undefined,parsing:{xAxisKey:'x',yAxisKey:'y'},interaction:{mode:'index',intersect:false},
-scales:{x:{type:'category',labels:[...new Set(ks.flatMap(k=>S[k].map(h=>h.t)))].sort(),ticks:{font:{size:f},callback:function(v){const l=this.getLabelForValue(v);return l.endsWith('T00:00')?l.slice(5,10):(big&&l.endsWith('T12:00')?'noon':'')},autoSkip:false,maxRotation:0}},y:{ticks:{font:{size:f}}}},
+function cfgLine(id,key,big){const S=window.SERIES,ks=Object.keys(S),f=KCX.fs(big),D=864e5;
+const all=ks.flatMap(k=>S[k].map(h=>tms(h.t)));const xmin=Math.min(...all),xmax=Math.max(...all);
+return {type:'line',plugins:[XHAIR],data:{datasets:ks.map((k,i)=>({label:k+(TK[key]&&T[TK[key]]===k?' ★ top performer':''),data:S[k].map(h=>({x:tms(h.t),y:h[key]})),borderColor:mcol(k,i,TK[key]),backgroundColor:mcol(k,i,TK[key]),pointRadius:0,pointHoverRadius:big?6:4,borderWidth:mw(k,TK[key])*(big?1.3:1),order:mo(k,TK[key]),spanGaps:true}))},
+options:{...KCX.opts(id,big),maintainAspectRatio:false,animation:big?false:undefined,interaction:{mode:'xsync',intersect:false},
+scales:{x:{type:'linear',min:xmin,max:xmax,afterBuildTicks:s=>{const t=[];for(let m=Math.ceil(s.min/D)*D;m<=s.max;m+=big?D/2:D)t.push({value:m});s.ticks=t},
+grid:{color:c=>c.tick&&c.tick.value%D===0?'rgba(0,0,0,.12)':'rgba(0,0,0,.04)'},
+ticks:{font:{size:f},autoSkip:false,maxRotation:0,callback:v=>v%D===0?DFMT.format(new Date(v)):(big?'noon':'')}},y:{ticks:{font:{size:f}}}},
 plugins:{legend:{labels:{boxWidth:big?16:12,font:{size:f}}},tooltip:{titleFont:{size:f+1},bodyFont:{size:f},callbacks:{title:ttitle}}}}}}
 function chart(id,key,title){const el=document.getElementById(id);if(!window.Chart)return el.replaceWith('Charts unavailable (Chart.js CDN failed)');CH[id]=new Chart(el,cfgLine(id,key,false));KCX.register(id,title,big=>cfgLine(id,key,big),()=>CH[id])}
 chart('cT','temp','Temperature (°F) · Kansas City');chart('cP','precip','Hourly precip (in) · Kansas City');chart('cG','gust','Wind gusts (mph) · Kansas City');

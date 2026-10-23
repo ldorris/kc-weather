@@ -1,10 +1,15 @@
 {
- "generated": "2026-10-23T02:22:17.242434-05:00",
+ "generated": "2026-10-23T02:25:29.794215-05:00",
  "status": [
   {
    "source": "SPC Day 1 outlook",
    "ok": true,
    "detail": "None"
+  },
+  {
+   "source": "NWS EAX AFD",
+   "ok": true,
+   "detail": "2026-10-23T03:49:00+00:00"
   },
   {
    "source": "SPC Day 2 outlook",
@@ -17,14 +22,19 @@
    "detail": "None"
   },
   {
+   "source": "Open-Meteo HRRR",
+   "ok": true,
+   "detail": "run 2026-10-23 05 UTC via ncep_hrrr_conus"
+  },
+  {
+   "source": "Open-Meteo ICON",
+   "ok": true,
+   "detail": "run 2026-10-23 00 UTC via icon_seamless"
+  },
+  {
    "source": "Open-Meteo NBM",
    "ok": true,
    "detail": "run 2026-10-23 06 UTC via ncep_nbm_conus"
-  },
-  {
-   "source": "NWS EAX AFD",
-   "ok": true,
-   "detail": "2026-10-23T03:49:00+00:00"
   },
   {
    "source": "NWS gridpoint Kansas City (KCI)",
@@ -47,16 +57,6 @@
    "detail": "run 2026-10-23 00 UTC via ncep_aigfs025"
   },
   {
-   "source": "Open-Meteo HRRR",
-   "ok": true,
-   "detail": "run 2026-10-23 05 UTC via ncep_hrrr_conus"
-  },
-  {
-   "source": "Open-Meteo ICON",
-   "ok": true,
-   "detail": "run 2026-10-23 00 UTC via icon_seamless"
-  },
-  {
    "source": "Open-Meteo GFS",
    "ok": true,
    "detail": "run 2026-10-23 00 UTC via gfs_global"
@@ -75,6 +75,31 @@
    "source": "NWS gridpoint Sedalia",
    "ok": true,
    "detail": "EAX/91,33"
+  },
+  {
+   "source": "NWS gridpoint Clinton",
+   "ok": true,
+   "detail": "EAX/72,18"
+  },
+  {
+   "source": "NWS gridpoint Butler",
+   "ok": true,
+   "detail": "EAX/53,13"
+  },
+  {
+   "source": "NWS gridpoint Olathe",
+   "ok": true,
+   "detail": "EAX/35,41"
+  },
+  {
+   "source": "NWS gridpoint Lee's Summit",
+   "ok": true,
+   "detail": "EAX/51,42"
+  },
+  {
+   "source": "Open-Meteo ECMWF IFS",
+   "ok": true,
+   "detail": "run 2026-10-23 00 UTC via ecmwf_ifs"
   },
   {
    "source": "NWS active alerts (EAX+TOP via DMA points)",
@@ -100,26 +125,6 @@
    "source": "NWS KMCI latest obs",
    "ok": true,
    "detail": "2026-10-23T06:40:00+00:00"
-  },
-  {
-   "source": "Open-Meteo ECMWF IFS",
-   "ok": true,
-   "detail": "run 2026-10-23 00 UTC via ecmwf_ifs"
-  },
-  {
-   "source": "NWS gridpoint Butler",
-   "ok": true,
-   "detail": "EAX/53,13"
-  },
-  {
-   "source": "NWS gridpoint Olathe",
-   "ok": true,
-   "detail": "EAX/35,41"
-  },
-  {
-   "source": "NWS gridpoint Lee's Summit",
-   "ok": true,
-   "detail": "EAX/51,42"
   },
   {
    "source": "ECMWF open data ECMWF AIFS",
@@ -2227,20 +2232,50 @@
      },
      {
       "amt": 0,
-      "pop": 4,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0.02,
-      "pop": 8,
+      "pop": null,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.01,
-      "pop": 26,
+      "pop": null,
       "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0,
+      "pop": null,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0,
+      "pop": null,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0.0,
+      "pop": null,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0.01,
+      "pop": null,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0,
+      "pop": null,
+      "type": "dry",
       "fb": false
      },
      {

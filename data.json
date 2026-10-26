@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-26T03:04:44.762834-05:00",
+ "generated": "2026-10-26T03:09:43.512693-05:00",
  "status": [
   {
    "source": "SPC Day 1 outlook",
@@ -32,14 +32,14 @@
    "detail": "EAX/39,60"
   },
   {
+   "source": "Open-Meteo GFS",
+   "ok": true,
+   "detail": "run 2026-10-26 00 UTC via gfs_global"
+  },
+  {
    "source": "NWS gridpoint St. Joseph",
    "ok": true,
    "detail": "EAX/34,81"
-  },
-  {
-   "source": "Open-Meteo ICON",
-   "ok": true,
-   "detail": "run 2026-10-26 00 UTC via icon_seamless"
   },
   {
    "source": "NWS gridpoint Lawrence",
@@ -52,24 +52,14 @@
    "detail": "EAX/79,82"
   },
   {
+   "source": "Open-Meteo ICON",
+   "ok": true,
+   "detail": "run 2026-10-26 00 UTC via icon_seamless"
+  },
+  {
    "source": "NWS gridpoint Sedalia",
    "ok": true,
    "detail": "EAX/91,33"
-  },
-  {
-   "source": "Open-Meteo GFS",
-   "ok": true,
-   "detail": "run 2026-10-26 00 UTC via gfs_global"
-  },
-  {
-   "source": "NWS gridpoint Clinton",
-   "ok": true,
-   "detail": "EAX/72,18"
-  },
-  {
-   "source": "Open-Meteo NOAA AI GFS",
-   "ok": true,
-   "detail": "run 2026-10-26 00 UTC via ncep_aigfs025"
   },
   {
    "source": "Open-Meteo NBM",
@@ -77,9 +67,19 @@
    "detail": "run 2026-10-26 06 UTC via ncep_nbm_conus"
   },
   {
+   "source": "NWS gridpoint Clinton",
+   "ok": true,
+   "detail": "EAX/72,18"
+  },
+  {
    "source": "Open-Meteo HRRR",
    "ok": true,
    "detail": "run 2026-10-26 06 UTC via ncep_hrrr_conus"
+  },
+  {
+   "source": "Open-Meteo NOAA AI GFS",
+   "ok": true,
+   "detail": "run 2026-10-26 00 UTC via ncep_aigfs025"
   },
   {
    "source": "NWS gridpoint Butler",
@@ -102,6 +102,11 @@
    "detail": "run 2026-10-26 00 UTC via ecmwf_aifs025_single"
   },
   {
+   "source": "Open-Meteo ECMWF IFS",
+   "ok": true,
+   "detail": "run 2026-10-26 00 UTC via ecmwf_ifs"
+  },
+  {
    "source": "NWS active alerts (EAX+TOP via DMA points)",
    "ok": true,
    "detail": "0 active"
@@ -110,11 +115,6 @@
    "source": "NWS point forecast Kansas City (KCI)",
    "ok": true,
    "detail": "office EAX"
-  },
-  {
-   "source": "Open-Meteo ECMWF IFS",
-   "ok": true,
-   "detail": "run 2026-10-26 00 UTC via ecmwf_ifs"
   },
   {
    "source": "NWS point forecast St. Joseph",
@@ -171,7 +171,7 @@
    "run": "2026-10-26 06 UTC",
    "error": null,
    "src": "Open-Meteo ncep_hrrr_conus",
-   "upstream": "2026-10-26 05 UTC"
+   "upstream": "2026-10-26 06 UTC"
   },
   {
    "id": "icon_seamless",
@@ -1820,211 +1820,211 @@
     "cells": [
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 2,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 4,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 7,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 12,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 21,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 23,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 19,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 8,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 4,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 3,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 3,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 3,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 2,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0.0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0.01,
-      "pop": 4,
+      "pop": null,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.04,
-      "pop": 7,
+      "pop": null,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.08,
-      "pop": 11,
+      "pop": null,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.07,
-      "pop": 13,
+      "pop": null,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.04,
-      "pop": 13,
+      "pop": null,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.08,
-      "pop": 18,
+      "pop": null,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.02,
-      "pop": 23,
+      "pop": null,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.02,
-      "pop": 26,
+      "pop": null,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.05,
-      "pop": 39,
+      "pop": null,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.03,
-      "pop": 28,
+      "pop": null,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 29,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 15,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 41,
+      "pop": null,
       "type": "dry",
       "fb": false
      }

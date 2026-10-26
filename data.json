@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-26T02:32:07.425509-05:00",
+ "generated": "2026-10-26T03:04:44.762834-05:00",
  "status": [
   {
    "source": "SPC Day 1 outlook",
@@ -17,14 +17,14 @@
    "detail": "None"
   },
   {
-   "source": "RRFS (NOMADS)",
-   "ok": false,
-   "detail": "not displayed: newest upstream cycle 2026-10-26 06 UTC (v1.0) but GRIB2 point decoding not implemented"
-  },
-  {
    "source": "NWS EAX AFD",
    "ok": true,
    "detail": "2026-10-26T03:42:00+00:00"
+  },
+  {
+   "source": "RRFS (NOMADS)",
+   "ok": false,
+   "detail": "not displayed: newest upstream cycle 2026-10-26 06 UTC (v1.0) but GRIB2 point decoding not implemented"
   },
   {
    "source": "NWS gridpoint Kansas City (KCI)",
@@ -32,14 +32,9 @@
    "detail": "EAX/39,60"
   },
   {
-   "source": "Open-Meteo GFS",
+   "source": "NWS gridpoint St. Joseph",
    "ok": true,
-   "detail": "run 2026-10-26 00 UTC via gfs_global"
-  },
-  {
-   "source": "Open-Meteo HRRR",
-   "ok": true,
-   "detail": "run 2026-10-26 05 UTC via ncep_hrrr_conus"
+   "detail": "EAX/34,81"
   },
   {
    "source": "Open-Meteo ICON",
@@ -47,24 +42,9 @@
    "detail": "run 2026-10-26 00 UTC via icon_seamless"
   },
   {
-   "source": "NWS gridpoint St. Joseph",
-   "ok": true,
-   "detail": "EAX/34,81"
-  },
-  {
-   "source": "Open-Meteo NOAA AI GFS",
-   "ok": true,
-   "detail": "run 2026-10-26 00 UTC via ncep_aigfs025"
-  },
-  {
    "source": "NWS gridpoint Lawrence",
    "ok": true,
    "detail": "TOP/97,45"
-  },
-  {
-   "source": "Open-Meteo NBM",
-   "ok": true,
-   "detail": "run 2026-10-26 06 UTC via ncep_nbm_conus"
   },
   {
    "source": "NWS gridpoint Chillicothe",
@@ -77,14 +57,29 @@
    "detail": "EAX/91,33"
   },
   {
+   "source": "Open-Meteo GFS",
+   "ok": true,
+   "detail": "run 2026-10-26 00 UTC via gfs_global"
+  },
+  {
    "source": "NWS gridpoint Clinton",
    "ok": true,
    "detail": "EAX/72,18"
   },
   {
-   "source": "NWS active alerts (EAX+TOP via DMA points)",
+   "source": "Open-Meteo NOAA AI GFS",
    "ok": true,
-   "detail": "0 active"
+   "detail": "run 2026-10-26 00 UTC via ncep_aigfs025"
+  },
+  {
+   "source": "Open-Meteo NBM",
+   "ok": true,
+   "detail": "run 2026-10-26 06 UTC via ncep_nbm_conus"
+  },
+  {
+   "source": "Open-Meteo HRRR",
+   "ok": true,
+   "detail": "run 2026-10-26 06 UTC via ncep_hrrr_conus"
   },
   {
    "source": "NWS gridpoint Butler",
@@ -92,14 +87,34 @@
    "detail": "EAX/53,13"
   },
   {
+   "source": "NWS gridpoint Olathe",
+   "ok": true,
+   "detail": "EAX/35,41"
+  },
+  {
+   "source": "NWS gridpoint Lee's Summit",
+   "ok": true,
+   "detail": "EAX/51,42"
+  },
+  {
+   "source": "Open-Meteo ECMWF AIFS",
+   "ok": true,
+   "detail": "run 2026-10-26 00 UTC via ecmwf_aifs025_single"
+  },
+  {
+   "source": "NWS active alerts (EAX+TOP via DMA points)",
+   "ok": true,
+   "detail": "0 active"
+  },
+  {
    "source": "NWS point forecast Kansas City (KCI)",
    "ok": true,
    "detail": "office EAX"
   },
   {
-   "source": "NWS gridpoint Olathe",
+   "source": "Open-Meteo ECMWF IFS",
    "ok": true,
-   "detail": "EAX/35,41"
+   "detail": "run 2026-10-26 00 UTC via ecmwf_ifs"
   },
   {
    "source": "NWS point forecast St. Joseph",
@@ -109,22 +124,7 @@
   {
    "source": "NWS KMCI latest obs",
    "ok": true,
-   "detail": "2026-10-26T07:00:00+00:00"
-  },
-  {
-   "source": "NWS gridpoint Lee's Summit",
-   "ok": true,
-   "detail": "EAX/51,42"
-  },
-  {
-   "source": "Open-Meteo ECMWF IFS",
-   "ok": true,
-   "detail": "run 2026-10-26 00 UTC via ecmwf_ifs"
-  },
-  {
-   "source": "ECMWF open data ECMWF AIFS",
-   "ok": true,
-   "detail": "run 2026-10-26 00 UTC (newer than Open-Meteo 2026-10-25 18 UTC)"
+   "detail": "2026-10-26T07:25:00+00:00"
   },
   {
    "source": "Caution notes",
@@ -146,7 +146,7 @@
    "label": "ECMWF AIFS",
    "run": "2026-10-26 00 UTC",
    "error": null,
-   "src": "ECMWF open data direct (GRIB2, 35 steps, 68 MB) \u2014 Open-Meteo still on 2026-10-25 18 UTC",
+   "src": "Open-Meteo ecmwf_aifs025_single",
    "upstream": "2026-10-26 00 UTC"
   },
   {
@@ -168,7 +168,7 @@
   {
    "id": "ncep_hrrr_conus",
    "label": "HRRR",
-   "run": "2026-10-26 05 UTC",
+   "run": "2026-10-26 06 UTC",
    "error": null,
    "src": "Open-Meteo ncep_hrrr_conus",
    "upstream": "2026-10-26 05 UTC"
@@ -267,8 +267,8 @@
   },
   "ECMWF AIFS": {
    "2026-10-26": {
-    "hi": 76.0,
-    "lo": 55.2,
+    "hi": 75.8,
+    "lo": 55.0,
     "precip": 0.0,
     "gust": null,
     "snow": 0.0,
@@ -276,18 +276,18 @@
     "complete": true
    },
    "2026-10-27": {
-    "hi": 67.6,
-    "lo": 59.1,
-    "precip": 0.05,
+    "hi": 67.4,
+    "lo": 58.8,
+    "precip": 0.07,
     "gust": null,
     "snow": 0.0,
     "ice": false,
     "complete": true
    },
    "2026-10-28": {
-    "hi": 75.2,
-    "lo": 57.8,
-    "precip": 0.08,
+    "hi": 75.0,
+    "lo": 57.6,
+    "precip": 0.1,
     "gust": null,
     "snow": 0.0,
     "ice": false,
@@ -295,34 +295,34 @@
    },
    "2026-10-29": {
     "hi": 71.4,
-    "lo": 62.5,
-    "precip": 0.2,
+    "lo": 62.3,
+    "precip": 0.21,
     "gust": null,
     "snow": 0.0,
     "ice": false,
     "complete": true
    },
    "2026-10-30": {
-    "hi": 75.0,
-    "lo": 60.3,
-    "precip": 0.08,
+    "hi": 74.9,
+    "lo": 60.0,
+    "precip": 0.1,
     "gust": null,
     "snow": 0.0,
     "ice": false,
     "complete": true
    },
    "2026-10-31": {
-    "hi": 70.4,
-    "lo": 59.2,
-    "precip": 0.04,
+    "hi": 70.0,
+    "lo": 58.9,
+    "precip": 0.06,
     "gust": null,
     "snow": 0.0,
     "ice": false,
     "complete": true
    },
    "2026-11-01": {
-    "hi": 68.3,
-    "lo": 60.1,
+    "hi": 68.0,
+    "lo": 59.8,
     "precip": 0.06,
     "gust": null,
     "snow": 0.0,
@@ -330,9 +330,9 @@
     "complete": true
    },
    "2026-11-02": {
-    "hi": 71.9,
-    "lo": 62.2,
-    "precip": 0.2,
+    "hi": 71.6,
+    "lo": 61.9,
+    "precip": 0.22,
     "gust": null,
     "snow": 0.0,
     "ice": false,
@@ -489,19 +489,28 @@
   },
   "HRRR": {
    "2026-10-26": {
-    "hi": 76.2,
-    "lo": 57.1,
+    "hi": 76.0,
+    "lo": 56.5,
     "precip": 0.0,
-    "gust": 16.8,
+    "gust": 14.8,
     "snow": 0.0,
     "ice": false,
     "complete": true
    },
    "2026-10-27": {
-    "hi": 69.0,
-    "lo": 58.2,
+    "hi": 73.3,
+    "lo": 60.9,
     "precip": 0.0,
-    "gust": 16.1,
+    "gust": 19.0,
+    "snow": 0.0,
+    "ice": false,
+    "complete": true
+   },
+   "2026-10-28": {
+    "hi": 61.9,
+    "lo": 60.8,
+    "precip": 0.0,
+    "gust": 14.5,
     "snow": 0.0,
     "ice": false,
     "complete": false
@@ -662,14 +671,14 @@
    "level": 0,
    "reasons": [],
    "hi": [
-    76.2,
+    76.0,
     75.2,
     77.5,
     7
    ],
    "lo": [
     57.7,
-    55.2,
+    55.0,
     59.7,
     7
    ],
@@ -680,7 +689,7 @@
     7
    ],
    "gust": [
-    16.8,
+    16.3,
     12.5,
     18.1,
     5
@@ -691,28 +700,28 @@
    "level": 0,
    "reasons": [],
    "hi": [
-    68.8,
+    69.9,
     66.4,
-    71.2,
-    6
+    73.3,
+    7
    ],
    "lo": [
     58.8,
     57.2,
-    59.5,
-    6
+    60.9,
+    7
    ],
    "precip": [
     0.0,
     0.0,
     0.4,
-    6
+    7
    ],
    "gust": [
-    18.1,
+    19.0,
     13.6,
     20.4,
-    4
+    5
    ]
   },
   {
@@ -720,14 +729,14 @@
    "level": 0,
    "reasons": [],
    "hi": [
-    75.5,
+    75.4,
     74.8,
     76.8,
     6
    ],
    "lo": [
     58.5,
-    57.8,
+    57.6,
     59.5,
     6
    ],
@@ -757,7 +766,7 @@
    "lo": [
     61.5,
     60.7,
-    62.5,
+    62.3,
     6
    ],
    "precip": [
@@ -807,13 +816,13 @@
    "level": 0,
    "reasons": [],
    "hi": [
-    66.6,
+    66.3,
     61.1,
     70.7,
     6
    ],
    "lo": [
-    58.1,
+    58.0,
     54.8,
     60.4,
     6
@@ -836,7 +845,7 @@
    "level": 0,
    "reasons": [],
    "hi": [
-    68.3,
+    68.2,
     60.3,
     71.7,
     6
@@ -844,7 +853,7 @@
    "lo": [
     57.4,
     52.1,
-    60.1,
+    59.8,
     6
    ],
    "precip": [
@@ -873,7 +882,7 @@
    "lo": [
     57.4,
     56.3,
-    62.2,
+    61.9,
     5
    ],
    "precip": [
@@ -969,15 +978,15 @@
    "max": 80.8
   },
   {
-   "day": "2026-11-01",
-   "var": "Low",
-   "unit": "\u00b0F",
-   "spread": 8.0,
-   "score": 8.0,
-   "low": "GFS",
-   "high": "ECMWF AIFS",
-   "min": 52.1,
-   "max": 60.1
+   "day": "2026-10-28",
+   "var": "Peak gust",
+   "unit": "mph",
+   "spread": 11.6,
+   "score": 7.733333333333334,
+   "low": "NBM",
+   "high": "GFS",
+   "min": 24.6,
+   "max": 36.2
   }
  ],
  "stories": [
@@ -1019,10 +1028,6 @@
  },
  "precip": {
   "blocks": [
-   [
-    "2026-10-26T00:00",
-    3
-   ],
    [
     "2026-10-26T03:00",
     3
@@ -1117,7 +1122,19 @@
    ],
    [
     "2026-10-29T00:00",
-    12
+    3
+   ],
+   [
+    "2026-10-29T03:00",
+    3
+   ],
+   [
+    "2026-10-29T06:00",
+    3
+   ],
+   [
+    "2026-10-29T09:00",
+    3
    ],
    [
     "2026-10-29T12:00",
@@ -1156,12 +1173,6 @@
    {
     "name": "ECMWF IFS",
     "cells": [
-     {
-      "amt": 0,
-      "pop": 0,
-      "type": "dry",
-      "fb": false
-     },
      {
       "amt": 0,
       "pop": 0,
@@ -1301,9 +1312,27 @@
       "fb": false
      },
      {
-      "amt": 0.13,
+      "amt": 0,
+      "pop": 13,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0.1,
+      "pop": 29,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.03,
       "pop": 31,
       "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0,
+      "pop": 20,
+      "type": "dry",
       "fb": false
      },
      {
@@ -1402,6 +1431,48 @@
       "fb": false
      },
      {
+      "amt": 0.0,
+      "pop": null,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0.01,
+      "pop": null,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.01,
+      "pop": null,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.01,
+      "pop": null,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.01,
+      "pop": null,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.01,
+      "pop": null,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.01,
+      "pop": null,
+      "type": "rain",
+      "fb": false
+     },
+     {
       "amt": 0,
       "pop": null,
       "type": "dry",
@@ -1444,55 +1515,7 @@
       "fb": false
      },
      {
-      "amt": 0.0,
-      "pop": null,
-      "type": "dry",
-      "fb": false
-     },
-     {
-      "amt": 0,
-      "pop": null,
-      "type": "dry",
-      "fb": false
-     },
-     {
-      "amt": 0.0,
-      "pop": null,
-      "type": "dry",
-      "fb": false
-     },
-     {
-      "amt": 0.01,
-      "pop": null,
-      "type": "rain",
-      "fb": false
-     },
-     {
-      "amt": 0.01,
-      "pop": null,
-      "type": "rain",
-      "fb": false
-     },
-     {
-      "amt": 0.01,
-      "pop": null,
-      "type": "rain",
-      "fb": false
-     },
-     {
-      "amt": 0.01,
-      "pop": null,
-      "type": "rain",
-      "fb": false
-     },
-     {
-      "amt": 0.01,
-      "pop": null,
-      "type": "rain",
-      "fb": false
-     },
-     {
-      "amt": 0.01,
+      "amt": 0.02,
       "pop": null,
       "type": "rain",
       "fb": false
@@ -1501,40 +1524,16 @@
       "amt": 0.02,
       "pop": null,
       "type": "rain",
-      "fb": false
-     },
-     {
-      "amt": 0.13,
-      "pop": null,
-      "type": "rain",
-      "fb": false
-     },
-     {
-      "amt": 0.07,
-      "pop": null,
-      "type": "rain",
-      "fb": false
-     },
-     {
-      "amt": 0.07,
-      "pop": null,
-      "type": "rain",
-      "fb": false
-     },
-     {
-      "amt": 0.02,
-      "pop": null,
-      "type": "rain",
-      "fb": false
-     },
-     {
-      "amt": 0.0,
-      "pop": null,
-      "type": "dry",
       "fb": false
      },
      {
       "amt": 0.03,
+      "pop": null,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.05,
       "pop": null,
       "type": "rain",
       "fb": false
@@ -1552,7 +1551,49 @@
       "fb": false
      },
      {
+      "amt": 0.08,
+      "pop": null,
+      "type": "rain",
+      "fb": false
+     },
+     {
       "amt": 0.06,
+      "pop": null,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.03,
+      "pop": null,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.02,
+      "pop": null,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.05,
+      "pop": null,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.05,
+      "pop": null,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.01,
+      "pop": null,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.07,
       "pop": null,
       "type": "rain",
       "fb": false
@@ -1562,12 +1603,6 @@
    {
     "name": "GFS",
     "cells": [
-     {
-      "amt": 0,
-      "pop": 0,
-      "type": "dry",
-      "fb": false
-     },
      {
       "amt": 0,
       "pop": 0,
@@ -1707,8 +1742,26 @@
       "fb": false
      },
      {
-      "amt": 0.14,
+      "amt": 0.04,
+      "pop": 64,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.02,
       "pop": 66,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.05,
+      "pop": 66,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.03,
+      "pop": 55,
       "type": "rain",
       "fb": false
      },
@@ -1767,199 +1820,211 @@
     "cells": [
      {
       "amt": 0,
-      "pop": null,
+      "pop": 0,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
+      "pop": 0,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
+      "pop": 0,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
+      "pop": 0,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
+      "pop": 0,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
+      "pop": 0,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
+      "pop": 0,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
+      "pop": 0,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
+      "pop": 2,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
+      "pop": 4,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
+      "pop": 7,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
+      "pop": 12,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
+      "pop": 21,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
+      "pop": 23,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
+      "pop": 19,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
+      "pop": 8,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
+      "pop": 4,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
+      "pop": 3,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
+      "pop": 3,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
+      "pop": 3,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
-      "type": "dry",
-      "fb": false
-     },
-     {
-      "amt": 0,
-      "pop": null,
+      "pop": 2,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0.0,
-      "pop": null,
+      "pop": 0,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0.01,
-      "pop": null,
+      "pop": 4,
       "type": "rain",
       "fb": false
      },
      {
-      "amt": 0.22,
-      "pop": null,
+      "amt": 0.04,
+      "pop": 7,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.08,
-      "pop": null,
+      "pop": 11,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.07,
+      "pop": 13,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.04,
+      "pop": 13,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.08,
+      "pop": 18,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.02,
-      "pop": null,
+      "pop": 23,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.02,
-      "pop": null,
+      "pop": 26,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.05,
-      "pop": null,
+      "pop": 39,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.03,
-      "pop": null,
+      "pop": 28,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
+      "pop": 29,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
+      "pop": 15,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
+      "pop": 41,
       "type": "dry",
       "fb": false
      }
@@ -1968,12 +2033,6 @@
    {
     "name": "HRRR",
     "cells": [
-     {
-      "amt": 0,
-      "pop": 0,
-      "type": "dry",
-      "fb": false
-     },
      {
       "amt": 0,
       "pop": 0,
@@ -2058,6 +2117,19 @@
       "type": "dry",
       "fb": false
      },
+     {
+      "amt": 0,
+      "pop": 7,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0,
+      "pop": 7,
+      "type": "dry",
+      "fb": false
+     },
+     null,
      null,
      null,
      null,
@@ -2081,12 +2153,6 @@
    {
     "name": "ICON",
     "cells": [
-     {
-      "amt": 0,
-      "pop": 0,
-      "type": "dry",
-      "fb": false
-     },
      {
       "amt": 0,
       "pop": 0,
@@ -2227,7 +2293,25 @@
      },
      {
       "amt": 0,
+      "pop": 3,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0,
+      "pop": 16,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0,
       "pop": 20,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0,
+      "pop": 16,
       "type": "dry",
       "fb": false
      },
@@ -2292,12 +2376,6 @@
      },
      {
       "amt": 0,
-      "pop": 0,
-      "type": "dry",
-      "fb": false
-     },
-     {
-      "amt": 0,
       "pop": 1,
       "type": "dry",
       "fb": false
@@ -2429,9 +2507,27 @@
       "fb": false
      },
      {
-      "amt": 0.05,
+      "amt": 0.01,
       "pop": 37,
       "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.02,
+      "pop": 37,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.02,
+      "pop": 37,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0,
+      "pop": 15,
+      "type": "dry",
       "fb": false
      },
      {
@@ -2487,12 +2583,6 @@
    {
     "name": "NWS (gridpoint)",
     "cells": [
-     {
-      "amt": 0.0,
-      "pop": 0,
-      "type": "dry",
-      "fb": false
-     },
      {
       "amt": 0.0,
       "pop": 0,
@@ -2632,9 +2722,27 @@
       "fb": false
      },
      {
-      "amt": 0.04,
+      "amt": 0.01,
       "pop": 41,
       "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.02,
+      "pop": 41,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.01,
+      "pop": 41,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.0,
+      "pop": 23,
+      "type": "dry",
       "fb": false
      },
      {
@@ -2713,13 +2821,13 @@
     ],
     "ECMWF AIFS": [
      0,
-     0.05,
-     0.08,
-     0.2,
-     0.08,
-     0.04,
+     0.07,
+     0.1,
+     0.21,
+     0.1,
      0.06,
-     0.2
+     0.06,
+     0.22
     ],
     "GFS": [
      0,
@@ -2743,7 +2851,7 @@
     ],
     "HRRR": [
      0,
-     null,
+     0,
      null,
      null,
      null,
@@ -2796,12 +2904,12 @@
     "ECMWF AIFS": [
      0,
      0.12,
-     0.12,
-     0.19,
-     0.17,
-     0.03,
-     0.05,
-     0.31
+     0.11,
+     0.24,
+     0.18,
+     0.04,
+     0.06,
+     0.28
     ],
     "GFS": [
      0,
@@ -2825,7 +2933,7 @@
     ],
     "HRRR": [
      0,
-     null,
+     0,
      null,
      null,
      null,
@@ -2876,14 +2984,14 @@
      0.76
     ],
     "ECMWF AIFS": [
-     0.0,
-     0.07,
+     0,
+     0.1,
      0.08,
-     0.19,
-     0.07,
+     0.21,
+     0.1,
+     0.08,
      0.06,
-     0.06,
-     0.32
+     0.33
     ],
     "GFS": [
      0,
@@ -2907,7 +3015,7 @@
     ],
     "HRRR": [
      0,
-     null,
+     0.02,
      null,
      null,
      null,
@@ -2959,12 +3067,12 @@
     ],
     "ECMWF AIFS": [
      0,
-     0.01,
-     0.06,
-     0.16,
+     0.02,
+     0.08,
+     0.21,
      0.17,
      0.02,
-     0.05,
+     0.08,
      0.06
     ],
     "GFS": [
@@ -2989,7 +3097,7 @@
     ],
     "HRRR": [
      0,
-     null,
+     0,
      null,
      null,
      null,
@@ -3042,12 +3150,12 @@
     "ECMWF AIFS": [
      0,
      0,
-     0.02,
-     0.12,
-     0.03,
-     0.06,
+     0,
      0.14,
-     0.02
+     0.01,
+     0.08,
+     0.16,
+     0.04
     ],
     "GFS": [
      0,
@@ -3071,7 +3179,7 @@
     ],
     "HRRR": [
      0,
-     null,
+     0,
      null,
      null,
      null,
@@ -3124,12 +3232,12 @@
     "ECMWF AIFS": [
      0,
      0,
-     0.02,
-     0.12,
+     0.05,
+     0.11,
      0.01,
-     0.1,
      0.14,
-     0.03
+     0.18,
+     0.04
     ],
     "GFS": [
      0,
@@ -3153,7 +3261,7 @@
     ],
     "HRRR": [
      0,
-     null,
+     0,
      null,
      null,
      null,
@@ -3205,12 +3313,12 @@
     ],
     "ECMWF AIFS": [
      0,
-     0.0,
-     0.04,
+     0,
+     0.05,
      0.14,
-     0.02,
-     0.1,
-     0.09,
+     0.01,
+     0.12,
+     0.12,
      0.06
     ],
     "GFS": [
@@ -3235,7 +3343,7 @@
     ],
     "HRRR": [
      0,
-     null,
+     0,
      null,
      null,
      null,
@@ -3287,11 +3395,11 @@
     ],
     "ECMWF AIFS": [
      0,
-     0.03,
-     0.07,
-     0.19,
      0.05,
-     0.05,
+     0.06,
+     0.18,
+     0.09,
+     0.06,
      0.06,
      0.17
     ],
@@ -3317,7 +3425,7 @@
     ],
     "HRRR": [
      0,
-     null,
+     0,
      null,
      null,
      null,
@@ -3369,12 +3477,12 @@
     ],
     "ECMWF AIFS": [
      0,
-     0.01,
-     0.05,
-     0.19,
-     0.05,
-     0.05,
-     0.07,
+     0,
+     0.06,
+     0.18,
+     0.09,
+     0.08,
+     0.06,
      0.1
     ],
     "GFS": [
@@ -3399,7 +3507,7 @@
     ],
     "HRRR": [
      0,
-     null,
+     0,
      null,
      null,
      null,
@@ -3730,9 +3838,9 @@
    ]
   },
   "obs": {
-   "time": "2026-10-26T07:00:00+00:00",
+   "time": "2026-10-26T07:25:00+00:00",
    "text": "Clear",
-   "temp": 57,
+   "temp": 55,
    "dew": 50,
    "wind": 8,
    "gust": null,

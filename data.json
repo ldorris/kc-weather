@@ -1,10 +1,15 @@
 {
- "generated": "2026-10-27T03:02:25.099214-05:00",
+ "generated": "2026-10-27T03:20:48.212507-05:00",
  "status": [
   {
    "source": "SPC Day 1 outlook",
    "ok": true,
    "detail": "None"
+  },
+  {
+   "source": "NWS EAX AFD",
+   "ok": true,
+   "detail": "2026-10-27T03:39:00+00:00"
   },
   {
    "source": "SPC Day 2 outlook",
@@ -19,7 +24,7 @@
   {
    "source": "RRFS (NOMADS)",
    "ok": false,
-   "detail": "not displayed: newest upstream cycle 2026-10-27 06 UTC (v1.0) but GRIB2 point decoding not implemented"
+   "detail": "not displayed: newest upstream cycle 2026-10-27 07 UTC (v1.0) but GRIB2 point decoding not implemented"
   },
   {
    "source": "NWS gridpoint Kansas City (KCI)",
@@ -27,39 +32,9 @@
    "detail": "EAX/39,60"
   },
   {
-   "source": "NWS EAX AFD",
-   "ok": true,
-   "detail": "2026-10-27T03:39:00+00:00"
-  },
-  {
-   "source": "Open-Meteo ICON",
-   "ok": true,
-   "detail": "run 2026-10-27 00 UTC via icon_seamless"
-  },
-  {
-   "source": "Open-Meteo NBM",
-   "ok": true,
-   "detail": "run 2026-10-27 06 UTC via ncep_nbm_conus"
-  },
-  {
    "source": "NWS gridpoint St. Joseph",
    "ok": true,
    "detail": "EAX/34,81"
-  },
-  {
-   "source": "Open-Meteo NOAA AI GFS",
-   "ok": true,
-   "detail": "run 2026-10-27 00 UTC via ncep_aigfs025"
-  },
-  {
-   "source": "Open-Meteo GFS",
-   "ok": true,
-   "detail": "run 2026-10-27 00 UTC via gfs_global"
-  },
-  {
-   "source": "Open-Meteo HRRR",
-   "ok": true,
-   "detail": "run 2026-10-27 06 UTC via ncep_hrrr_conus"
   },
   {
    "source": "NWS gridpoint Lawrence",
@@ -67,9 +42,24 @@
    "detail": "TOP/97,45"
   },
   {
+   "source": "Open-Meteo NOAA AI GFS",
+   "ok": true,
+   "detail": "run 2026-10-27 00 UTC via ncep_aigfs025"
+  },
+  {
    "source": "NWS gridpoint Chillicothe",
    "ok": true,
    "detail": "EAX/79,82"
+  },
+  {
+   "source": "Open-Meteo NBM",
+   "ok": true,
+   "detail": "run 2026-10-27 06 UTC via ncep_nbm_conus"
+  },
+  {
+   "source": "Open-Meteo ICON",
+   "ok": true,
+   "detail": "run 2026-10-27 00 UTC via icon_seamless"
   },
   {
    "source": "NWS gridpoint Sedalia",
@@ -77,9 +67,9 @@
    "detail": "EAX/91,33"
   },
   {
-   "source": "Open-Meteo ECMWF AIFS",
+   "source": "Open-Meteo HRRR",
    "ok": true,
-   "detail": "run 2026-10-27 00 UTC via ecmwf_aifs025_single"
+   "detail": "run 2026-10-27 06 UTC via ncep_hrrr_conus"
   },
   {
    "source": "NWS gridpoint Clinton",
@@ -87,14 +77,14 @@
    "detail": "EAX/72,18"
   },
   {
-   "source": "Open-Meteo ECMWF IFS",
-   "ok": true,
-   "detail": "run 2026-10-27 00 UTC via ecmwf_ifs"
-  },
-  {
    "source": "NWS gridpoint Butler",
    "ok": true,
    "detail": "EAX/53,13"
+  },
+  {
+   "source": "Open-Meteo GFS",
+   "ok": true,
+   "detail": "run 2026-10-27 00 UTC via gfs_global"
   },
   {
    "source": "NWS gridpoint Olathe",
@@ -107,6 +97,11 @@
    "detail": "EAX/51,42"
   },
   {
+   "source": "Open-Meteo ECMWF AIFS",
+   "ok": true,
+   "detail": "run 2026-10-27 00 UTC via ecmwf_aifs025_single"
+  },
+  {
    "source": "NWS active alerts (EAX+TOP via DMA points)",
    "ok": true,
    "detail": "0 active"
@@ -117,6 +112,11 @@
    "detail": "office EAX"
   },
   {
+   "source": "Open-Meteo ECMWF IFS",
+   "ok": true,
+   "detail": "run 2026-10-27 00 UTC via ecmwf_ifs"
+  },
+  {
    "source": "NWS point forecast St. Joseph",
    "ok": true,
    "detail": "office EAX"
@@ -124,7 +124,7 @@
   {
    "source": "NWS KMCI latest obs",
    "ok": true,
-   "detail": "2026-10-27T07:35:00+00:00"
+   "detail": "2026-10-27T07:45:00+00:00"
   },
   {
    "source": "Caution notes",
@@ -1838,31 +1838,19 @@
      },
      {
       "amt": 0,
+      "pop": 4,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0,
       "pop": 6,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 13,
-      "type": "dry",
-      "fb": false
-     },
-     {
-      "amt": 0,
-      "pop": 26,
-      "type": "dry",
-      "fb": false
-     },
-     {
-      "amt": 0,
-      "pop": 29,
-      "type": "dry",
-      "fb": false
-     },
-     {
-      "amt": 0,
-      "pop": 22,
+      "pop": 6,
       "type": "dry",
       "fb": false
      },
@@ -1874,6 +1862,18 @@
      },
      {
       "amt": 0,
+      "pop": 2,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0,
+      "pop": 0,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0,
       "pop": 0,
       "type": "dry",
       "fb": false
@@ -1904,37 +1904,37 @@
      },
      {
       "amt": 0.0,
-      "pop": 0,
+      "pop": 1,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0.01,
-      "pop": 1,
+      "pop": 3,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.04,
-      "pop": 5,
+      "pop": 9,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.09,
-      "pop": 12,
+      "pop": 19,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.07,
-      "pop": 16,
+      "pop": 23,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.02,
-      "pop": 16,
+      "pop": 21,
       "type": "rain",
       "fb": false
      },
@@ -1946,91 +1946,91 @@
      },
      {
       "amt": 0.01,
-      "pop": 20,
+      "pop": 24,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.02,
-      "pop": 29,
+      "pop": 37,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.05,
-      "pop": 42,
+      "pop": 54,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.04,
-      "pop": 49,
+      "pop": 62,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.01,
-      "pop": 48,
+      "pop": 61,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.01,
-      "pop": 44,
+      "pop": 54,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 39,
+      "pop": 47,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0.02,
-      "pop": 34,
-      "type": "rain",
-      "fb": false
-     },
-     {
-      "amt": 0.06,
       "pop": 46,
       "type": "rain",
       "fb": false
      },
      {
+      "amt": 0.06,
+      "pop": 50,
+      "type": "rain",
+      "fb": false
+     },
+     {
       "amt": 0.41,
-      "pop": 43,
+      "pop": 52,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.1,
-      "pop": 31,
+      "pop": 40,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.01,
-      "pop": 14,
+      "pop": 36,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.18,
-      "pop": 51,
+      "pop": 54,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.23,
-      "pop": 71,
+      "pop": 65,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 66,
+      "pop": 51,
       "type": "dry",
       "fb": false
      }
@@ -2858,7 +2858,7 @@
     "HRRR": [
      0,
      0.13,
-     null,
+     0,
      null,
      null,
      null,
@@ -2873,7 +2873,7 @@
      0.06,
      0,
      1.02,
-     null
+     0
     ],
     "NBM": [
      0,
@@ -2940,7 +2940,7 @@
     "HRRR": [
      0,
      0,
-     null,
+     0,
      null,
      null,
      null,
@@ -2955,7 +2955,7 @@
      0.2,
      0,
      0.79,
-     null
+     0
     ],
     "NBM": [
      0,
@@ -3022,7 +3022,7 @@
     "HRRR": [
      0,
      0,
-     null,
+     0,
      null,
      null,
      null,
@@ -3037,7 +3037,7 @@
      0.03,
      0,
      0.99,
-     null
+     0.01
     ],
     "NBM": [
      0,
@@ -3104,7 +3104,7 @@
     "HRRR": [
      0,
      0.03,
-     null,
+     0,
      null,
      null,
      null,
@@ -3119,7 +3119,7 @@
      0.06,
      0.02,
      0.91,
-     null
+     0.01
     ],
     "NBM": [
      0,
@@ -3186,7 +3186,7 @@
     "HRRR": [
      0,
      0.02,
-     null,
+     0,
      null,
      null,
      null,
@@ -3201,7 +3201,7 @@
      0.07,
      0,
      1.27,
-     null
+     0.02
     ],
     "NBM": [
      0,
@@ -3268,7 +3268,7 @@
     "HRRR": [
      0,
      0,
-     null,
+     0,
      null,
      null,
      null,
@@ -3283,7 +3283,7 @@
      0.18,
      0,
      1.42,
-     null
+     0.02
     ],
     "NBM": [
      0,
@@ -3350,7 +3350,7 @@
     "HRRR": [
      0,
      0,
-     null,
+     0,
      null,
      null,
      null,
@@ -3365,7 +3365,7 @@
      0,
      0.01,
      1.25,
-     null
+     0.02
     ],
     "NBM": [
      0,
@@ -3432,7 +3432,7 @@
     "HRRR": [
      0,
      0,
-     null,
+     0,
      null,
      null,
      null,
@@ -3447,7 +3447,7 @@
      0.05,
      0.01,
      1.04,
-     null
+     0
     ],
     "NBM": [
      0,
@@ -3514,7 +3514,7 @@
     "HRRR": [
      0,
      0,
-     null,
+     0,
      null,
      null,
      null,
@@ -3529,7 +3529,7 @@
      0,
      0,
      1.01,
-     null
+     0
     ],
     "NBM": [
      0,
@@ -3550,6 +3550,206 @@
      0.16,
      1.65,
      0.27
+    ]
+   }
+  },
+  "partial": {
+   "Kansas City (KCI)": {
+    "HRRR": [
+     null,
+     null,
+     "run ends 01:00 CT",
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    "ICON": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "run ends 07:00 CT"
+    ]
+   },
+   "St. Joseph": {
+    "HRRR": [
+     null,
+     null,
+     "run ends 01:00 CT",
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    "ICON": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "run ends 07:00 CT"
+    ]
+   },
+   "Lawrence": {
+    "HRRR": [
+     null,
+     null,
+     "run ends 01:00 CT",
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    "ICON": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "run ends 07:00 CT"
+    ]
+   },
+   "Chillicothe": {
+    "HRRR": [
+     null,
+     null,
+     "run ends 01:00 CT",
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    "ICON": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "run ends 07:00 CT"
+    ]
+   },
+   "Sedalia": {
+    "HRRR": [
+     null,
+     null,
+     "run ends 01:00 CT",
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    "ICON": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "run ends 07:00 CT"
+    ]
+   },
+   "Clinton": {
+    "HRRR": [
+     null,
+     null,
+     "run ends 01:00 CT",
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    "ICON": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "run ends 07:00 CT"
+    ]
+   },
+   "Butler": {
+    "HRRR": [
+     null,
+     null,
+     "run ends 01:00 CT",
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    "ICON": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "run ends 07:00 CT"
+    ]
+   },
+   "Olathe": {
+    "HRRR": [
+     null,
+     null,
+     "run ends 01:00 CT",
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    "ICON": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "run ends 07:00 CT"
+    ]
+   },
+   "Lee's Summit": {
+    "HRRR": [
+     null,
+     null,
+     "run ends 01:00 CT",
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    "ICON": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "run ends 07:00 CT"
     ]
    }
   },
@@ -3707,7 +3907,7 @@
      "short": "Cloudy",
      "wind": "5 mph S",
      "pop": 5,
-     "start": "2026-10-27T02:00:00-05:00",
+     "start": "2026-10-27T03:00:00-05:00",
      "end": "2026-10-27T06:00:00-05:00",
      "day": false
     },
@@ -3724,9 +3924,9 @@
     {
      "name": "Tuesday Night",
      "temp": 57,
-     "short": "Mostly Cloudy",
+     "short": "Mostly Cloudy then Slight Chance Rain Showers",
      "wind": "7 mph SSE",
-     "pop": 10,
+     "pop": 19,
      "start": "2026-10-27T18:00:00-05:00",
      "end": "2026-10-28T06:00:00-05:00",
      "day": false
@@ -3736,7 +3936,7 @@
      "temp": 80,
      "short": "Slight Chance Showers And Thunderstorms then Mostly Sunny",
      "wind": "7 to 17 mph S",
-     "pop": 15,
+     "pop": 17,
      "start": "2026-10-28T06:00:00-05:00",
      "end": "2026-10-28T18:00:00-05:00",
      "day": true
@@ -3844,11 +4044,11 @@
    ]
   },
   "obs": {
-   "time": "2026-10-27T07:35:00+00:00",
+   "time": "2026-10-27T07:45:00+00:00",
    "text": "Partly Cloudy",
    "temp": 57,
    "dew": 52,
-   "wind": 7,
+   "wind": 8,
    "gust": null,
    "dir": 170
   }

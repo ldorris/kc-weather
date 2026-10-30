@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T02:54:00.880150-05:00",
+ "generated": "2026-10-30T03:02:13.211187-05:00",
  "status": [
   {
    "source": "SPC Day 1 outlook",
@@ -22,6 +22,11 @@
    "detail": "2026-10-30T07:32:00+00:00"
   },
   {
+   "source": "Open-Meteo NOAA AI GFS",
+   "ok": true,
+   "detail": "run 2026-10-30 00 UTC via ncep_aigfs025"
+  },
+  {
    "source": "RRFS (NOMADS)",
    "ok": false,
    "detail": "not displayed: newest upstream cycle 2026-10-30 06 UTC (v1.0) but GRIB2 point decoding not implemented"
@@ -42,29 +47,39 @@
    "detail": "run 2026-10-30 00 UTC via icon_seamless"
   },
   {
-   "source": "NWS gridpoint Lawrence",
+   "source": "NWS gridpoint KCI (First Warn fields)",
    "ok": true,
-   "detail": "TOP/97,45"
+   "detail": "EAX/39,60"
   },
   {
-   "source": "Open-Meteo GFS",
+   "source": "SPC Day 4 outlook (15%/30% areas)",
    "ok": true,
-   "detail": "run 2026-10-30 00 UTC via gfs_global"
+   "detail": "no area over KC"
   },
   {
-   "source": "NWS gridpoint Chillicothe",
+   "source": "SPC Day 5 outlook (15%/30% areas)",
    "ok": true,
-   "detail": "EAX/79,82"
+   "detail": "no area over KC"
+  },
+  {
+   "source": "SPC Day 6 outlook (15%/30% areas)",
+   "ok": true,
+   "detail": "no area over KC"
+  },
+  {
+   "source": "SPC Day 7 outlook (15%/30% areas)",
+   "ok": true,
+   "detail": "no area over KC"
+  },
+  {
+   "source": "SPC Day 8 outlook (15%/30% areas)",
+   "ok": true,
+   "detail": "no area over KC"
   },
   {
    "source": "Open-Meteo HRRR",
    "ok": true,
-   "detail": "run 2026-10-30 05 UTC via ncep_hrrr_conus"
-  },
-  {
-   "source": "NWS gridpoint Sedalia",
-   "ok": true,
-   "detail": "EAX/91,33"
+   "detail": "run 2026-10-30 06 UTC via ncep_hrrr_conus"
   },
   {
    "source": "Open-Meteo NBM",
@@ -72,19 +87,14 @@
    "detail": "run 2026-10-30 06 UTC via ncep_nbm_conus"
   },
   {
-   "source": "Open-Meteo NOAA AI GFS",
+   "source": "Open-Meteo GFS",
    "ok": true,
-   "detail": "run 2026-10-30 00 UTC via ncep_aigfs025"
+   "detail": "run 2026-10-30 00 UTC via gfs_global"
   },
   {
-   "source": "NWS gridpoint Clinton",
+   "source": "NWS gridpoint Lawrence",
    "ok": true,
-   "detail": "EAX/72,18"
-  },
-  {
-   "source": "NWS gridpoint Butler",
-   "ok": true,
-   "detail": "EAX/53,13"
+   "detail": "TOP/97,45"
   },
   {
    "source": "Open-Meteo ECMWF AIFS",
@@ -92,9 +102,19 @@
    "detail": "run 2026-10-30 00 UTC via ecmwf_aifs025_single"
   },
   {
-   "source": "NWS gridpoint Olathe",
+   "source": "NWS gridpoint Chillicothe",
    "ok": true,
-   "detail": "EAX/35,41"
+   "detail": "EAX/79,82"
+  },
+  {
+   "source": "Open-Meteo ECMWF IFS",
+   "ok": true,
+   "detail": "run 2026-10-30 00 UTC via ecmwf_ifs"
+  },
+  {
+   "source": "NWS gridpoint Sedalia",
+   "ok": true,
+   "detail": "EAX/91,33"
   },
   {
    "source": "NWS active alerts (EAX+TOP via DMA points)",
@@ -107,9 +127,9 @@
    "detail": "office EAX"
   },
   {
-   "source": "NWS gridpoint Lee's Summit",
+   "source": "NWS gridpoint Clinton",
    "ok": true,
-   "detail": "EAX/51,42"
+   "detail": "EAX/72,18"
   },
   {
    "source": "NWS point forecast St. Joseph",
@@ -117,14 +137,29 @@
    "detail": "office EAX"
   },
   {
+   "source": "NWS gridpoint Butler",
+   "ok": true,
+   "detail": "EAX/53,13"
+  },
+  {
    "source": "NWS KMCI latest obs",
    "ok": true,
    "detail": "2026-10-30T07:30:00+00:00"
   },
   {
-   "source": "Open-Meteo ECMWF IFS",
+   "source": "NWS gridpoint Olathe",
    "ok": true,
-   "detail": "run 2026-10-30 00 UTC via ecmwf_ifs"
+   "detail": "EAX/35,41"
+  },
+  {
+   "source": "NWS gridpoint Lee's Summit",
+   "ok": true,
+   "detail": "EAX/51,42"
+  },
+  {
+   "source": "First Warn flags",
+   "ok": true,
+   "detail": "First Warn: FRI 10/30/26 (rain 51%, AM commute); MON 11/2/26 (rain 89%, AM commute, PM commute, gusts 40 mph); TUE 11/3/26 (rain 61%, AM commute). First Warn Weather Day: none."
   },
   {
    "source": "Caution notes",
@@ -168,10 +203,10 @@
   {
    "id": "ncep_hrrr_conus",
    "label": "HRRR",
-   "run": "2026-10-30 05 UTC",
+   "run": "2026-10-30 06 UTC",
    "error": null,
    "src": "Open-Meteo ncep_hrrr_conus",
-   "upstream": "2026-10-30 05 UTC"
+   "upstream": "2026-10-30 06 UTC"
   },
   {
    "id": "icon_seamless",
@@ -489,19 +524,28 @@
   },
   "HRRR": {
    "2026-10-30": {
-    "hi": 77.6,
-    "lo": 60.0,
+    "hi": 78.3,
+    "lo": 57.7,
     "precip": 0.0,
-    "gust": 25.9,
+    "gust": 26.8,
     "snow": 0.0,
     "ice": false,
     "complete": true
    },
    "2026-10-31": {
-    "hi": 73.0,
-    "lo": 60.7,
+    "hi": 70.2,
+    "lo": 61.0,
+    "precip": 0.04,
+    "gust": 21.0,
+    "snow": 0.0,
+    "ice": false,
+    "complete": true
+   },
+   "2026-11-01": {
+    "hi": 63.8,
+    "lo": 63.8,
     "precip": 0.0,
-    "gust": 18.1,
+    "gust": 19.0,
     "snow": 0.0,
     "ice": false,
     "complete": false
@@ -659,17 +703,17 @@
  "flags": [
   {
    "day": "2026-10-30",
-   "level": 0,
+   "level": 1,
    "reasons": [],
    "hi": [
     72.4,
     71.0,
-    77.6,
+    78.3,
     7
    ],
    "lo": [
-    59.6,
-    59.0,
+    59.2,
+    57.7,
     61.9,
     7
    ],
@@ -682,8 +726,12 @@
    "gust": [
     23.9,
     11.9,
-    25.9,
+    26.8,
     5
+   ],
+   "fw_reasons": [
+    "Rain chance 51% (daytime peak 7 AM) \u00b7 NWS EAX gridpoint PoP",
+    "AM commute 6\u20139 AM: rain chance up to 51% could slow travel \u00b7 NWS PoP"
    ]
   },
   {
@@ -691,29 +739,30 @@
    "level": 0,
    "reasons": [],
    "hi": [
-    65.8,
+    66.0,
     64.0,
-    67.7,
-    6
+    70.2,
+    7
    ],
    "lo": [
-    59.9,
+    60.1,
     59.2,
-    60.9,
-    6
+    61.0,
+    7
    ],
    "precip": [
     0.2,
-    0.1,
+    0.0,
     0.2,
-    6
+    7
    ],
    "gust": [
-    15.9,
+    18.1,
     11.2,
     22.4,
-    4
-   ]
+    5
+   ],
+   "fw_reasons": []
   },
   {
    "day": "2026-11-01",
@@ -742,7 +791,8 @@
     10.7,
     22.4,
     4
-   ]
+   ],
+   "fw_reasons": []
   },
   {
    "day": "2026-11-02",
@@ -773,11 +823,17 @@
     30.9,
     44.5,
     4
+   ],
+   "fw_reasons": [
+    "Rain chance 89% (daytime peak 12 PM) \u00b7 NWS EAX gridpoint PoP",
+    "AM commute 6\u20139 AM: rain chance up to 76% could slow travel \u00b7 NWS PoP",
+    "PM commute 4\u20137 PM: rain chance up to 89% could slow travel \u00b7 NWS PoP",
+    "Gusts: model-median peak 40 mph (4 models, range 31\u201344)"
    ]
   },
   {
    "day": "2026-11-03",
-   "level": 0,
+   "level": 1,
    "reasons": [],
    "hi": [
     65.8,
@@ -802,6 +858,10 @@
     21.5,
     31.3,
     4
+   ],
+   "fw_reasons": [
+    "Rain chance 61% (daytime peak 6 AM) \u00b7 NWS EAX gridpoint PoP",
+    "AM commute 6\u20139 AM: rain chance up to 61% could slow travel \u00b7 NWS PoP"
    ]
   },
   {
@@ -831,7 +891,8 @@
     20.8,
     40.5,
     4
-   ]
+   ],
+   "fw_reasons": []
   },
   {
    "day": "2026-11-05",
@@ -860,7 +921,8 @@
     8.9,
     26.8,
     4
-   ]
+   ],
+   "fw_reasons": []
   },
   {
    "day": "2026-11-06",
@@ -889,9 +951,166 @@
     9.2,
     15.7,
     3
-   ]
+   ],
+   "fw_reasons": []
   }
  ],
+ "firstwarn": {
+  "days": [
+   {
+    "day": "2026-10-30",
+    "label": "FRI 10/30/26",
+    "level": 1,
+    "wfd": [],
+    "fw": [
+     "Rain chance 51% (daytime peak 7 AM) \u00b7 NWS EAX gridpoint PoP",
+     "AM commute 6\u20139 AM: rain chance up to 51% could slow travel \u00b7 NWS PoP"
+    ],
+    "short": [
+     "rain 51%",
+     "AM commute"
+    ],
+    "notes": [],
+    "checks": [
+     "daytime PoP max 51% (NWS)",
+     "min visibility 9.0 mi (NWS)",
+     "peak gust NWS 14 / model median 19 mph",
+     "SPC Day 1: General thunder"
+    ],
+    "nws_grid": true
+   },
+   {
+    "day": "2026-10-31",
+    "label": "SAT 10/31/26",
+    "level": 0,
+    "wfd": [],
+    "fw": [],
+    "short": [],
+    "notes": [],
+    "checks": [
+     "daytime PoP max 23% (NWS)",
+     "min visibility 7.9 mi (NWS)",
+     "peak gust NWS 14 / model median 18 mph",
+     "SPC Day 2: None"
+    ],
+    "nws_grid": true
+   },
+   {
+    "day": "2026-11-01",
+    "label": "SUN 11/1/26",
+    "level": 0,
+    "wfd": [],
+    "fw": [],
+    "short": [],
+    "notes": [],
+    "checks": [
+     "daytime PoP max 23% (NWS)",
+     "visibility: beyond NWS grid",
+     "peak gust NWS 12 / model median 19 mph",
+     "SPC Day 3: None"
+    ],
+    "nws_grid": true
+   },
+   {
+    "day": "2026-11-02",
+    "label": "MON 11/2/26",
+    "level": 1,
+    "wfd": [],
+    "fw": [
+     "Rain chance 89% (daytime peak 12 PM) \u00b7 NWS EAX gridpoint PoP",
+     "AM commute 6\u20139 AM: rain chance up to 76% could slow travel \u00b7 NWS PoP",
+     "PM commute 4\u20137 PM: rain chance up to 89% could slow travel \u00b7 NWS PoP",
+     "Gusts: model-median peak 40 mph (4 models, range 31\u201344)"
+    ],
+    "short": [
+     "rain 89%",
+     "AM commute",
+     "PM commute",
+     "gusts 40 mph"
+    ],
+    "notes": [],
+    "checks": [
+     "daytime PoP max 89% (NWS)",
+     "visibility: beyond NWS grid",
+     "peak gust NWS 37 / model median 40 mph",
+     "SPC Day 5: no area over KC"
+    ],
+    "nws_grid": true
+   },
+   {
+    "day": "2026-11-03",
+    "label": "TUE 11/3/26",
+    "level": 1,
+    "wfd": [],
+    "fw": [
+     "Rain chance 61% (daytime peak 6 AM) \u00b7 NWS EAX gridpoint PoP",
+     "AM commute 6\u20139 AM: rain chance up to 61% could slow travel \u00b7 NWS PoP"
+    ],
+    "short": [
+     "rain 61%",
+     "AM commute"
+    ],
+    "notes": [],
+    "checks": [
+     "daytime PoP max 61% (NWS)",
+     "visibility: beyond NWS grid",
+     "peak gust NWS 22 / model median 30 mph",
+     "SPC Day 6: no area over KC"
+    ],
+    "nws_grid": true
+   },
+   {
+    "day": "2026-11-04",
+    "label": "WED 11/4/26",
+    "level": 0,
+    "wfd": [],
+    "fw": [],
+    "short": [],
+    "notes": [],
+    "checks": [
+     "daytime PoP max 24% (NWS)",
+     "visibility: beyond NWS grid",
+     "peak gust NWS 21 / model median 26 mph",
+     "SPC Day 7: no area over KC"
+    ],
+    "nws_grid": true
+   },
+   {
+    "day": "2026-11-05",
+    "label": "THU 11/5/26",
+    "level": 0,
+    "wfd": [],
+    "fw": [],
+    "short": [],
+    "notes": [],
+    "checks": [
+     "daytime PoP max 18% (NWS)",
+     "visibility: beyond NWS grid",
+     "peak gust NWS 9 / model median 22 mph",
+     "SPC Day 8: no area over KC"
+    ],
+    "nws_grid": true
+   },
+   {
+    "day": "2026-11-06",
+    "label": "FRI 11/6/26",
+    "level": 0,
+    "wfd": [],
+    "fw": [],
+    "short": [],
+    "notes": [],
+    "checks": [
+     "daytime PoP max 11% (NWS)",
+     "visibility: beyond NWS grid",
+     "peak gust NWS 9 / model median 15 mph"
+    ],
+    "nws_grid": true
+   }
+  ],
+  "summary": "First Warn: FRI 10/30/26 (rain 51%, AM commute); MON 11/2/26 (rain 89%, AM commute, PM commute, gusts 40 mph); TUE 11/3/26 (rain 61%, AM commute). First Warn Weather Day: none.",
+  "nws_grid": "EAX/39,60",
+  "nws_ok": true
+ },
  "disagreements": [
   {
    "day": "2026-11-06",
@@ -960,6 +1179,17 @@
    "max": 48.6
   },
   {
+   "day": "2026-10-30",
+   "var": "Peak gust",
+   "unit": "mph",
+   "spread": 14.9,
+   "score": 9.933333333333334,
+   "low": "NBM",
+   "high": "HRRR",
+   "min": 11.9,
+   "max": 26.8
+  },
+  {
    "day": "2026-11-05",
    "var": "High",
    "unit": "\u00b0F",
@@ -969,17 +1199,6 @@
    "high": "GFS",
    "min": 53.0,
    "max": 62.9
-  },
-  {
-   "day": "2026-10-30",
-   "var": "Peak gust",
-   "unit": "mph",
-   "spread": 14.0,
-   "score": 9.333333333333332,
-   "low": "NBM",
-   "high": "HRRR",
-   "min": 11.9,
-   "max": 25.9
   }
  ],
  "stories": [
@@ -1027,10 +1246,6 @@
  },
  "precip": {
   "blocks": [
-   [
-    "2026-10-30T00:00",
-    3
-   ],
    [
     "2026-10-30T03:00",
     3
@@ -1125,7 +1340,19 @@
    ],
    [
     "2026-11-02T00:00",
-    12
+    3
+   ],
+   [
+    "2026-11-02T03:00",
+    3
+   ],
+   [
+    "2026-11-02T06:00",
+    3
+   ],
+   [
+    "2026-11-02T09:00",
+    3
    ],
    [
     "2026-11-02T12:00",
@@ -1164,12 +1391,6 @@
    {
     "name": "ECMWF IFS",
     "cells": [
-     {
-      "amt": 0,
-      "pop": 14,
-      "type": "dry",
-      "fb": false
-     },
      {
       "amt": 0.0,
       "pop": 13,
@@ -1309,7 +1530,25 @@
       "fb": false
      },
      {
-      "amt": 0.2,
+      "amt": 0.0,
+      "pop": 20,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0.08,
+      "pop": 36,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0,
+      "pop": 42,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0.12,
       "pop": 48,
       "type": "rain",
       "fb": false
@@ -1367,12 +1606,6 @@
    {
     "name": "ECMWF AIFS",
     "cells": [
-     {
-      "amt": 0.03,
-      "pop": null,
-      "type": "rain",
-      "fb": false
-     },
      {
       "amt": 0.04,
       "pop": null,
@@ -1512,7 +1745,25 @@
       "fb": false
      },
      {
-      "amt": 0.07,
+      "amt": 0.0,
+      "pop": null,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0.01,
+      "pop": null,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.02,
+      "pop": null,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.04,
       "pop": null,
       "type": "rain",
       "fb": false
@@ -1570,12 +1821,6 @@
    {
     "name": "GFS",
     "cells": [
-     {
-      "amt": 0.07,
-      "pop": 81,
-      "type": "rain",
-      "fb": false
-     },
      {
       "amt": 0.07,
       "pop": 90,
@@ -1715,9 +1960,27 @@
       "fb": false
      },
      {
-      "amt": 0.01,
+      "amt": 0,
+      "pop": 47,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0,
+      "pop": 73,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0.0,
+      "pop": 70,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0.0,
       "pop": 77,
-      "type": "rain",
+      "type": "dry",
       "fb": false
      },
      {
@@ -1774,200 +2037,212 @@
     "name": "NOAA AI GFS",
     "cells": [
      {
-      "amt": 0.08,
-      "pop": null,
-      "type": "rain",
-      "fb": false
-     },
-     {
       "amt": 0.11,
-      "pop": null,
+      "pop": 67,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.09,
-      "pop": null,
+      "pop": 68,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.05,
-      "pop": null,
+      "pop": 61,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.05,
-      "pop": null,
+      "pop": 45,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.05,
-      "pop": null,
+      "pop": 49,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.08,
-      "pop": null,
+      "pop": 57,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.14,
-      "pop": null,
+      "pop": 64,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.11,
-      "pop": null,
+      "pop": 65,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.05,
-      "pop": null,
+      "pop": 62,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.04,
-      "pop": null,
+      "pop": 52,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.01,
-      "pop": null,
+      "pop": 37,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.01,
-      "pop": null,
+      "pop": 19,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
+      "pop": 20,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
+      "pop": 24,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
+      "pop": 25,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
+      "pop": 24,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
+      "pop": 18,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
+      "pop": 8,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
+      "pop": 4,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
+      "pop": 3,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
+      "pop": 2,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
+      "pop": 1,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
+      "pop": 4,
       "type": "dry",
       "fb": false
      },
      {
-      "amt": 0.06,
-      "pop": null,
+      "amt": 0,
+      "pop": 15,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0,
+      "pop": 35,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0.02,
+      "pop": 54,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.05,
+      "pop": 70,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 1.41,
-      "pop": null,
+      "pop": 78,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.99,
-      "pop": null,
+      "pop": 71,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.16,
-      "pop": null,
+      "pop": 50,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.12,
-      "pop": null,
+      "pop": 35,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.12,
-      "pop": null,
+      "pop": 23,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.01,
-      "pop": null,
+      "pop": 14,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
+      "pop": 6,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": null,
+      "pop": 6,
       "type": "dry",
       "fb": false
      }
@@ -1976,12 +2251,6 @@
    {
     "name": "HRRR",
     "cells": [
-     {
-      "amt": 0,
-      "pop": 26,
-      "type": "dry",
-      "fb": false
-     },
      {
       "amt": 0,
       "pop": 45,
@@ -2037,9 +2306,9 @@
       "fb": false
      },
      {
-      "amt": 0,
+      "amt": 0.04,
       "pop": 32,
-      "type": "dry",
+      "type": "rain",
       "fb": false
      },
      {
@@ -2066,6 +2335,19 @@
       "type": "dry",
       "fb": false
      },
+     {
+      "amt": 0,
+      "pop": 6,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0,
+      "pop": 6,
+      "type": "dry",
+      "fb": false
+     },
+     null,
      null,
      null,
      null,
@@ -2089,12 +2371,6 @@
    {
     "name": "ICON",
     "cells": [
-     {
-      "amt": 0.04,
-      "pop": 45,
-      "type": "rain",
-      "fb": false
-     },
      {
       "amt": 0.07,
       "pop": 48,
@@ -2235,6 +2511,24 @@
      },
      {
       "amt": 0,
+      "pop": 14,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0,
+      "pop": 32,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0,
+      "pop": 46,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0,
       "pop": 53,
       "type": "dry",
       "fb": false
@@ -2292,12 +2586,6 @@
    {
     "name": "NBM",
     "cells": [
-     {
-      "amt": 0.04,
-      "pop": 26,
-      "type": "rain",
-      "fb": false
-     },
      {
       "amt": 0.06,
       "pop": 45,
@@ -2437,7 +2725,25 @@
       "fb": false
      },
      {
-      "amt": 0.55,
+      "amt": 0.04,
+      "pop": 50,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.12,
+      "pop": 50,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.16,
+      "pop": 68,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.24,
       "pop": 68,
       "type": "rain",
       "fb": false
@@ -2495,12 +2801,6 @@
    {
     "name": "NWS (gridpoint)",
     "cells": [
-     {
-      "amt": 0.01,
-      "pop": 37,
-      "type": "rain",
-      "fb": false
-     },
      {
       "amt": 0.01,
       "pop": 41,
@@ -2640,7 +2940,25 @@
       "fb": false
      },
      {
-      "amt": 0.72,
+      "amt": 0.12,
+      "pop": 49,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.12,
+      "pop": 49,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.24,
+      "pop": 76,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.24,
       "pop": 76,
       "type": "rain",
       "fb": false
@@ -2751,8 +3069,8 @@
     ],
     "HRRR": [
      0,
+     0.04,
      0,
-     null,
      null,
      null,
      null,
@@ -2832,9 +3150,9 @@
      0
     ],
     "HRRR": [
-     0.63,
      0.07,
-     null,
+     0.19,
+     0,
      null,
      null,
      null,
@@ -2914,9 +3232,9 @@
      0
     ],
     "HRRR": [
-     0.14,
+     0.02,
+     0.03,
      0,
-     null,
      null,
      null,
      null,
@@ -2996,9 +3314,9 @@
      0
     ],
     "HRRR": [
-     0.08,
      0,
-     null,
+     0.02,
+     0,
      null,
      null,
      null,
@@ -3078,9 +3396,9 @@
      0
     ],
     "HRRR": [
-     0.04,
      0,
-     null,
+     0,
+     0,
      null,
      null,
      null,
@@ -3160,9 +3478,9 @@
      0
     ],
     "HRRR": [
-     0.16,
      0,
-     null,
+     0,
+     0,
      null,
      null,
      null,
@@ -3242,9 +3560,9 @@
      0
     ],
     "HRRR": [
-     1.02,
-     0.14,
-     null,
+     0,
+     0,
+     0,
      null,
      null,
      null,
@@ -3324,9 +3642,9 @@
      0
     ],
     "HRRR": [
-     0.05,
      0,
-     null,
+     0.02,
+     0,
      null,
      null,
      null,
@@ -3406,9 +3724,9 @@
      0
     ],
     "HRRR": [
-     0.04,
      0,
-     null,
+     0,
+     0,
      null,
      null,
      null,
@@ -3451,8 +3769,8 @@
    "Kansas City (KCI)": {
     "HRRR": [
      null,
-     "run ends 19:00 CT",
      null,
+     "run ends 01:00 CT",
      null,
      null,
      null,
@@ -3473,8 +3791,8 @@
    "St. Joseph": {
     "HRRR": [
      null,
-     "run ends 19:00 CT",
      null,
+     "run ends 01:00 CT",
      null,
      null,
      null,
@@ -3495,8 +3813,8 @@
    "Lawrence": {
     "HRRR": [
      null,
-     "run ends 19:00 CT",
      null,
+     "run ends 01:00 CT",
      null,
      null,
      null,
@@ -3517,8 +3835,8 @@
    "Chillicothe": {
     "HRRR": [
      null,
-     "run ends 19:00 CT",
      null,
+     "run ends 01:00 CT",
      null,
      null,
      null,
@@ -3539,8 +3857,8 @@
    "Sedalia": {
     "HRRR": [
      null,
-     "run ends 19:00 CT",
      null,
+     "run ends 01:00 CT",
      null,
      null,
      null,
@@ -3561,8 +3879,8 @@
    "Clinton": {
     "HRRR": [
      null,
-     "run ends 19:00 CT",
      null,
+     "run ends 01:00 CT",
      null,
      null,
      null,
@@ -3583,8 +3901,8 @@
    "Butler": {
     "HRRR": [
      null,
-     "run ends 19:00 CT",
      null,
+     "run ends 01:00 CT",
      null,
      null,
      null,
@@ -3605,8 +3923,8 @@
    "Olathe": {
     "HRRR": [
      null,
-     "run ends 19:00 CT",
      null,
+     "run ends 01:00 CT",
      null,
      null,
      null,
@@ -3627,8 +3945,8 @@
    "Lee's Summit": {
     "HRRR": [
      null,
-     "run ends 19:00 CT",
      null,
+     "run ends 01:00 CT",
      null,
      null,
      null,
@@ -3647,7 +3965,7 @@
     ]
    }
   },
-  "summary": "Most guidance (7/8) brings precip in around Fri night; dry until then. 7-day totals range 0.00\u20133.74\"."
+  "summary": "Most guidance (8/8) brings precip in around Fri night; dry until then. 7-day totals range 0.04\u20133.67\"."
  },
  "nws": {
   "alerts": [],
@@ -3801,7 +4119,7 @@
      "short": "Showers And Thunderstorms Likely",
      "wind": "7 mph E",
      "pop": 61,
-     "start": "2026-10-30T02:00:00-05:00",
+     "start": "2026-10-30T03:00:00-05:00",
      "end": "2026-10-30T06:00:00-05:00",
      "day": false
     },

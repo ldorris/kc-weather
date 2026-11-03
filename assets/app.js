@@ -33,11 +33,16 @@ const XHAIR={id:'xhair',afterDatasetsDraw(c){const a=c.tooltip&&c.tooltip.getAct
 const CH={};
 function cfgLine(id,key,big){const S=window.SERIES,ks=Object.keys(S),f=KCX.fs(big),D=864e5;
 const all=ks.flatMap(k=>S[k].map(h=>tms(h.t)));const xmin=Math.min(...all),xmax=Math.max(...all);
-return {type:'line',plugins:[XHAIR],data:{datasets:ks.map((k,i)=>({label:k+(TK[key]&&T[TK[key]]===k?' ★ top performer':''),data:S[k].map(h=>({x:tms(h.t),y:h[key]})),borderColor:mcol(k,i,TK[key]),backgroundColor:mcol(k,i,TK[key]),pointRadius:0,pointHoverRadius:big?6:4,borderWidth:mw(k,TK[key])*(big?1.3:1),order:mo(k,TK[key]),spanGaps:true}))},
+const ds=ks.map((k,i)=>({label:k+(TK[key]&&T[TK[key]]===k?' ★ top performer':''),data:S[k].map(h=>({x:tms(h.t),y:h[key]})),borderColor:mcol(k,i,TK[key]),backgroundColor:mcol(k,i,TK[key]),pointRadius:0,pointHoverRadius:big?6:4,borderWidth:mw(k,TK[key])*(big?1.3:1),order:mo(k,TK[key]),spanGaps:true}));
+if(key==='temp')(window.DAILYX||[]).forEach(X=>{const G='#39FF14',th=T.tmax===X.key,tl=T.tmin===X.key,pc=p=>(p.k==='high'?th:tl)?G:X.color;
+const data=X.pts.map(p=>({x:tms(p.t),y:p.y,k:p.k})).filter(p=>p.x>=xmin&&p.x<=xmax);if(!data.length)return;
+ds.push({label:X.label+(th||tl?' ★ top performer ('+[th?'highs':'',tl?'lows':''].filter(Boolean).join(', ')+')':''),daily:1,data,borderColor:th?G:X.color,backgroundColor:th?G:X.color,borderDash:[7,5],borderWidth:(th?3.5:2.5)*(big?1.3:1),
+pointStyle:'triangle',pointRotation:c=>c.raw&&c.raw.k==='low'?180:0,pointRadius:big?8:6,pointHoverRadius:big?10:8,pointBackgroundColor:c=>c.raw?pc(c.raw):X.color,pointBorderColor:X.color,pointBorderWidth:1.5,order:th?-1:0,spanGaps:true})});
+return {type:'line',plugins:[XHAIR],data:{datasets:ds},
 options:{...KCX.opts(id,big),maintainAspectRatio:false,animation:big?false:undefined,interaction:{mode:'xsync',intersect:false},
 scales:{x:{type:'linear',min:xmin,max:xmax,afterBuildTicks:s=>{const t=[];for(let m=Math.ceil(s.min/D)*D;m<=s.max;m+=big?D/2:D)t.push({value:m});s.ticks=t},
 grid:{color:c=>c.tick&&c.tick.value%D===0?'rgba(0,0,0,.12)':'rgba(0,0,0,.04)'},
 ticks:{font:{size:f},autoSkip:false,maxRotation:0,callback:v=>v%D===0?DFMT.format(new Date(v)):(big?'noon':'')}},y:{ticks:{font:{size:f}}}},
-plugins:{legend:{labels:{boxWidth:big?16:12,font:{size:f}}},tooltip:{titleFont:{size:f+1},bodyFont:{size:f},callbacks:{title:ttitle}}}}}}
+plugins:{legend:{labels:{boxWidth:big?16:12,font:{size:f}}},tooltip:{titleFont:{size:f+1},bodyFont:{size:f},callbacks:{title:ttitle,label:c=>{const r=c.raw||{};return c.dataset.daily?' '+c.dataset.label.split(' ')[0]+' daily '+r.k+': '+c.formattedValue+' (placed at median model timing)':' '+c.dataset.label+': '+c.formattedValue}}}}}}}
 function chart(id,key,title){const el=document.getElementById(id);if(!window.Chart)return el.replaceWith('Charts unavailable (Chart.js CDN failed)');CH[id]=new Chart(el,cfgLine(id,key,false));KCX.register(id,title,big=>cfgLine(id,key,big),()=>CH[id])}
 chart('cT','temp','Temperature (°F) · Kansas City');chart('cP','precip','Hourly precip (in) · Kansas City');chart('cG','gust','Wind gusts (mph) · Kansas City');

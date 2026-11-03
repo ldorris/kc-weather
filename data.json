@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T03:02:18.179215-06:00",
+ "generated": "2026-11-03T03:05:26.594307-06:00",
  "status": [
   {
    "source": "SPC Day 1 outlook",
@@ -22,19 +22,24 @@
    "detail": "2026-11-03T07:25:00+00:00"
   },
   {
-   "source": "Open-Meteo GFS",
-   "ok": true,
-   "detail": "run 2026-11-03 00 UTC via gfs_global"
-  },
-  {
    "source": "Open-Meteo HRRR",
    "ok": true,
    "detail": "run 2026-11-03 07 UTC via ncep_hrrr_conus"
   },
   {
+   "source": "Open-Meteo NBM",
+   "ok": true,
+   "detail": "run 2026-11-03 08 UTC via ncep_nbm_conus"
+  },
+  {
    "source": "NWS gridpoint Kansas City (KCI)",
    "ok": true,
    "detail": "EAX/39,60"
+  },
+  {
+   "source": "Open-Meteo GFS",
+   "ok": true,
+   "detail": "run 2026-11-03 00 UTC via gfs_global"
   },
   {
    "source": "Open-Meteo NOAA AI GFS",
@@ -52,22 +57,17 @@
    "detail": "no area over KC"
   },
   {
-   "source": "SPC Day 6 outlook (15%/30% areas)",
-   "ok": true,
-   "detail": "no area over KC"
-  },
-  {
    "source": "NWS gridpoint KCI (First Warn fields)",
    "ok": true,
    "detail": "EAX/39,60"
   },
   {
-   "source": "SPC Day 7 outlook (15%/30% areas)",
+   "source": "SPC Day 6 outlook (15%/30% areas)",
    "ok": true,
    "detail": "no area over KC"
   },
   {
-   "source": "SPC Day 8 outlook (15%/30% areas)",
+   "source": "SPC Day 7 outlook (15%/30% areas)",
    "ok": true,
    "detail": "no area over KC"
   },
@@ -82,19 +82,14 @@
    "detail": "run 2026-11-03 00 UTC via icon_seamless"
   },
   {
+   "source": "SPC Day 8 outlook (15%/30% areas)",
+   "ok": true,
+   "detail": "no area over KC"
+  },
+  {
    "source": "NWS gridpoint Lawrence",
    "ok": true,
    "detail": "TOP/97,45"
-  },
-  {
-   "source": "NWS active alerts (EAX+TOP via DMA points)",
-   "ok": true,
-   "detail": "3 active"
-  },
-  {
-   "source": "Open-Meteo NBM",
-   "ok": true,
-   "detail": "run 2026-11-03 08 UTC via ncep_nbm_conus"
   },
   {
    "source": "NWS gridpoint Chillicothe",
@@ -102,9 +97,9 @@
    "detail": "EAX/79,82"
   },
   {
-   "source": "NWS point forecast Kansas City (KCI)",
+   "source": "NWS active alerts (EAX+TOP via DMA points)",
    "ok": true,
-   "detail": "office EAX"
+   "detail": "3 active"
   },
   {
    "source": "NWS gridpoint Sedalia",
@@ -112,7 +107,7 @@
    "detail": "EAX/91,33"
   },
   {
-   "source": "NWS point forecast St. Joseph",
+   "source": "NWS point forecast Kansas City (KCI)",
    "ok": true,
    "detail": "office EAX"
   },
@@ -120,6 +115,16 @@
    "source": "NWS gridpoint Clinton",
    "ok": true,
    "detail": "EAX/72,18"
+  },
+  {
+   "source": "NWS point forecast St. Joseph",
+   "ok": true,
+   "detail": "office EAX"
+  },
+  {
+   "source": "Open-Meteo ECMWF AIFS",
+   "ok": true,
+   "detail": "run 2026-11-03 00 UTC via ecmwf_aifs025_single"
   },
   {
    "source": "NWS KMCI latest obs",
@@ -132,19 +137,14 @@
    "detail": "EAX/53,13"
   },
   {
-   "source": "Open-Meteo ECMWF IFS",
-   "ok": true,
-   "detail": "run 2026-11-03 00 UTC via ecmwf_ifs025"
-  },
-  {
-   "source": "Open-Meteo ECMWF AIFS",
-   "ok": true,
-   "detail": "run 2026-11-03 00 UTC via ecmwf_aifs025_single"
-  },
-  {
    "source": "NWS gridpoint Olathe",
    "ok": true,
    "detail": "EAX/35,41"
+  },
+  {
+   "source": "Open-Meteo ECMWF IFS",
+   "ok": true,
+   "detail": "run 2026-11-03 00 UTC via ecmwf_ifs025"
   },
   {
    "source": "NWS gridpoint Lee's Summit",
@@ -154,7 +154,7 @@
   {
    "source": "RRFS (NOMADS)",
    "ok": true,
-   "detail": "run 2026-11-03 06 UTC (v1.0, to f084; newest synoptic upstream 2026-11-03 06 UTC); 85 steps, 1144 MB, 172 hits, 80 s"
+   "detail": "run 2026-11-03 06 UTC (v1.0, to f084; newest synoptic upstream 2026-11-03 06 UTC); 85 steps, 1144 MB, 172 hits, 85 s"
   },
   {
    "source": "First Warn flags",
@@ -222,14 +222,14 @@
    "run": "2026-11-03 08 UTC",
    "error": null,
    "src": "Open-Meteo ncep_nbm_conus",
-   "upstream": "2026-11-03 07 UTC"
+   "upstream": "2026-11-03 08 UTC"
   },
   {
    "id": "rrfs",
    "label": "RRFS",
    "run": "2026-11-03 06 UTC",
    "error": null,
-   "src": "NOMADS RRFS v1.0 3 km CONUS GRIB2 (nearest grid pt 0.45 km from KCI; 85 hourly steps, 1144 MB byte-ranges, 172 requests, 80 s)",
+   "src": "NOMADS RRFS v1.0 3 km CONUS GRIB2 (nearest grid pt 0.45 km from KCI; 85 hourly steps, 1144 MB byte-ranges, 172 requests, 85 s)",
    "upstream": "2026-11-03 06 UTC"
   }
  ],
@@ -637,7 +637,7 @@
    "2026-11-03": {
     "hi": 66.7,
     "lo": 50.7,
-    "precip": 0.74,
+    "precip": 0.73,
     "gust": 26.2,
     "snow": 0.0,
     "ice": false,
@@ -647,7 +647,7 @@
     "hi": 57.2,
     "lo": 46.2,
     "precip": 0.0,
-    "gust": 21.5,
+    "gust": 21.7,
     "snow": 0.0,
     "ice": false,
     "complete": true
@@ -803,7 +803,7 @@
    ],
    "gust": [
     25.4,
-    21.5,
+    21.7,
     28.4,
     6
    ],
@@ -2307,31 +2307,31 @@
     "cells": [
      {
       "amt": 0.45,
-      "pop": 81,
+      "pop": 82,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.09,
-      "pop": 24,
+      "pop": 36,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 32,
+      "pop": 22,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 48,
+      "pop": 31,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 33,
+      "pop": 34,
       "type": "dry",
       "fb": false
      },
@@ -2343,7 +2343,7 @@
      },
      {
       "amt": 0,
-      "pop": 10,
+      "pop": 9,
       "type": "dry",
       "fb": false
      },
@@ -2361,7 +2361,7 @@
      },
      {
       "amt": 0,
-      "pop": 2,
+      "pop": 3,
       "type": "dry",
       "fb": false
      },
@@ -2636,32 +2636,32 @@
     "name": "NBM",
     "cells": [
      {
-      "amt": 0.16,
-      "pop": 81,
-      "type": "rain",
-      "fb": false
-     },
-     {
-      "amt": 0.01,
-      "pop": 24,
-      "type": "rain",
-      "fb": false
-     },
-     {
-      "amt": 0.01,
-      "pop": 32,
-      "type": "rain",
-      "fb": false
-     },
-     {
-      "amt": 0.06,
-      "pop": 48,
+      "amt": 0.14,
+      "pop": 82,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.02,
-      "pop": 33,
+      "pop": 36,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.01,
+      "pop": 22,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.05,
+      "pop": 31,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.03,
+      "pop": 34,
       "type": "rain",
       "fb": false
      },
@@ -2673,7 +2673,7 @@
      },
      {
       "amt": 0,
-      "pop": 10,
+      "pop": 9,
       "type": "dry",
       "fb": false
      },
@@ -2691,7 +2691,7 @@
      },
      {
       "amt": 0,
-      "pop": 2,
+      "pop": 3,
       "type": "dry",
       "fb": false
      },
@@ -3312,7 +3312,7 @@
      0
     ],
     "NBM": [
-     0.74,
+     0.73,
      0,
      0,
      0,
@@ -3404,7 +3404,7 @@
      0
     ],
     "NBM": [
-     1.19,
+     1.07,
      0,
      0,
      0,
@@ -3496,7 +3496,7 @@
      0
     ],
     "NBM": [
-     0.69,
+     0.75,
      0,
      0.02,
      0,
@@ -3588,7 +3588,7 @@
      0
     ],
     "NBM": [
-     1.14,
+     1.18,
      0.01,
      0,
      0,
@@ -3680,7 +3680,7 @@
      0
     ],
     "NBM": [
-     0.79,
+     0.77,
      0,
      0.02,
      0,
@@ -3772,7 +3772,7 @@
      0
     ],
     "NBM": [
-     0.87,
+     0.84,
      0,
      0.05,
      0,
@@ -3864,7 +3864,7 @@
      0
     ],
     "NBM": [
-     0.9,
+     0.86,
      0,
      0.07,
      0,
@@ -3956,7 +3956,7 @@
      0
     ],
     "NBM": [
-     0.75,
+     0.79,
      0,
      0.02,
      0,
@@ -4048,7 +4048,7 @@
      0
     ],
     "NBM": [
-     0.98,
+     1.11,
      0,
      0.05,
      0,
@@ -4369,7 +4369,7 @@
     ]
    }
   },
-  "summary": "Most guidance (9/9) brings precip in around Tue night; dry until then. 7-day totals range 0.27\u20130.67\"."
+  "summary": "Most guidance (9/9) brings precip in around Tue night; dry until then. 7-day totals range 0.26\u20130.67\"."
  },
  "nws": {
   "alerts": [

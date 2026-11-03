@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T03:05:26.594307-06:00",
+ "generated": "2026-11-03T03:08:00.431088-06:00",
  "status": [
   {
    "source": "SPC Day 1 outlook",
@@ -22,9 +22,9 @@
    "detail": "2026-11-03T07:25:00+00:00"
   },
   {
-   "source": "Open-Meteo HRRR",
+   "source": "Open-Meteo NOAA AI GFS",
    "ok": true,
-   "detail": "run 2026-11-03 07 UTC via ncep_hrrr_conus"
+   "detail": "run 2026-11-03 00 UTC via ncep_aigfs025"
   },
   {
    "source": "Open-Meteo NBM",
@@ -32,19 +32,9 @@
    "detail": "run 2026-11-03 08 UTC via ncep_nbm_conus"
   },
   {
-   "source": "NWS gridpoint Kansas City (KCI)",
-   "ok": true,
-   "detail": "EAX/39,60"
-  },
-  {
    "source": "Open-Meteo GFS",
    "ok": true,
    "detail": "run 2026-11-03 00 UTC via gfs_global"
-  },
-  {
-   "source": "Open-Meteo NOAA AI GFS",
-   "ok": true,
-   "detail": "run 2026-11-03 00 UTC via ncep_aigfs025"
   },
   {
    "source": "SPC Day 4 outlook (15%/30% areas)",
@@ -57,17 +47,32 @@
    "detail": "no area over KC"
   },
   {
-   "source": "NWS gridpoint KCI (First Warn fields)",
-   "ok": true,
-   "detail": "EAX/39,60"
-  },
-  {
    "source": "SPC Day 6 outlook (15%/30% areas)",
    "ok": true,
    "detail": "no area over KC"
   },
   {
+   "source": "NWS gridpoint Kansas City (KCI)",
+   "ok": true,
+   "detail": "EAX/39,60"
+  },
+  {
+   "source": "NWS gridpoint KCI (First Warn fields)",
+   "ok": true,
+   "detail": "EAX/39,60"
+  },
+  {
    "source": "SPC Day 7 outlook (15%/30% areas)",
+   "ok": true,
+   "detail": "no area over KC"
+  },
+  {
+   "source": "Open-Meteo HRRR",
+   "ok": true,
+   "detail": "run 2026-11-03 07 UTC via ncep_hrrr_conus"
+  },
+  {
+   "source": "SPC Day 8 outlook (15%/30% areas)",
    "ok": true,
    "detail": "no area over KC"
   },
@@ -80,11 +85,6 @@
    "source": "Open-Meteo ICON",
    "ok": true,
    "detail": "run 2026-11-03 00 UTC via icon_seamless"
-  },
-  {
-   "source": "SPC Day 8 outlook (15%/30% areas)",
-   "ok": true,
-   "detail": "no area over KC"
   },
   {
    "source": "NWS gridpoint Lawrence",
@@ -102,19 +102,14 @@
    "detail": "3 active"
   },
   {
-   "source": "NWS gridpoint Sedalia",
-   "ok": true,
-   "detail": "EAX/91,33"
-  },
-  {
    "source": "NWS point forecast Kansas City (KCI)",
    "ok": true,
    "detail": "office EAX"
   },
   {
-   "source": "NWS gridpoint Clinton",
+   "source": "NWS gridpoint Sedalia",
    "ok": true,
-   "detail": "EAX/72,18"
+   "detail": "EAX/91,33"
   },
   {
    "source": "NWS point forecast St. Joseph",
@@ -122,9 +117,9 @@
    "detail": "office EAX"
   },
   {
-   "source": "Open-Meteo ECMWF AIFS",
+   "source": "NWS gridpoint Clinton",
    "ok": true,
-   "detail": "run 2026-11-03 00 UTC via ecmwf_aifs025_single"
+   "detail": "EAX/72,18"
   },
   {
    "source": "NWS KMCI latest obs",
@@ -137,14 +132,14 @@
    "detail": "EAX/53,13"
   },
   {
+   "source": "Open-Meteo ECMWF AIFS",
+   "ok": true,
+   "detail": "run 2026-11-03 00 UTC via ecmwf_aifs025_single"
+  },
+  {
    "source": "NWS gridpoint Olathe",
    "ok": true,
    "detail": "EAX/35,41"
-  },
-  {
-   "source": "Open-Meteo ECMWF IFS",
-   "ok": true,
-   "detail": "run 2026-11-03 00 UTC via ecmwf_ifs025"
   },
   {
    "source": "NWS gridpoint Lee's Summit",
@@ -152,9 +147,14 @@
    "detail": "EAX/51,42"
   },
   {
+   "source": "Open-Meteo ECMWF IFS",
+   "ok": true,
+   "detail": "run 2026-11-03 00 UTC via ecmwf_ifs025"
+  },
+  {
    "source": "RRFS (NOMADS)",
    "ok": true,
-   "detail": "run 2026-11-03 06 UTC (v1.0, to f084; newest synoptic upstream 2026-11-03 06 UTC); 85 steps, 1144 MB, 172 hits, 85 s"
+   "detail": "run 2026-11-03 06 UTC (v1.0, to f084; newest synoptic upstream 2026-11-03 06 UTC); 85 steps, 1144 MB, 172 hits, 74 s"
   },
   {
    "source": "First Warn flags",
@@ -229,7 +229,7 @@
    "label": "RRFS",
    "run": "2026-11-03 06 UTC",
    "error": null,
-   "src": "NOMADS RRFS v1.0 3 km CONUS GRIB2 (nearest grid pt 0.45 km from KCI; 85 hourly steps, 1144 MB byte-ranges, 172 requests, 85 s)",
+   "src": "NOMADS RRFS v1.0 3 km CONUS GRIB2 (nearest grid pt 0.45 km from KCI; 85 hourly steps, 1144 MB byte-ranges, 172 requests, 74 s)",
    "upstream": "2026-11-03 06 UTC"
   }
  ],
@@ -2092,211 +2092,211 @@
     "cells": [
      {
       "amt": 0.38,
-      "pop": 100,
+      "pop": null,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.13,
-      "pop": 100,
+      "pop": null,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 70,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0.02,
-      "pop": 39,
+      "pop": null,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.02,
-      "pop": 45,
+      "pop": null,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.02,
-      "pop": 45,
+      "pop": null,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.01,
-      "pop": 34,
+      "pop": null,
       "type": "rain",
       "fb": false
      },
      {
       "amt": 0.0,
-      "pop": 19,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 8,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 1,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 5,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 10,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 18,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 20,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 19,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 16,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 10,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 3,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 1,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 3,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 3,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      }
@@ -4563,10 +4563,10 @@
     {
      "name": "Overnight",
      "temp": 60,
-     "short": "Showers And Thunderstorms Likely",
+     "short": "Chance Showers And Thunderstorms",
      "wind": "10 mph SSE",
-     "pop": 69,
-     "start": "2026-11-03T02:00:00-06:00",
+     "pop": 64,
+     "start": "2026-11-03T03:00:00-06:00",
      "end": "2026-11-03T06:00:00-06:00",
      "day": false
     },

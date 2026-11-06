@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T03:09:33.654818-06:00",
+ "generated": "2026-11-06T03:11:40.671447-06:00",
  "status": [
   {
    "source": "SPC Day 1 outlook",
@@ -22,19 +22,19 @@
    "detail": "2026-11-06T04:49:00+00:00"
   },
   {
-   "source": "Open-Meteo NOAA AI GFS",
-   "ok": true,
-   "detail": "run 2026-11-06 00 UTC via ncep_aigfs025"
-  },
-  {
-   "source": "Open-Meteo HRRR",
-   "ok": true,
-   "detail": "run 2026-11-06 07 UTC via ncep_hrrr_conus"
-  },
-  {
    "source": "Open-Meteo ICON",
    "ok": true,
    "detail": "run 2026-11-06 00 UTC via icon_seamless"
+  },
+  {
+   "source": "Open-Meteo GFS",
+   "ok": true,
+   "detail": "run 2026-11-06 00 UTC via gfs_global"
+  },
+  {
+   "source": "NWS gridpoint KCI (First Warn fields)",
+   "ok": true,
+   "detail": "EAX/39,60"
   },
   {
    "source": "SPC Day 4 outlook (15%/30% areas)",
@@ -62,9 +62,14 @@
    "detail": "no area over KC"
   },
   {
-   "source": "NWS gridpoint KCI (First Warn fields)",
+   "source": "Open-Meteo NBM",
    "ok": true,
-   "detail": "EAX/39,60"
+   "detail": "run 2026-11-06 08 UTC via ncep_nbm_conus"
+  },
+  {
+   "source": "Open-Meteo HRRR",
+   "ok": true,
+   "detail": "run 2026-11-06 07 UTC via ncep_hrrr_conus"
   },
   {
    "source": "SPC Day 8 outlook (15%/30% areas)",
@@ -72,14 +77,9 @@
    "detail": "no area over KC"
   },
   {
-   "source": "Open-Meteo NBM",
+   "source": "Open-Meteo NOAA AI GFS",
    "ok": true,
-   "detail": "run 2026-11-06 08 UTC via ncep_nbm_conus"
-  },
-  {
-   "source": "Open-Meteo GFS",
-   "ok": true,
-   "detail": "run 2026-11-06 00 UTC via gfs_global"
+   "detail": "run 2026-11-06 00 UTC via ncep_aigfs025"
   },
   {
    "source": "NWS gridpoint St. Joseph",
@@ -97,11 +97,6 @@
    "detail": "2 active"
   },
   {
-   "source": "Open-Meteo ECMWF AIFS",
-   "ok": true,
-   "detail": "run 2026-11-06 00 UTC via ecmwf_aifs025_single"
-  },
-  {
    "source": "NWS gridpoint Chillicothe",
    "ok": true,
    "detail": "EAX/79,82"
@@ -110,11 +105,6 @@
    "source": "NWS point forecast Kansas City (KCI)",
    "ok": true,
    "detail": "office EAX"
-  },
-  {
-   "source": "NWS gridpoint Sedalia",
-   "ok": true,
-   "detail": "EAX/91,33"
   },
   {
    "source": "NWS point forecast St. Joseph",
@@ -127,14 +117,24 @@
    "detail": "2026-11-06T08:11:00+00:00"
   },
   {
-   "source": "NWS gridpoint Clinton",
+   "source": "NWS gridpoint Sedalia",
    "ok": true,
-   "detail": "EAX/72,18"
+   "detail": "EAX/91,33"
   },
   {
    "source": "Open-Meteo ECMWF IFS",
    "ok": true,
    "detail": "run 2026-11-06 00 UTC via ecmwf_ifs025"
+  },
+  {
+   "source": "NWS gridpoint Clinton",
+   "ok": true,
+   "detail": "EAX/72,18"
+  },
+  {
+   "source": "Open-Meteo ECMWF AIFS",
+   "ok": true,
+   "detail": "run 2026-11-06 00 UTC via ecmwf_aifs025_single"
   },
   {
    "source": "NWS gridpoint Butler",
@@ -154,12 +154,12 @@
   {
    "source": "RRFS (NOMADS)",
    "ok": true,
-   "detail": "run 2026-11-06 06 UTC (v1.0, to f084; newest synoptic upstream 2026-11-06 06 UTC); 85 steps, 1115 MB, 172 hits, 89 s"
+   "detail": "run 2026-11-06 06 UTC (v1.0, to f084; newest synoptic upstream 2026-11-06 06 UTC); 85 steps, 1115 MB, 172 hits, 80 s"
   },
   {
    "source": "First Warn flags",
    "ok": true,
-   "detail": "First Warn: none. First Warn Weather Day: SAT 11/7/26 (Freeze Warning)."
+   "detail": "First Warn: SAT 11/7/26 (Frost Advisory, Freeze Warning). First Warn Weather Day: none."
   },
   {
    "source": "Caution notes",
@@ -229,7 +229,7 @@
    "label": "RRFS",
    "run": "2026-11-06 06 UTC",
    "error": null,
-   "src": "NOMADS RRFS v1.0 3 km CONUS GRIB2 (nearest grid pt 0.45 km from KCI; 85 hourly steps, 1115 MB byte-ranges, 172 requests, 89 s)",
+   "src": "NOMADS RRFS v1.0 3 km CONUS GRIB2 (nearest grid pt 0.45 km from KCI; 85 hourly steps, 1115 MB byte-ranges, 172 requests, 80 s)",
    "upstream": "2026-11-06 06 UTC"
   }
  ],
@@ -779,7 +779,7 @@
   },
   {
    "day": "2026-11-07",
-   "level": 2,
+   "level": 1,
    "reasons": [],
    "hi": [
     53.6,
@@ -806,6 +806,7 @@
     6
    ],
    "fw_reasons": [
+    "NWS Frost Advisory (Kansas City (KCI), St. Joseph, Clinton, Butler, Olathe, Lee's Summit) \u00b7 NWS alerts",
     "NWS Freeze Warning (Chillicothe, Sedalia) \u00b7 NWS alerts"
    ]
   },
@@ -1011,14 +1012,14 @@
    {
     "day": "2026-11-07",
     "label": "SAT 11/7/26",
-    "level": 2,
-    "wfd": [
+    "level": 1,
+    "wfd": [],
+    "fw": [
+     "NWS Frost Advisory (Kansas City (KCI), St. Joseph, Clinton, Butler, Olathe, Lee's Summit) \u00b7 NWS alerts",
      "NWS Freeze Warning (Chillicothe, Sedalia) \u00b7 NWS alerts"
     ],
-    "fw": [
-     "NWS Frost Advisory (Kansas City (KCI), St. Joseph, Clinton, Butler, Olathe, Lee's Summit) \u00b7 NWS alerts"
-    ],
     "short": [
+     "Frost Advisory",
      "Freeze Warning"
     ],
     "notes": [],
@@ -1127,7 +1128,7 @@
     "nws_grid": true
    }
   ],
-  "summary": "First Warn: none. First Warn Weather Day: SAT 11/7/26 (Freeze Warning).",
+  "summary": "First Warn: SAT 11/7/26 (Frost Advisory, Freeze Warning). First Warn Weather Day: none.",
   "nws_grid": "EAX/39,60",
   "nws_ok": true
  },
@@ -1222,12 +1223,6 @@
   }
  ],
  "stories": [
-  {
-   "h": "First Warn Weather Day: Saturday",
-   "why": "Potentially dangerous weather could affect travel, outdoor plans and safety.",
-   "say": "NWS Freeze Warning (Chillicothe, Sedalia). Details will change \u2014 we'll update as new data arrives.",
-   "conf": "Medium"
-  },
   {
    "h": "Mostly dry stretch: 8 of the next 8 days",
    "why": "Good for outdoor plans, harvest; watch fire danger and lawns.",
@@ -2091,211 +2086,211 @@
     "cells": [
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 3,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 0,
+      "pop": null,
       "type": "dry",
       "fb": false
      }

@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-13T02:09:08.797878-06:00",
+ "generated": "2026-11-13T03:09:12.792867-06:00",
  "status": [
   {
    "source": "SPC Day 1 outlook",
@@ -14,7 +14,7 @@
   {
    "source": "NWS EAX AFD",
    "ok": true,
-   "detail": "2026-11-13T05:23:00+00:00"
+   "detail": "2026-11-13T08:34:00+00:00"
   },
   {
    "source": "SPC Day 3 outlook",
@@ -39,7 +39,7 @@
   {
    "source": "NWS KMCI latest obs",
    "ok": true,
-   "detail": "2026-11-13T06:53:00+00:00"
+   "detail": "2026-11-13T07:53:00+00:00"
   },
   {
    "source": "NWS gridpoint Kansas City (KCI)",
@@ -72,19 +72,29 @@
    "detail": "EAX/72,18"
   },
   {
+   "source": "NWS gridpoint Butler",
+   "ok": true,
+   "detail": "EAX/53,13"
+  },
+  {
+   "source": "NWS gridpoint Olathe",
+   "ok": true,
+   "detail": "EAX/35,41"
+  },
+  {
+   "source": "NWS gridpoint Lee's Summit",
+   "ok": true,
+   "detail": "EAX/51,42"
+  },
+  {
+   "source": "NWS gridpoint KCI (First Warn fields)",
+   "ok": true,
+   "detail": "EAX/39,60"
+  },
+  {
    "source": "Open-Meteo GFS",
    "ok": true,
    "detail": "run unknown via gfs_global"
-  },
-  {
-   "source": "Open-Meteo NOAA AI GFS",
-   "ok": true,
-   "detail": "run unknown via ncep_aigfs025"
-  },
-  {
-   "source": "Open-Meteo HRRR",
-   "ok": true,
-   "detail": "run unknown via ncep_hrrr_conus"
   },
   {
    "source": "Open-Meteo ICON",
@@ -92,9 +102,14 @@
    "detail": "run unknown via icon_seamless"
   },
   {
-   "source": "NWS gridpoint KCI (First Warn fields)",
+   "source": "Open-Meteo HRRR",
    "ok": true,
-   "detail": "EAX/39,60"
+   "detail": "run unknown via ncep_hrrr_conus"
+  },
+  {
+   "source": "Open-Meteo NOAA AI GFS",
+   "ok": true,
+   "detail": "run unknown via ncep_aigfs025"
   },
   {
    "source": "NWS KMCI observations (yesterday, First Warn day 1)",
@@ -107,11 +122,6 @@
    "detail": "no area over KC"
   },
   {
-   "source": "NWS gridpoint Butler",
-   "ok": true,
-   "detail": "EAX/53,13"
-  },
-  {
    "source": "Open-Meteo NBM",
    "ok": true,
    "detail": "run unknown via ncep_nbm_conus"
@@ -122,19 +132,9 @@
    "detail": "no area over KC"
   },
   {
-   "source": "NWS gridpoint Olathe",
-   "ok": true,
-   "detail": "EAX/35,41"
-  },
-  {
    "source": "SPC Day 6 outlook (15%/30% areas)",
    "ok": true,
    "detail": "no area over KC"
-  },
-  {
-   "source": "NWS gridpoint Lee's Summit",
-   "ok": true,
-   "detail": "EAX/51,42"
   },
   {
    "source": "SPC Day 7 outlook (15%/30% areas)",
@@ -159,7 +159,7 @@
   {
    "source": "RRFS (NOMADS)",
    "ok": true,
-   "detail": "run 2026-11-13 00 UTC (v1.0, to f084; newest synoptic upstream 2026-11-13 06 UTC); 80 steps, 1102 MB, 163 hits, 85 s"
+   "detail": "run 2026-11-13 06 UTC (v1.0, to f084; newest synoptic upstream 2026-11-13 06 UTC); 85 steps, 1165 MB, 172 hits, 92 s"
   },
   {
    "source": "First Warn flags",
@@ -232,9 +232,9 @@
   {
    "id": "rrfs",
    "label": "RRFS",
-   "run": "2026-11-13 00 UTC",
+   "run": "2026-11-13 06 UTC",
    "error": null,
-   "src": "NOMADS RRFS v1.0 3 km CONUS GRIB2 (nearest grid pt 0.45 km from KCI; 80 hourly steps, 1102 MB byte-ranges, 163 requests, 85 s)",
+   "src": "NOMADS RRFS v1.0 3 km CONUS GRIB2 (nearest grid pt 0.45 km from KCI; 85 hourly steps, 1165 MB byte-ranges, 172 requests, 92 s)",
    "upstream": "2026-11-13 06 UTC"
   }
  ],
@@ -537,19 +537,28 @@
   },
   "HRRR": {
    "2026-11-13": {
-    "hi": 44.9,
-    "lo": 23.9,
+    "hi": 44.6,
+    "lo": 23.8,
     "precip": 0.0,
-    "gust": 14.1,
+    "gust": 15.0,
     "snow": 0.0,
     "ice": false,
     "complete": true
    },
    "2026-11-14": {
-    "hi": 47.0,
-    "lo": 24.2,
+    "hi": 46.9,
+    "lo": 23.9,
     "precip": 0.0,
-    "gust": 15.2,
+    "gust": 17.7,
+    "snow": 0.0,
+    "ice": false,
+    "complete": true
+   },
+   "2026-11-15": {
+    "hi": 37.2,
+    "lo": 37.2,
+    "precip": 0.0,
+    "gust": 16.3,
     "snow": 0.0,
     "ice": false,
     "complete": false
@@ -631,8 +640,8 @@
   },
   "NBM": {
    "2026-11-13": {
-    "hi": 46.0,
-    "lo": 28.2,
+    "hi": 46.9,
+    "lo": 29.5,
     "precip": 0.0,
     "gust": 10.1,
     "snow": 0.0,
@@ -640,35 +649,35 @@
     "complete": true
    },
    "2026-11-14": {
-    "hi": 47.6,
-    "lo": 25.5,
+    "hi": 48.4,
+    "lo": 27.0,
     "precip": 0.0,
-    "gust": 10.7,
+    "gust": 10.5,
     "snow": 0.0,
     "ice": false,
     "complete": true
    },
    "2026-11-15": {
     "hi": 50.4,
-    "lo": 29.9,
+    "lo": 30.5,
     "precip": 0.0,
-    "gust": 8.3,
+    "gust": 8.1,
     "snow": 0.0,
     "ice": false,
     "complete": true
    },
    "2026-11-16": {
-    "hi": 51.3,
-    "lo": 31.0,
+    "hi": 53.1,
+    "lo": 32.2,
     "precip": 0.0,
-    "gust": 9.2,
+    "gust": 9.6,
     "snow": 0.0,
     "ice": false,
     "complete": true
    },
    "2026-11-17": {
-    "hi": 55.0,
-    "lo": 35.2,
+    "hi": 56.5,
+    "lo": 37.3,
     "precip": 0.0,
     "gust": 16.8,
     "snow": 0.0,
@@ -676,28 +685,28 @@
     "complete": true
    },
    "2026-11-18": {
-    "hi": 59.0,
-    "lo": 42.2,
-    "precip": 0.0,
-    "gust": 24.4,
+    "hi": 59.5,
+    "lo": 43.2,
+    "precip": 0.02,
+    "gust": 23.5,
     "snow": 0.0,
     "ice": false,
     "complete": true
    },
    "2026-11-19": {
-    "hi": 62.8,
-    "lo": 50.9,
-    "precip": 0.02,
-    "gust": 17.9,
+    "hi": 62.1,
+    "lo": 51.6,
+    "precip": 0.07,
+    "gust": 17.2,
     "snow": 0.0,
     "ice": false,
     "complete": true
    },
    "2026-11-20": {
-    "hi": 63.9,
-    "lo": 50.2,
-    "precip": 0.05,
-    "gust": 15.7,
+    "hi": 63.7,
+    "lo": 50.6,
+    "precip": 0.1,
+    "gust": 14.8,
     "snow": 0.0,
     "ice": false,
     "complete": true
@@ -705,17 +714,17 @@
   },
   "RRFS": {
    "2026-11-13": {
-    "hi": 45.6,
-    "lo": 28.8,
+    "hi": 45.3,
+    "lo": 27.9,
     "precip": 0.0,
-    "gust": 16.1,
+    "gust": 15.2,
     "snow": 0.0,
     "ice": false,
     "complete": true
    },
    "2026-11-14": {
     "hi": 48.1,
-    "lo": 26.6,
+    "lo": 25.9,
     "precip": 0.0,
     "gust": 16.1,
     "snow": 0.0,
@@ -723,19 +732,19 @@
     "complete": true
    },
    "2026-11-15": {
-    "hi": 50.8,
-    "lo": 32.1,
+    "hi": 51.0,
+    "lo": 30.9,
     "precip": 0.0,
-    "gust": 16.6,
+    "gust": 19.5,
     "snow": 0.0,
     "ice": false,
     "complete": true
    },
    "2026-11-16": {
-    "hi": 38.2,
-    "lo": 33.8,
+    "hi": 51.1,
+    "lo": 32.5,
     "precip": 0.0,
-    "gust": 13.6,
+    "gust": 15.2,
     "snow": 0.0,
     "ice": false,
     "complete": false
@@ -752,12 +761,12 @@
    "hi": [
     44.2,
     41.4,
-    46.0,
+    46.9,
     8
    ],
    "lo": [
-    28.8,
-    23.9,
+    29.1,
+    23.8,
     31.4,
     8
    ],
@@ -782,28 +791,28 @@
     "Freeze: median low \u226432\u00b0F in Kansas City (KCI), St. Joseph, Lawrence, Chillicothe, Sedalia, Clinton, Butler, Olathe, Lee's Summit"
    ],
    "hi": [
-    47.1,
+    47.0,
     44.3,
-    48.1,
-    7
+    48.4,
+    8
    ],
    "lo": [
-    26.6,
+    26.4,
     23.2,
     29.1,
-    7
+    8
    ],
    "precip": [
     0.0,
     0.0,
     0.0,
-    7
+    8
    ],
    "gust": [
     16.1,
-    10.7,
-    16.1,
-    5
+    10.5,
+    17.7,
+    6
    ],
    "fw_reasons": []
   },
@@ -820,7 +829,7 @@
     7
    ],
    "lo": [
-    30.4,
+    30.5,
     25.9,
     32.9,
     7
@@ -833,8 +842,8 @@
    ],
    "gust": [
     15.7,
-    8.3,
-    18.6,
+    8.1,
+    19.5,
     5
    ],
    "fw_reasons": []
@@ -847,13 +856,13 @@
     "Frost possible: median low 33-34\u00b0F in Clinton, Olathe"
    ],
    "hi": [
-    53.4,
-    51.3,
+    53.5,
+    51.9,
     55.9,
     6
    ],
    "lo": [
-    31.4,
+    32.0,
     27.2,
     35.0,
     6
@@ -866,7 +875,7 @@
    ],
    "gust": [
     13.8,
-    9.2,
+    9.6,
     18.8,
     4
    ],
@@ -883,7 +892,7 @@
     6
    ],
    "lo": [
-    36.1,
+    37.1,
     34.4,
     38.9,
     6
@@ -913,7 +922,7 @@
     6
    ],
    "lo": [
-    43.5,
+    44.0,
     37.0,
     46.0,
     6
@@ -926,7 +935,7 @@
    ],
    "gust": [
     26.9,
-    24.4,
+    23.5,
     39.4,
     4
    ],
@@ -937,7 +946,7 @@
    "level": 0,
    "reasons": [],
    "hi": [
-    61.5,
+    61.2,
     57.6,
     65.0,
     6
@@ -949,14 +958,14 @@
     6
    ],
    "precip": [
-    0.0,
+    0.1,
     0.0,
     0.8,
     6
    ],
    "gust": [
     22.0,
-    17.9,
+    17.2,
     30.4,
     4
    ],
@@ -967,14 +976,14 @@
    "level": 1,
    "reasons": [],
    "hi": [
-    63.8,
+    63.7,
     59.0,
     66.0,
     5
    ],
    "lo": [
     52.1,
-    50.2,
+    50.6,
     58.2,
     5
    ],
@@ -986,7 +995,7 @@
    ],
    "gust": [
     17.2,
-    15.7,
+    14.8,
     21.9,
     3
    ],
@@ -1032,7 +1041,7 @@
      "peak gust NWS 12 / model median 16 mph",
      "high 47\u00b0F (NWS max temp) vs 46\u00b0F (NWS max temp)",
      "daytime feels-like 34\u00b0F (NWS gridpoint apparent temp) vs 35\u00b0F",
-     "SPC Day 3: None"
+     "SPC Day 2: None"
     ],
     "nws_grid": true,
     "hi": 47.0,
@@ -1052,7 +1061,7 @@
      "peak gust NWS 8 / model median 16 mph",
      "high 51\u00b0F (NWS max temp) vs 47\u00b0F (NWS max temp)",
      "daytime feels-like 41\u00b0F (NWS gridpoint apparent temp) vs 34\u00b0F",
-     "SPC Day 4: no area over KC"
+     "SPC Day 3: None"
     ],
     "nws_grid": true,
     "hi": 51.0,
@@ -1069,7 +1078,7 @@
     "checks": [
      "daytime PoP max 0% (NWS)",
      "visibility: beyond NWS grid",
-     "peak gust NWS 9 / model median 14 mph",
+     "peak gust NWS 9 / model median 15 mph",
      "high 52\u00b0F (NWS max temp) vs 51\u00b0F (NWS max temp)",
      "daytime feels-like 44\u00b0F (NWS gridpoint apparent temp) vs 41\u00b0F",
      "SPC Day 5: no area over KC"
@@ -1170,6 +1179,17 @@
  },
  "disagreements": [
   {
+   "day": "2026-11-18",
+   "var": "Peak gust",
+   "unit": "mph",
+   "spread": 15.9,
+   "score": 10.6,
+   "low": "NBM",
+   "high": "GFS",
+   "min": 23.5,
+   "max": 39.4
+  },
+  {
    "day": "2026-11-17",
    "var": "Peak gust",
    "unit": "mph",
@@ -1179,17 +1199,6 @@
    "high": "GFS",
    "min": 16.8,
    "max": 32.0
-  },
-  {
-   "day": "2026-11-18",
-   "var": "Peak gust",
-   "unit": "mph",
-   "spread": 15.0,
-   "score": 10.0,
-   "low": "NBM",
-   "high": "GFS",
-   "min": 24.4,
-   "max": 39.4
   },
   {
    "day": "2026-11-18",
@@ -1206,11 +1215,11 @@
    "day": "2026-11-19",
    "var": "Peak gust",
    "unit": "mph",
-   "spread": 12.5,
-   "score": 8.333333333333334,
+   "spread": 13.2,
+   "score": 8.799999999999999,
    "low": "NBM",
    "high": "GFS",
-   "min": 17.9,
+   "min": 17.2,
    "max": 30.4
   },
   {
@@ -1236,17 +1245,6 @@
    "max": 0.8
   },
   {
-   "day": "2026-11-20",
-   "var": "Low",
-   "unit": "\u00b0F",
-   "spread": 8.0,
-   "score": 8.0,
-   "low": "NBM",
-   "high": "ECMWF AIFS",
-   "min": 50.2,
-   "max": 58.2
-  },
-  {
    "day": "2026-11-16",
    "var": "Low",
    "unit": "\u00b0F",
@@ -1256,6 +1254,17 @@
    "high": "GFS",
    "min": 27.2,
    "max": 35.0
+  },
+  {
+   "day": "2026-11-20",
+   "var": "Low",
+   "unit": "\u00b0F",
+   "spread": 7.6,
+   "score": 7.600000000000001,
+   "low": "NBM",
+   "high": "ECMWF AIFS",
+   "min": 50.6,
+   "max": 58.2
   }
  ],
  "stories": [
@@ -1266,21 +1275,21 @@
    "conf": "Medium"
   },
   {
-   "h": "Mostly dry stretch: 8 of the next 8 days",
+   "h": "Mostly dry stretch: 7 of the next 8 days",
    "why": "Good for outdoor plans, harvest; watch fire danger and lawns.",
    "say": "Little or no rain in most models.",
    "conf": "Medium"
   },
   {
-   "h": "Forecast uncertainty: Tuesday peak gust",
+   "h": "Forecast uncertainty: Wednesday peak gust",
    "why": "Being upfront that forecasts change builds trust.",
-   "say": "Models range 16.8-32.0 mph (NBM lowest, GFS highest). Expect updates.",
+   "say": "Models range 23.5-39.4 mph (NBM lowest, GFS highest). Expect updates.",
    "conf": "Low"
   },
   {
-   "h": "Pick of the week: Thursday",
+   "h": "Pick of the week: Friday",
    "why": "Viewers want to know the best day for plans.",
-   "say": "Around 62\u00b0, dry, light wind.",
+   "say": "Around 64\u00b0, dry, light wind.",
    "conf": "Medium"
   }
  ],
@@ -1298,48 +1307,44 @@
   "3": {
    "rank": 0,
    "name": "None",
-   "valid": "202611141200"
+   "valid": "202611151200"
   }
  },
  "rrfs_severe_kc": {
-  "run": "2026-11-13 00 UTC",
+  "run": "2026-11-13 06 UTC",
   "days": {
    "2026-11-13": {
     "hours": 24,
     "sbcape": 0,
     "mlcape": 0,
-    "shear06_kt": 67,
-    "srh3": 121
+    "shear06_kt": 65,
+    "srh3": 136
    },
    "2026-11-14": {
     "hours": 24,
     "sbcape": 0,
     "mlcape": 0,
     "shear06_kt": 52,
-    "srh3": 93
+    "srh3": 97
    },
    "2026-11-15": {
     "hours": 24,
     "sbcape": 0,
     "mlcape": 0,
-    "shear06_kt": 16,
-    "srh3": 89
+    "shear06_kt": 17,
+    "srh3": 86
    },
    "2026-11-16": {
-    "hours": 7,
+    "hours": 13,
     "sbcape": 0,
     "mlcape": 0,
-    "shear06_kt": 15,
-    "srh3": 57
+    "shear06_kt": 13,
+    "srh3": 38
    }
   }
  },
  "precip": {
   "blocks": [
-   [
-    "2026-11-13T00:00",
-    3
-   ],
    [
     "2026-11-13T03:00",
     3
@@ -1434,7 +1439,19 @@
    ],
    [
     "2026-11-16T00:00",
-    12
+    3
+   ],
+   [
+    "2026-11-16T03:00",
+    3
+   ],
+   [
+    "2026-11-16T06:00",
+    3
+   ],
+   [
+    "2026-11-16T09:00",
+    3
    ],
    [
     "2026-11-16T12:00",
@@ -1473,6 +1490,18 @@
    {
     "name": "ECMWF IFS",
     "cells": [
+     {
+      "amt": 0,
+      "pop": null,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0,
+      "pop": null,
+      "type": "dry",
+      "fb": false
+     },
      {
       "amt": 0,
       "pop": null,
@@ -1857,6 +1886,18 @@
       "fb": false
      },
      {
+      "amt": 0,
+      "pop": null,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0,
+      "pop": null,
+      "type": "dry",
+      "fb": false
+     },
+     {
       "amt": 0.05,
       "pop": null,
       "type": "rain",
@@ -1879,6 +1920,18 @@
    {
     "name": "GFS",
     "cells": [
+     {
+      "amt": 0,
+      "pop": 0,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0,
+      "pop": 0,
+      "type": "dry",
+      "fb": false
+     },
      {
       "amt": 0,
       "pop": 0,
@@ -2210,12 +2263,6 @@
      },
      {
       "amt": 0,
-      "pop": 0,
-      "type": "dry",
-      "fb": false
-     },
-     {
-      "amt": 0,
       "pop": 1,
       "type": "dry",
       "fb": false
@@ -2229,6 +2276,24 @@
      {
       "amt": 0,
       "pop": 3,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0,
+      "pop": 2,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0,
+      "pop": 0,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0,
+      "pop": 0,
       "type": "dry",
       "fb": false
      },
@@ -2369,6 +2434,13 @@
       "type": "dry",
       "fb": false
      },
+     {
+      "amt": 0,
+      "pop": 0,
+      "type": "dry",
+      "fb": false
+     },
+     null,
      null,
      null,
      null,
@@ -2393,6 +2465,18 @@
    {
     "name": "ICON",
     "cells": [
+     {
+      "amt": 0,
+      "pop": 0,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0,
+      "pop": 0,
+      "type": "dry",
+      "fb": false
+     },
      {
       "amt": 0,
       "pop": 0,
@@ -2706,31 +2790,37 @@
      },
      {
       "amt": 0,
-      "pop": 1,
+      "pop": 0,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 1,
+      "pop": 0,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 1,
+      "pop": 0,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 1,
+      "pop": 0,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0,
-      "pop": 1,
+      "pop": 0,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0,
+      "pop": 0,
       "type": "dry",
       "fb": false
      },
@@ -2772,25 +2862,31 @@
      },
      {
       "amt": 0,
-      "pop": 15,
+      "pop": 0,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0.02,
-      "pop": 21,
+      "pop": 12,
       "type": "rain",
       "fb": false
      },
      {
-      "amt": 0,
-      "pop": 21,
-      "type": "dry",
+      "amt": 0.05,
+      "pop": 18,
+      "type": "rain",
       "fb": false
      },
      {
-      "amt": 0.04,
-      "pop": 20,
+      "amt": 0.02,
+      "pop": 17,
+      "type": "rain",
+      "fb": false
+     },
+     {
+      "amt": 0.05,
+      "pop": 19,
       "type": "rain",
       "fb": false
      }
@@ -2799,6 +2895,18 @@
    {
     "name": "RRFS",
     "cells": [
+     {
+      "amt": 0,
+      "pop": null,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0,
+      "pop": null,
+      "type": "dry",
+      "fb": false
+     },
      {
       "amt": 0,
       "pop": null,
@@ -3066,31 +3174,43 @@
      },
      {
       "amt": 0.0,
+      "pop": 1,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0.0,
+      "pop": 1,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0.0,
+      "pop": 1,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0.0,
+      "pop": 1,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0.0,
       "pop": 0,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0.0,
-      "pop": 1,
+      "pop": 0,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0.0,
-      "pop": 1,
-      "type": "dry",
-      "fb": false
-     },
-     {
-      "amt": 0.0,
-      "pop": 1,
-      "type": "dry",
-      "fb": false
-     },
-     {
-      "amt": 0.0,
-      "pop": 1,
+      "pop": 0,
       "type": "dry",
       "fb": false
      },
@@ -3219,7 +3339,7 @@
     "HRRR": [
      0,
      0,
-     null,
+     0,
      null,
      null,
      null,
@@ -3242,9 +3362,9 @@
      0,
      0,
      0,
-     0,
      0.02,
-     0.05
+     0.07,
+     0.1
     ],
     "RRFS": [
      0,
@@ -3311,7 +3431,7 @@
     "HRRR": [
      0,
      0,
-     null,
+     0,
      null,
      null,
      null,
@@ -3334,9 +3454,9 @@
      0,
      0,
      0,
-     0,
      0.02,
-     0.07
+     0.07,
+     0.14
     ],
     "RRFS": [
      0,
@@ -3403,7 +3523,7 @@
     "HRRR": [
      0,
      0,
-     null,
+     0,
      null,
      null,
      null,
@@ -3426,9 +3546,9 @@
      0,
      0,
      0,
-     0,
      0.02,
-     0.07
+     0.07,
+     0.1
     ],
     "RRFS": [
      0,
@@ -3495,7 +3615,7 @@
     "HRRR": [
      0,
      0,
-     null,
+     0,
      null,
      null,
      null,
@@ -3520,7 +3640,7 @@
      0,
      0,
      0.05,
-     0.05
+     0.09
     ],
     "RRFS": [
      0,
@@ -3587,7 +3707,7 @@
     "HRRR": [
      0,
      0,
-     null,
+     0,
      null,
      null,
      null,
@@ -3611,8 +3731,8 @@
      0,
      0,
      0,
-     0.02,
-     0
+     0.07,
+     0.07
     ],
     "RRFS": [
      0,
@@ -3679,7 +3799,7 @@
     "HRRR": [
      0,
      0,
-     null,
+     0,
      null,
      null,
      null,
@@ -3703,8 +3823,8 @@
      0,
      0,
      0,
-     0.05,
-     0
+     0.07,
+     0.12
     ],
     "RRFS": [
      0,
@@ -3771,7 +3891,7 @@
     "HRRR": [
      0,
      0,
-     null,
+     0,
      null,
      null,
      null,
@@ -3795,8 +3915,8 @@
      0,
      0,
      0,
-     0.05,
-     0.02
+     0.07,
+     0.07
     ],
     "RRFS": [
      0,
@@ -3863,7 +3983,7 @@
     "HRRR": [
      0,
      0,
-     null,
+     0,
      null,
      null,
      null,
@@ -3886,9 +4006,9 @@
      0,
      0,
      0,
-     0,
      0.02,
-     0.05
+     0.07,
+     0.12
     ],
     "RRFS": [
      0,
@@ -3955,7 +4075,7 @@
     "HRRR": [
      0,
      0,
-     null,
+     0,
      null,
      null,
      null,
@@ -3978,9 +4098,9 @@
      0,
      0,
      0,
-     0,
+     0.02,
      0.07,
-     0.05
+     0.12
     ],
     "RRFS": [
      0,
@@ -4008,8 +4128,8 @@
    "Kansas City (KCI)": {
     "HRRR": [
      null,
-     "run ends 18:00 CT",
      null,
+     "run ends 00:00 CT",
      null,
      null,
      null,
@@ -4030,7 +4150,7 @@
      null,
      null,
      null,
-     "run ends 06:00 CT",
+     "run ends 12:00 CT",
      null,
      null,
      null,
@@ -4040,8 +4160,8 @@
    "St. Joseph": {
     "HRRR": [
      null,
-     "run ends 18:00 CT",
      null,
+     "run ends 00:00 CT",
      null,
      null,
      null,
@@ -4062,7 +4182,7 @@
      null,
      null,
      null,
-     "run ends 06:00 CT",
+     "run ends 12:00 CT",
      null,
      null,
      null,
@@ -4072,8 +4192,8 @@
    "Lawrence": {
     "HRRR": [
      null,
-     "run ends 18:00 CT",
      null,
+     "run ends 00:00 CT",
      null,
      null,
      null,
@@ -4094,7 +4214,7 @@
      null,
      null,
      null,
-     "run ends 06:00 CT",
+     "run ends 12:00 CT",
      null,
      null,
      null,
@@ -4104,8 +4224,8 @@
    "Chillicothe": {
     "HRRR": [
      null,
-     "run ends 18:00 CT",
      null,
+     "run ends 00:00 CT",
      null,
      null,
      null,
@@ -4126,7 +4246,7 @@
      null,
      null,
      null,
-     "run ends 06:00 CT",
+     "run ends 12:00 CT",
      null,
      null,
      null,
@@ -4136,8 +4256,8 @@
    "Sedalia": {
     "HRRR": [
      null,
-     "run ends 18:00 CT",
      null,
+     "run ends 00:00 CT",
      null,
      null,
      null,
@@ -4158,7 +4278,7 @@
      null,
      null,
      null,
-     "run ends 06:00 CT",
+     "run ends 12:00 CT",
      null,
      null,
      null,
@@ -4168,8 +4288,8 @@
    "Clinton": {
     "HRRR": [
      null,
-     "run ends 18:00 CT",
      null,
+     "run ends 00:00 CT",
      null,
      null,
      null,
@@ -4190,7 +4310,7 @@
      null,
      null,
      null,
-     "run ends 06:00 CT",
+     "run ends 12:00 CT",
      null,
      null,
      null,
@@ -4200,8 +4320,8 @@
    "Butler": {
     "HRRR": [
      null,
-     "run ends 18:00 CT",
      null,
+     "run ends 00:00 CT",
      null,
      null,
      null,
@@ -4222,7 +4342,7 @@
      null,
      null,
      null,
-     "run ends 06:00 CT",
+     "run ends 12:00 CT",
      null,
      null,
      null,
@@ -4232,8 +4352,8 @@
    "Olathe": {
     "HRRR": [
      null,
-     "run ends 18:00 CT",
      null,
+     "run ends 00:00 CT",
      null,
      null,
      null,
@@ -4254,7 +4374,7 @@
      null,
      null,
      null,
-     "run ends 06:00 CT",
+     "run ends 12:00 CT",
      null,
      null,
      null,
@@ -4264,8 +4384,8 @@
    "Lee's Summit": {
     "HRRR": [
      null,
-     "run ends 18:00 CT",
      null,
+     "run ends 00:00 CT",
      null,
      null,
      null,
@@ -4286,7 +4406,7 @@
      null,
      null,
      null,
-     "run ends 06:00 CT",
+     "run ends 12:00 CT",
      null,
      null,
      null,
@@ -4444,11 +4564,11 @@
    "St. Joseph": [
     {
      "name": "Overnight",
-     "temp": 28,
+     "temp": 27,
      "short": "Clear",
      "wind": "3 mph N",
      "pop": 0,
-     "start": "2026-11-13T01:00:00-06:00",
+     "start": "2026-11-13T03:00:00-06:00",
      "end": "2026-11-13T06:00:00-06:00",
      "day": false
     },
@@ -4456,7 +4576,7 @@
      "name": "Friday",
      "temp": 46,
      "short": "Sunny",
-     "wind": "2 to 6 mph N",
+     "wind": "3 to 7 mph NNE",
      "pop": 0,
      "start": "2026-11-13T06:00:00-06:00",
      "end": "2026-11-13T18:00:00-06:00",
@@ -4464,9 +4584,9 @@
     },
     {
      "name": "Friday Night",
-     "temp": 24,
+     "temp": 21,
      "short": "Mostly Clear",
-     "wind": "0 to 3 mph ENE",
+     "wind": "1 to 5 mph E",
      "pop": 0,
      "start": "2026-11-13T18:00:00-06:00",
      "end": "2026-11-14T06:00:00-06:00",
@@ -4474,9 +4594,9 @@
     },
     {
      "name": "Saturday",
-     "temp": 48,
+     "temp": 47,
      "short": "Mostly Sunny",
-     "wind": "1 to 7 mph ESE",
+     "wind": "2 to 8 mph SE",
      "pop": 0,
      "start": "2026-11-14T06:00:00-06:00",
      "end": "2026-11-14T18:00:00-06:00",
@@ -4484,9 +4604,9 @@
     },
     {
      "name": "Saturday Night",
-     "temp": 28,
+     "temp": 27,
      "short": "Partly Cloudy",
-     "wind": "5 mph ESE",
+     "wind": "2 to 6 mph ESE",
      "pop": 0,
      "start": "2026-11-14T18:00:00-06:00",
      "end": "2026-11-15T06:00:00-06:00",
@@ -4504,7 +4624,7 @@
     },
     {
      "name": "Sunday Night",
-     "temp": 29,
+     "temp": 28,
      "short": "Mostly Clear",
      "wind": "3 mph SE",
      "pop": 0,
@@ -4514,7 +4634,7 @@
     },
     {
      "name": "Monday",
-     "temp": 51,
+     "temp": 52,
      "short": "Sunny",
      "wind": "1 to 7 mph SSE",
      "pop": 0,
@@ -4585,14 +4705,14 @@
    ]
   },
   "obs": {
-   "time": "2026-11-13T06:53:00+00:00",
-   "text": "",
-   "temp": 30,
+   "time": "2026-11-13T07:53:00+00:00",
+   "text": "Clear",
+   "temp": 31,
    "dew": 28,
-   "wind": 6,
+   "wind": 7,
    "gust": null,
-   "dir": 290
+   "dir": 310
   }
  },
- "afd_time": "2026-11-13T05:23:00+00:00"
+ "afd_time": "2026-11-13T08:34:00+00:00"
 }

@@ -1,3 +1,4 @@
+const KDARK=document.documentElement.dataset.theme==='dark';if(window.Chart){Chart.defaults.color=KDARK?'#c8d4e3':'#3b4a5c';Chart.defaults.borderColor=KDARK?'rgba(255,255,255,.12)':'rgba(0,0,0,.1)';Chart.defaults.font.family='"Segoe UI Variable",-apple-system,system-ui,Inter,Roboto,Arial,sans-serif'}
 document.querySelectorAll('#mt th').forEach((th,i)=>th.onclick=()=>{const tb=document.querySelector('#mt tbody');const rows=[...tb.rows];const dir=th.dataset.d=th.dataset.d==='a'?'d':'a';
 rows.sort((a,b)=>{let x=a.cells[i].dataset.sort||a.cells[i].innerText,y=b.cells[i].dataset.sort||b.cells[i].innerText;const nx=parseFloat(x),ny=parseFloat(y);const r=a.cells[i].dataset.sort?x.localeCompare(y):(!isNaN(nx)&&!isNaN(ny))?nx-ny:x.localeCompare(y);return dir==='a'?r:-r});rows.forEach(r=>tb.appendChild(r))});
 const C=['#0b4f8a','#d7263d','#2a9d8f','#f5a623','#7b2cbf','#4cc9f0','#555','#000'];
@@ -29,7 +30,7 @@ chart.data.datasets.forEach((d,i)=>{if(!chart.isDatasetVisible(i))return;for(con
 if(best===null)return [];const out=[];
 chart.data.datasets.forEach((d,i)=>{if(!chart.isDatasetVisible(i))return;const k=d.data.findIndex(p=>p.x===best&&p.y!=null);if(k>=0)out.push({element:chart.getDatasetMeta(i).data[k],datasetIndex:i,index:k})});
 return out}}
-const XHAIR={id:'xhair',afterDatasetsDraw(c){const a=c.tooltip&&c.tooltip.getActiveElements&&c.tooltip.getActiveElements();if(!a||!a.length)return;const x=a[0].element.x,ctx=c.ctx;ctx.save();ctx.strokeStyle='rgba(19,37,58,.35)';ctx.lineWidth=1;ctx.setLineDash([4,3]);ctx.beginPath();ctx.moveTo(x,c.chartArea.top);ctx.lineTo(x,c.chartArea.bottom);ctx.stroke();ctx.restore()}};
+const XHAIR={id:'xhair',afterDatasetsDraw(c){const a=c.tooltip&&c.tooltip.getActiveElements&&c.tooltip.getActiveElements();if(!a||!a.length)return;const x=a[0].element.x,ctx=c.ctx;ctx.save();ctx.strokeStyle=KDARK?'rgba(230,238,248,.45)':'rgba(19,37,58,.35)';ctx.lineWidth=1;ctx.setLineDash([4,3]);ctx.beginPath();ctx.moveTo(x,c.chartArea.top);ctx.lineTo(x,c.chartArea.bottom);ctx.stroke();ctx.restore()}};
 const CH={};
 function cfgLine(id,key,big){const S=window.SERIES,ks=Object.keys(S),f=KCX.fs(big),D=864e5;
 const all=ks.flatMap(k=>S[k].map(h=>tms(h.t)));const xmin=Math.min(...all),xmax=Math.max(...all);
@@ -41,8 +42,23 @@ pointStyle:'triangle',pointRotation:c=>c.raw&&c.raw.k==='low'?180:0,pointRadius:
 return {type:'line',plugins:[XHAIR],data:{datasets:ds},
 options:{...KCX.opts(id,big),maintainAspectRatio:false,animation:big?false:undefined,interaction:{mode:'xsync',intersect:false},
 scales:{x:{type:'linear',min:xmin,max:xmax,afterBuildTicks:s=>{const t=[];for(let m=Math.ceil(s.min/D)*D;m<=s.max;m+=big?D/2:D)t.push({value:m});s.ticks=t},
-grid:{color:c=>c.tick&&c.tick.value%D===0?'rgba(0,0,0,.12)':'rgba(0,0,0,.04)'},
+grid:{color:c=>c.tick&&c.tick.value%D===0?(KDARK?'rgba(255,255,255,.18)':'rgba(0,0,0,.12)'):(KDARK?'rgba(255,255,255,.06)':'rgba(0,0,0,.04)')},
 ticks:{font:{size:f},autoSkip:false,maxRotation:0,callback:v=>v%D===0?DFMT.format(new Date(v)):(big?'noon':'')}},y:{ticks:{font:{size:f}}}},
 plugins:{legend:{labels:{boxWidth:big?16:12,font:{size:f}}},tooltip:{titleFont:{size:f+1},bodyFont:{size:f},callbacks:{title:ttitle,label:c=>{const r=c.raw||{};return c.dataset.daily?' '+c.dataset.label.split(' ')[0]+' daily '+r.k+': '+c.formattedValue+' (placed at median model timing)':' '+c.dataset.label+': '+c.formattedValue}}}}}}}
 function chart(id,key,title){const el=document.getElementById(id);if(!window.Chart)return el.replaceWith('Charts unavailable (Chart.js CDN failed)');CH[id]=new Chart(el,cfgLine(id,key,false));KCX.register(id,title,big=>cfgLine(id,key,big),()=>CH[id])}
 chart('cT','temp','Temperature (°F) · Kansas City');chart('cP','precip','Hourly precip (in) · Kansas City');chart('cG','gust','Wind gusts (mph) · Kansas City');
+/* Tabs: client-side switching, deep-linkable (#home #forecast #scores #tp #sw #nws #more, or any section id), #only-<id> view */
+(function(){const tabs=[...document.querySelectorAll('nav.tabs .tab')],panels=[...document.querySelectorAll('main>.panel')];if(!panels.length)return;
+const ids=new Set(panels.map(p=>p.dataset.tab)),nav=document.querySelector('nav.tabs');
+function show(k,el){panels.forEach(p=>p.classList.toggle('on',p.dataset.tab===k));
+tabs.forEach(t=>{const on=t.dataset.tab===k;t.classList.toggle('on',on);t.setAttribute('aria-selected',on?'true':'false');if(on){const r=t.parentNode;r.scrollTo({left:t.offsetLeft-r.clientWidth/2+t.clientWidth/2,behavior:'smooth'})}});
+if(window.Chart)Object.values(Chart.instances||{}).forEach(c=>{try{c.resize()}catch(e){}});
+requestAnimationFrame(()=>{if(el){const y=el.getBoundingClientRect().top+scrollY-(nav&&!document.body.classList.contains('only')?nav.offsetHeight+10:8);scrollTo({top:Math.max(0,y)})}else scrollTo({top:0})})}
+function route(){let h='';try{h=decodeURIComponent(location.hash.slice(1))}catch(e){}let only=false;if(h.startsWith('only-')){h=h.slice(5);only=true}
+if(!h||ids.has(h)){document.body.classList.remove('only');show(h||'home');return}
+const el=document.getElementById(h),p=el&&el.closest('main>.panel');if(!p){show('home');return}
+if(only){document.body.classList.add('only');[...p.children].forEach(c=>{c.style.display=(c===el||c.contains(el))?'':'none'})}
+if(el.tagName==='DETAILS')el.open=true;show(p.dataset.tab,el)}
+addEventListener('hashchange',route);route();
+const tb=document.getElementById('themeBtn');if(tb)tb.onclick=()=>{const t=document.documentElement.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('kcTheme',t)}catch(e){}document.documentElement.dataset.theme=t;location.reload()};
+})();

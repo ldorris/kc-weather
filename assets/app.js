@@ -1,4 +1,22 @@
-const KDARK=document.documentElement.dataset.theme==='dark';if(window.Chart){Chart.defaults.color=KDARK?'#c8d4e3':'#3b4a5c';Chart.defaults.borderColor=KDARK?'rgba(255,255,255,.12)':'rgba(0,0,0,.1)';Chart.defaults.font.family='"Segoe UI Variable",-apple-system,system-ui,Inter,Roboto,Arial,sans-serif'}
+function chartSkin(){const cs=getComputedStyle(document.documentElement),v=n=>cs.getPropertyValue(n).trim();
+return {tick:v('--chart-tick')||'#3b4a5c',grid:v('--chart-grid')||'rgba(0,0,0,.12)',gridMinor:v('--chart-grid-minor')||'rgba(0,0,0,.04)',
+xhair:v('--chart-xhair')||'rgba(19,37,58,.35)',font:v('--chart-font')||'system-ui,sans-serif',
+tipBg:v('--chart-tip-bg')||'rgba(255,255,255,.96)',tipFg:v('--chart-tip-fg')||'#10233a',tipBd:v('--chart-tip-bd')||'rgba(16,40,80,.18)',
+border:v('--line')||'rgba(0,0,0,.1)'}}
+function applyChartTheme(){if(!window.Chart)return;const s=chartSkin();
+Chart.defaults.color=s.tick;Chart.defaults.borderColor=s.border;Chart.defaults.font.family=s.font;
+const tip=Chart.defaults.plugins&&Chart.defaults.plugins.tooltip;if(tip){tip.backgroundColor=s.tipBg;tip.titleColor=s.tipFg;tip.bodyColor=s.tipFg;tip.borderColor=s.tipBd;tip.borderWidth=1}
+const charts=[];const inst=Chart.instances;
+if(inst){if(typeof inst.forEach==='function')inst.forEach(c=>charts.push(c));else Object.values(inst).forEach(c=>charts.push(c))}
+if(window.CH)Object.values(CH).forEach(c=>{if(c&&charts.indexOf(c)<0)charts.push(c)});
+if(window.KCX&&KCX.big&&charts.indexOf(KCX.big)<0)charts.push(KCX.big);
+charts.forEach(c=>{try{
+  if(c.options&&c.options.plugins){const L=c.options.plugins.legend,T=c.options.plugins.tooltip;
+    if(L&&L.labels){L.labels.color=s.tick;L.labels.font=Object.assign({},L.labels.font||{},{family:s.font})}
+    if(T){T.backgroundColor=s.tipBg;T.titleColor=s.tipFg;T.bodyColor=s.tipFg;T.borderColor=s.tipBd;T.borderWidth=1;if(T.titleFont)T.titleFont.family=s.font;if(T.bodyFont)T.bodyFont.family=s.font}}
+  if(c.options&&c.options.scales)Object.keys(c.options.scales).forEach(k=>{const sc=c.options.scales[k];if(!sc)return;if(sc.ticks)sc.ticks.color=s.tick;if(sc.title)sc.title.color=s.tick;if(!sc.grid)sc.grid={};if(typeof sc.grid.color!=='function')sc.grid.color=s.grid});
+  c.update('none')}catch(e){}})}
+applyChartTheme();
 document.querySelectorAll('#mt th').forEach((th,i)=>th.onclick=()=>{const tb=document.querySelector('#mt tbody');const rows=[...tb.rows];const dir=th.dataset.d=th.dataset.d==='a'?'d':'a';
 rows.sort((a,b)=>{let x=a.cells[i].dataset.sort||a.cells[i].innerText,y=b.cells[i].dataset.sort||b.cells[i].innerText;const nx=parseFloat(x),ny=parseFloat(y);const r=a.cells[i].dataset.sort?x.localeCompare(y):(!isNaN(nx)&&!isNaN(ny))?nx-ny:x.localeCompare(y);return dir==='a'?r:-r});rows.forEach(r=>tb.appendChild(r))});
 const C=['#0b4f8a','#d7263d','#2a9d8f','#f5a623','#7b2cbf','#4cc9f0','#555','#000'];
@@ -30,7 +48,7 @@ chart.data.datasets.forEach((d,i)=>{if(!chart.isDatasetVisible(i))return;for(con
 if(best===null)return [];const out=[];
 chart.data.datasets.forEach((d,i)=>{if(!chart.isDatasetVisible(i))return;const k=d.data.findIndex(p=>p.x===best&&p.y!=null);if(k>=0)out.push({element:chart.getDatasetMeta(i).data[k],datasetIndex:i,index:k})});
 return out}}
-const XHAIR={id:'xhair',afterDatasetsDraw(c){const a=c.tooltip&&c.tooltip.getActiveElements&&c.tooltip.getActiveElements();if(!a||!a.length)return;const x=a[0].element.x,ctx=c.ctx;ctx.save();ctx.strokeStyle=KDARK?'rgba(230,238,248,.45)':'rgba(19,37,58,.35)';ctx.lineWidth=1;ctx.setLineDash([4,3]);ctx.beginPath();ctx.moveTo(x,c.chartArea.top);ctx.lineTo(x,c.chartArea.bottom);ctx.stroke();ctx.restore()}};
+const XHAIR={id:'xhair',afterDatasetsDraw(c){const a=c.tooltip&&c.tooltip.getActiveElements&&c.tooltip.getActiveElements();if(!a||!a.length)return;const x=a[0].element.x,ctx=c.ctx;ctx.save();ctx.strokeStyle=chartSkin().xhair;ctx.lineWidth=1;ctx.setLineDash([4,3]);ctx.beginPath();ctx.moveTo(x,c.chartArea.top);ctx.lineTo(x,c.chartArea.bottom);ctx.stroke();ctx.restore()}};
 const CH={};
 function cfgLine(id,key,big){const S=window.SERIES,ks=Object.keys(S),f=KCX.fs(big),D=864e5;
 const all=ks.flatMap(k=>S[k].map(h=>tms(h.t)));const xmin=Math.min(...all),xmax=Math.max(...all);
@@ -42,7 +60,7 @@ pointStyle:'triangle',pointRotation:c=>c.raw&&c.raw.k==='low'?180:0,pointRadius:
 return {type:'line',plugins:[XHAIR],data:{datasets:ds},
 options:{...KCX.opts(id,big),maintainAspectRatio:false,animation:big?false:undefined,interaction:{mode:'xsync',intersect:false},
 scales:{x:{type:'linear',min:xmin,max:xmax,afterBuildTicks:s=>{const t=[];for(let m=Math.ceil(s.min/D)*D;m<=s.max;m+=big?D/2:D)t.push({value:m});s.ticks=t},
-grid:{color:c=>c.tick&&c.tick.value%D===0?(KDARK?'rgba(255,255,255,.18)':'rgba(0,0,0,.12)'):(KDARK?'rgba(255,255,255,.06)':'rgba(0,0,0,.04)')},
+grid:{color:c=>{const s=chartSkin();return c.tick&&c.tick.value%D===0?s.grid:s.gridMinor}},
 ticks:{font:{size:f},autoSkip:false,maxRotation:0,callback:v=>v%D===0?(innerWidth<640&&!big?SDFMT.format(new Date(v)):DFMT.format(new Date(v))):(big?'noon':'')}},y:{ticks:{font:{size:f}}}},
 plugins:{legend:{labels:{boxWidth:big?16:12,font:{size:f}}},tooltip:{titleFont:{size:f+1},bodyFont:{size:f},callbacks:{title:ttitle,label:c=>{const r=c.raw||{};return c.dataset.daily?' '+(c.dataset.xkey||c.dataset.label.split(' ')[0])+' daily '+r.k+': '+c.formattedValue+' (placed at median model timing)':' '+c.dataset.label+': '+c.formattedValue}}}}}}}
 function chart(id,key,title){const el=document.getElementById(id);if(!window.Chart)return el.replaceWith('Charts unavailable (Chart.js CDN failed)');CH[id]=new Chart(el,cfgLine(id,key,false));KCX.register(id,title,big=>cfgLine(id,key,big),()=>CH[id])}
@@ -67,5 +85,13 @@ const el=document.getElementById(h),p=el&&el.closest('main>.panel');if(!p){show(
 if(only){document.body.classList.add('only');[...p.children].forEach(c=>{c.style.display=(c===el||c.contains(el))?'':'none'})}
 if(el.tagName==='DETAILS')el.open=true;show(p.dataset.tab,el)}
 addEventListener('hashchange',route);route();
-const tb=document.getElementById('themeBtn');if(tb)tb.onclick=()=>{const t=document.documentElement.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('kcTheme',t)}catch(e){}document.documentElement.dataset.theme=t;location.reload()};
+const KCTHEMES=[{id:'cyberpunk',label:'Cyberpunk',icon:'🌆'},{id:'light',label:'Classic Light',icon:'☀️'},{id:'dark',label:'Classic Dark',icon:'🌙'}];
+function applyTheme(t,persist){if(!KCTHEMES.some(x=>x.id===t))t='cyberpunk';
+const d=document.documentElement;d.dataset.theme=t;d.dataset.scheme=t==='light'?'light':'dark';
+if(persist!==false){try{localStorage.setItem('kcThemeV2',t)}catch(e){}}
+const sel=document.getElementById('themeSel');if(sel){if(!sel.dataset.built){sel.innerHTML=KCTHEMES.map(x=>'<option value="'+x.id+'">'+x.icon+' '+x.label+'</option>').join('');sel.dataset.built='1'}sel.value=t}
+if(window.applyChartTheme)applyChartTheme();
+try{window.dispatchEvent(new CustomEvent('kc-theme',{detail:{theme:t}}))}catch(e){}}
+const tsel=document.getElementById('themeSel');
+if(tsel){applyTheme(document.documentElement.dataset.theme||'cyberpunk',false);tsel.onchange=()=>applyTheme(tsel.value,true)}
 })();

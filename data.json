@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-19T11:08:02.980551-06:00",
+ "generated": "2026-11-19T13:04:46.408159-06:00",
  "status": [
   {
    "source": "SPC Day 1 outlook",
@@ -9,7 +9,7 @@
   {
    "source": "NWS EAX AFD",
    "ok": true,
-   "detail": "2026-11-19T11:20:00+00:00"
+   "detail": "2026-11-19T17:44:00+00:00"
   },
   {
    "source": "SPC Day 2 outlook",
@@ -39,7 +39,7 @@
   {
    "source": "NWS KMCI latest obs",
    "ok": true,
-   "detail": "2026-11-19T15:53:00+00:00"
+   "detail": "2026-11-19T17:53:00+00:00"
   },
   {
    "source": "NWS gridpoint Kansas City (KCI)",
@@ -122,9 +122,39 @@
    "detail": "18 obs; high 64\u00b0F"
   },
   {
+   "source": "Open-Meteo ICON",
+   "ok": false,
+   "detail": "icon_seamless: 429 Client Error: Too Many Requests for url: https://api.open-meteo.com/v1/forecast?latitude=39.2976%2C39.7675%2C38.9717%2C39.7953%2C38.7045%2C38.3684%2C38.2586%2C38.8814%2C38.9108&long"
+  },
+  {
+   "source": "Open-Meteo GFS",
+   "ok": false,
+   "detail": "gfs_global: 429 Client Error: Too Many Requests for url: https://api.open-meteo.com/v1/forecast?latitude=39.2976%2C39.7675%2C38.9717%2C39.7953%2C38.7045%2C38.3684%2C38.2586%2C38.8814%2C38.9108&longitu"
+  },
+  {
+   "source": "GFS MOS (MAV) (IEM MOS API)",
+   "ok": true,
+   "detail": "run 2026-11-19 12 UTC; 21 rows to Sun 11/22 6 AM CT; 3 days max/min"
+  },
+  {
    "source": "Open-Meteo HRRR",
    "ok": false,
    "detail": "ncep_hrrr_conus: 429 Client Error: Too Many Requests for url: https://api.open-meteo.com/v1/forecast?latitude=39.2976%2C39.7675%2C38.9717%2C39.7953%2C38.7045%2C38.3684%2C38.2586%2C38.8814%2C38.9108&lo"
+  },
+  {
+   "source": "GFS MOS ext (MEX) (IEM MOS API)",
+   "ok": true,
+   "detail": "run 2026-11-19 12 UTC; 15 rows to Fri 11/27 6 AM CT; 8 days max/min"
+  },
+  {
+   "source": "LAMP (IEM MOS API)",
+   "ok": true,
+   "detail": "run 2026-11-19 18 UTC; 38 rows to Sat 11/21 2 AM CT; 1 days max/min"
+  },
+  {
+   "source": "NAM MOS (MET)",
+   "ok": true,
+   "detail": "not fetched: retired by NWS with the NAM on 2026-11-03 12Z (Service Change Notice 26-47); last IEM run 2026-11-03 00Z"
   },
   {
    "source": "Open-Meteo NBM",
@@ -135,36 +165,6 @@
    "source": "Open-Meteo NOAA AI GFS",
    "ok": false,
    "detail": "ncep_aigfs025: 429 Client Error: Too Many Requests for url: https://api.open-meteo.com/v1/forecast?latitude=39.2976%2C39.7675%2C38.9717%2C39.7953%2C38.7045%2C38.3684%2C38.2586%2C38.8814%2C38.9108&long"
-  },
-  {
-   "source": "Open-Meteo GFS",
-   "ok": false,
-   "detail": "gfs_global: 429 Client Error: Too Many Requests for url: https://api.open-meteo.com/v1/forecast?latitude=39.2976%2C39.7675%2C38.9717%2C39.7953%2C38.7045%2C38.3684%2C38.2586%2C38.8814%2C38.9108&longitu"
-  },
-  {
-   "source": "Open-Meteo ICON",
-   "ok": false,
-   "detail": "icon_seamless: 429 Client Error: Too Many Requests for url: https://api.open-meteo.com/v1/forecast?latitude=39.2976%2C39.7675%2C38.9717%2C39.7953%2C38.7045%2C38.3684%2C38.2586%2C38.8814%2C38.9108&long"
-  },
-  {
-   "source": "GFS MOS (MAV) (IEM MOS API)",
-   "ok": true,
-   "detail": "run 2026-11-19 12 UTC; 21 rows to Sun 11/22 6 AM CT; 3 days max/min"
-  },
-  {
-   "source": "GFS MOS ext (MEX) (IEM MOS API)",
-   "ok": true,
-   "detail": "run 2026-11-19 00 UTC; 15 rows to Thu 11/26 6 PM CT; 8 days max/min"
-  },
-  {
-   "source": "LAMP (IEM MOS API)",
-   "ok": true,
-   "detail": "run 2026-11-19 16 UTC; 38 rows to Sat 11/21 12 AM CT; 2 days max/min"
-  },
-  {
-   "source": "NAM MOS (MET)",
-   "ok": true,
-   "detail": "not fetched: retired by NWS with the NAM on 2026-11-03 12Z (Service Change Notice 26-47); last IEM run 2026-11-03 00Z"
   },
   {
    "source": "Open-Meteo ECMWF AIFS",
@@ -179,7 +179,7 @@
   {
    "source": "RRFS (NOMADS)",
    "ok": true,
-   "detail": "run 2026-11-19 12 UTC (v1.0, to f084; newest synoptic upstream 2026-11-19 12 UTC); 85 steps, 1174 MB, 172 hits, 94 s"
+   "detail": "run 2026-11-19 12 UTC (v1.0, to f084; newest synoptic upstream 2026-11-19 18 UTC); 85 steps, 1174 MB, 173 hits, 91 s"
   },
   {
    "source": "Homemade MOS (bias-corrected HRRR/RRFS)",
@@ -204,7 +204,7 @@
   {
    "source": "First Warn flags",
    "ok": true,
-   "detail": "First Warn: SAT 11/21/26 (rain 93%, PM commute); SUN 11/22/26 (18\u00b0F drop, feels-like \u221223\u00b0F). First Warn Weather Day: none."
+   "detail": "First Warn: SAT 11/21/26 (rain 99%, PM commute); SUN 11/22/26 (20\u00b0F drop, feels-like \u221225\u00b0F). First Warn Weather Day: none."
   },
   {
    "source": "Caution notes",
@@ -227,7 +227,7 @@
    "run": null,
    "error": "ecmwf_aifs025_single: 429 Client Error: Too Many Requests for url: https://api.open-meteo.com/v1/forecast?latitude=39.2976%2C39.7675%2C38.9717%2C39.7953%2C38.7045%2C38.3684%2C38.2586%2C38.8814%2C38.9108&longitude=-94.7139%2C-94.8467%2C-95.2353%2C-93.5524%2C-93.2283%2C-93.7783%2C-94.3305%2C-94.8191%2",
    "src": null,
-   "upstream": "2026-11-19 06 UTC"
+   "upstream": "2026-11-19 12 UTC"
   },
   {
    "id": "gfs_global",
@@ -235,7 +235,7 @@
    "run": null,
    "error": "gfs_global: 429 Client Error: Too Many Requests for url: https://api.open-meteo.com/v1/forecast?latitude=39.2976%2C39.7675%2C38.9717%2C39.7953%2C38.7045%2C38.3684%2C38.2586%2C38.8814%2C38.9108&longitude=-94.7139%2C-94.8467%2C-95.2353%2C-93.5524%2C-93.2283%2C-93.7783%2C-94.3305%2C-94.8191%2C-94.3822&",
    "src": null,
-   "upstream": "2026-11-19 06 UTC"
+   "upstream": "2026-11-19 12 UTC"
   },
   {
    "id": "ncep_aigfs025",
@@ -251,7 +251,7 @@
    "run": null,
    "error": "ncep_hrrr_conus: 429 Client Error: Too Many Requests for url: https://api.open-meteo.com/v1/forecast?latitude=39.2976%2C39.7675%2C38.9717%2C39.7953%2C38.7045%2C38.3684%2C38.2586%2C38.8814%2C38.9108&longitude=-94.7139%2C-94.8467%2C-95.2353%2C-93.5524%2C-93.2283%2C-93.7783%2C-94.3305%2C-94.8191%2C-94.",
    "src": null,
-   "upstream": "2026-11-19 15 UTC"
+   "upstream": "2026-11-19 17 UTC"
   },
   {
    "id": "icon_seamless",
@@ -259,7 +259,7 @@
    "run": null,
    "error": "icon_seamless: 429 Client Error: Too Many Requests for url: https://api.open-meteo.com/v1/forecast?latitude=39.2976%2C39.7675%2C38.9717%2C39.7953%2C38.7045%2C38.3684%2C38.2586%2C38.8814%2C38.9108&longitude=-94.7139%2C-94.8467%2C-95.2353%2C-93.5524%2C-93.2283%2C-93.7783%2C-94.3305%2C-94.8191%2C-94.38",
    "src": null,
-   "upstream": "2026-11-19 06 UTC"
+   "upstream": "2026-11-19 12 UTC"
   },
   {
    "id": "ncep_nbm_conus",
@@ -267,15 +267,15 @@
    "run": null,
    "error": "ncep_nbm_conus: 429 Client Error: Too Many Requests for url: https://api.open-meteo.com/v1/forecast?latitude=39.2976%2C39.7675%2C38.9717%2C39.7953%2C38.7045%2C38.3684%2C38.2586%2C38.8814%2C38.9108&longitude=-94.7139%2C-94.8467%2C-95.2353%2C-93.5524%2C-93.2283%2C-93.7783%2C-94.3305%2C-94.8191%2C-94.3",
    "src": null,
-   "upstream": "2026-11-19 16 UTC"
+   "upstream": "2026-11-19 17 UTC"
   },
   {
    "id": "rrfs",
    "label": "RRFS",
    "run": "2026-11-19 12 UTC",
    "error": null,
-   "src": "NOMADS RRFS v1.0 3 km CONUS GRIB2 (nearest grid pt 0.45 km from KCI; 85 hourly steps, 1174 MB byte-ranges, 172 requests, 94 s)",
-   "upstream": "2026-11-19 12 UTC"
+   "src": "NOMADS RRFS v1.0 3 km CONUS GRIB2 (nearest grid pt 0.45 km from KCI; 85 hourly steps, 1174 MB byte-ranges, 173 requests, 91 s)",
+   "upstream": "2026-11-19 18 UTC"
   }
  ],
  "kc_daily_by_model": {
@@ -388,8 +388,8 @@
     1
    ],
    "fw_reasons": [
-    "Rain chance 93% (daytime peak 6 PM) \u00b7 NWS EAX gridpoint PoP",
-    "PM commute 4\u20137 PM: rain chance up to 93% could slow travel \u00b7 NWS PoP"
+    "Rain chance 99% (daytime peak 6 PM) \u00b7 NWS EAX gridpoint PoP",
+    "PM commute 4\u20137 PM: rain chance up to 99% could slow travel \u00b7 NWS PoP"
    ]
   },
   {
@@ -401,8 +401,8 @@
    "precip": null,
    "gust": null,
    "fw_reasons": [
-    "Sharp cool-down: high 68\u00b0 \u2192 50\u00b0 (18\u00b0F drop) \u00b7 NWS max temp",
-    "Much colder feel: daytime feels-like (7 AM\u20137 PM avg) 63\u00b0 \u2192 41\u00b0 (23\u00b0F drop) \u00b7 NWS gridpoint apparent temp"
+    "Sharp cool-down: high 70\u00b0 \u2192 50\u00b0 (20\u00b0F drop) \u00b7 NWS max temp",
+    "Much colder feel: daytime feels-like (7 AM\u20137 PM avg) 65\u00b0 \u2192 40\u00b0 (25\u00b0F drop) \u00b7 NWS gridpoint apparent temp"
    ]
   }
  ],
@@ -419,14 +419,14 @@
     "checks": [
      "daytime PoP max 0% (NWS)",
      "min visibility 10.0 mi (NWS)",
-     "peak gust NWS 14 / model median 17 mph",
+     "peak gust NWS 14 / model median 16 mph",
      "high 69\u00b0F (NWS max temp) vs 64\u00b0F (yesterday's observed high at KCI (NWS KMCI obs))",
      "daytime feels-like 60\u00b0F (NWS gridpoint apparent temp) vs 58\u00b0F",
      "SPC Day 1: None"
     ],
     "nws_grid": true,
     "hi": 69.0,
-    "feels": 59.9
+    "feels": 59.6
    },
    {
     "day": "2026-11-20",
@@ -437,16 +437,16 @@
     "short": [],
     "notes": [],
     "checks": [
-     "daytime PoP max 0% (NWS)",
+     "daytime PoP max 1% (NWS)",
      "min visibility 9.8 mi (NWS)",
      "peak gust NWS 36 / model median 34 mph",
-     "high 70\u00b0F (NWS max temp) vs 69\u00b0F (NWS max temp)",
-     "daytime feels-like 63\u00b0F (NWS gridpoint apparent temp) vs 60\u00b0F",
+     "high 71\u00b0F (NWS max temp) vs 69\u00b0F (NWS max temp)",
+     "daytime feels-like 64\u00b0F (NWS gridpoint apparent temp) vs 60\u00b0F",
      "SPC Day 2: None"
     ],
     "nws_grid": true,
-    "hi": 70.0,
-    "feels": 62.9
+    "hi": 71.0,
+    "feels": 64.0
    },
    {
     "day": "2026-11-21",
@@ -454,25 +454,25 @@
     "level": 1,
     "wfd": [],
     "fw": [
-     "Rain chance 93% (daytime peak 6 PM) \u00b7 NWS EAX gridpoint PoP",
-     "PM commute 4\u20137 PM: rain chance up to 93% could slow travel \u00b7 NWS PoP"
+     "Rain chance 99% (daytime peak 6 PM) \u00b7 NWS EAX gridpoint PoP",
+     "PM commute 4\u20137 PM: rain chance up to 99% could slow travel \u00b7 NWS PoP"
     ],
     "short": [
-     "rain 93%",
+     "rain 99%",
      "PM commute"
     ],
     "notes": [],
     "checks": [
-     "daytime PoP max 93% (NWS)",
+     "daytime PoP max 99% (NWS)",
      "visibility: beyond NWS grid",
-     "peak gust NWS 26 / model median 31 mph",
-     "high 68\u00b0F (NWS max temp) vs 70\u00b0F (NWS max temp)",
-     "daytime feels-like 63\u00b0F (NWS gridpoint apparent temp) vs 63\u00b0F",
+     "peak gust NWS 28 / model median 31 mph",
+     "high 70\u00b0F (NWS max temp) vs 71\u00b0F (NWS max temp)",
+     "daytime feels-like 65\u00b0F (NWS gridpoint apparent temp) vs 64\u00b0F",
      "SPC Day 3: General thunder"
     ],
     "nws_grid": true,
-    "hi": 68.0,
-    "feels": 63.2
+    "hi": 70.0,
+    "feels": 64.7
    },
    {
     "day": "2026-11-22",
@@ -480,25 +480,25 @@
     "level": 1,
     "wfd": [],
     "fw": [
-     "Sharp cool-down: high 68\u00b0 \u2192 50\u00b0 (18\u00b0F drop) \u00b7 NWS max temp",
-     "Much colder feel: daytime feels-like (7 AM\u20137 PM avg) 63\u00b0 \u2192 41\u00b0 (23\u00b0F drop) \u00b7 NWS gridpoint apparent temp"
+     "Sharp cool-down: high 70\u00b0 \u2192 50\u00b0 (20\u00b0F drop) \u00b7 NWS max temp",
+     "Much colder feel: daytime feels-like (7 AM\u20137 PM avg) 65\u00b0 \u2192 40\u00b0 (25\u00b0F drop) \u00b7 NWS gridpoint apparent temp"
     ],
     "short": [
-     "18\u00b0F drop",
-     "feels-like \u221223\u00b0F"
+     "20\u00b0F drop",
+     "feels-like \u221225\u00b0F"
     ],
     "notes": [],
     "checks": [
      "daytime PoP max 7% (NWS)",
      "visibility: beyond NWS grid",
-     "peak gust NWS 20 / model median 32 mph",
-     "high 50\u00b0F (NWS max temp) vs 68\u00b0F (NWS max temp)",
-     "daytime feels-like 41\u00b0F (NWS gridpoint apparent temp) vs 63\u00b0F",
+     "peak gust NWS 23 / model median 32 mph",
+     "high 50\u00b0F (NWS max temp) vs 70\u00b0F (NWS max temp)",
+     "daytime feels-like 40\u00b0F (NWS gridpoint apparent temp) vs 65\u00b0F",
      "SPC Day 4: no area over KC"
     ],
     "nws_grid": true,
     "hi": 50.0,
-    "feels": 40.6
+    "feels": 39.9
    },
    {
     "day": "2026-11-23",
@@ -512,12 +512,12 @@
      "daytime PoP max 0% (NWS)",
      "visibility: beyond NWS grid",
      "gusts: unavailable",
-     "high 46\u00b0F (NWS max temp) vs 50\u00b0F (NWS max temp)",
-     "daytime feels-like 36\u00b0F (NWS gridpoint apparent temp) vs 41\u00b0F",
+     "high 45\u00b0F (NWS max temp) vs 50\u00b0F (NWS max temp)",
+     "daytime feels-like 36\u00b0F (NWS gridpoint apparent temp) vs 40\u00b0F",
      "SPC Day 5: no area over KC"
     ],
     "nws_grid": true,
-    "hi": 46.0,
+    "hi": 45.0,
     "feels": 35.8
    },
    {
@@ -529,16 +529,16 @@
     "short": [],
     "notes": [],
     "checks": [
-     "daytime PoP max 5% (NWS)",
+     "daytime PoP max 2% (NWS)",
      "visibility: beyond NWS grid",
      "gusts: unavailable",
-     "high 42\u00b0F (NWS max temp) vs 46\u00b0F (NWS max temp)",
-     "daytime feels-like 31\u00b0F (NWS gridpoint apparent temp) vs 36\u00b0F",
+     "high 43\u00b0F (NWS max temp) vs 45\u00b0F (NWS max temp)",
+     "daytime feels-like 33\u00b0F (NWS gridpoint apparent temp) vs 36\u00b0F",
      "SPC Day 6: no area over KC"
     ],
     "nws_grid": true,
-    "hi": 42.0,
-    "feels": 30.8
+    "hi": 43.0,
+    "feels": 32.9
    },
    {
     "day": "2026-11-25",
@@ -549,16 +549,16 @@
     "short": [],
     "notes": [],
     "checks": [
-     "daytime PoP max 2% (NWS)",
+     "daytime PoP max 1% (NWS)",
      "visibility: beyond NWS grid",
      "gusts: unavailable",
-     "high 42\u00b0F (NWS max temp) vs 42\u00b0F (NWS max temp)",
-     "daytime feels-like 32\u00b0F (NWS gridpoint apparent temp) vs 31\u00b0F",
+     "high 42\u00b0F (NWS max temp) vs 43\u00b0F (NWS max temp)",
+     "daytime feels-like 34\u00b0F (NWS gridpoint apparent temp) vs 33\u00b0F",
      "SPC Day 7: no area over KC"
     ],
     "nws_grid": true,
     "hi": 42.0,
-    "feels": 32.1
+    "feels": 33.6
    },
    {
     "day": "2026-11-26",
@@ -569,19 +569,19 @@
     "short": [],
     "notes": [],
     "checks": [
-     "daytime PoP max 11% (NWS)",
+     "daytime PoP max 5% (NWS)",
      "visibility: beyond NWS grid",
      "gusts: unavailable",
-     "high 44\u00b0F (NWS max temp) vs 42\u00b0F (NWS max temp)",
-     "daytime feels-like 34\u00b0F (NWS gridpoint apparent temp) vs 32\u00b0F",
+     "high 43\u00b0F (NWS max temp) vs 42\u00b0F (NWS max temp)",
+     "daytime feels-like 34\u00b0F (NWS gridpoint apparent temp) vs 34\u00b0F",
      "SPC Day 8: no area over KC"
     ],
     "nws_grid": true,
-    "hi": 44.0,
-    "feels": 34.0
+    "hi": 43.0,
+    "feels": 34.1
    }
   ],
-  "summary": "First Warn: SAT 11/21/26 (rain 93%, PM commute); SUN 11/22/26 (18\u00b0F drop, feels-like \u221223\u00b0F). First Warn Weather Day: none.",
+  "summary": "First Warn: SAT 11/21/26 (rain 99%, PM commute); SUN 11/22/26 (20\u00b0F drop, feels-like \u221225\u00b0F). First Warn Weather Day: none.",
   "nws_grid": "EAX/39,60",
   "nws_ok": true
  },
@@ -646,10 +646,6 @@
  },
  "precip": {
   "blocks": [
-   [
-    "2026-11-19T09:00",
-    3
-   ],
    [
     "2026-11-19T12:00",
     3
@@ -777,6 +773,10 @@
    [
     "2026-11-26T00:00",
     12
+   ],
+   [
+    "2026-11-26T12:00",
+    12
    ]
   ],
   "rows": [
@@ -811,12 +811,6 @@
    {
     "name": "RRFS",
     "cells": [
-     {
-      "amt": 0,
-      "pop": null,
-      "type": "dry",
-      "fb": false
-     },
      {
       "amt": 0,
       "pop": null,
@@ -973,6 +967,7 @@
      null,
      null,
      null,
+     null,
      null
     ]
    },
@@ -1011,49 +1006,13 @@
      },
      {
       "amt": 0.0,
-      "pop": 0,
+      "pop": 1,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0.0,
-      "pop": 0,
-      "type": "dry",
-      "fb": false
-     },
-     {
-      "amt": 0.0,
-      "pop": 0,
-      "type": "dry",
-      "fb": false
-     },
-     {
-      "amt": 0.0,
-      "pop": 0,
-      "type": "dry",
-      "fb": false
-     },
-     {
-      "amt": 0.0,
-      "pop": 0,
-      "type": "dry",
-      "fb": false
-     },
-     {
-      "amt": 0.0,
-      "pop": 0,
-      "type": "dry",
-      "fb": false
-     },
-     {
-      "amt": 0.0,
-      "pop": 0,
-      "type": "dry",
-      "fb": false
-     },
-     {
-      "amt": 0.0,
-      "pop": 0,
+      "pop": 1,
       "type": "dry",
       "fb": false
      },
@@ -1071,49 +1030,79 @@
      },
      {
       "amt": 0.0,
-      "pop": 3,
+      "pop": 1,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0.0,
-      "pop": 3,
+      "pop": 1,
       "type": "dry",
       "fb": false
      },
      {
-      "amt": 0.03,
-      "pop": 46,
+      "amt": 0.0,
+      "pop": 0,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0.0,
+      "pop": 0,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0.0,
+      "pop": 0,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0.0,
+      "pop": 0,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0.0,
+      "pop": 0,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0.0,
+      "pop": 14,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0.0,
+      "pop": 14,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0.18,
+      "pop": 99,
       "type": "rain",
       "fb": false
      },
      {
-      "amt": 0.03,
-      "pop": 46,
+      "amt": 0.18,
+      "pop": 99,
       "type": "rain",
       "fb": false
      },
      {
-      "amt": 0.24,
-      "pop": 93,
+      "amt": 0.12,
+      "pop": 81,
       "type": "rain",
       "fb": false
      },
      {
-      "amt": 0.24,
-      "pop": 93,
-      "type": "rain",
-      "fb": false
-     },
-     {
-      "amt": 0.07,
-      "pop": 56,
-      "type": "rain",
-      "fb": false
-     },
-     {
-      "amt": 0.07,
-      "pop": 56,
+      "amt": 0.12,
+      "pop": 81,
       "type": "rain",
       "fb": false
      },
@@ -1144,18 +1133,18 @@
      {
       "amt": 0.0,
       "pop": 0,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0.0,
+      "pop": 1,
       "type": "dry",
       "fb": false
      },
      {
       "amt": 0.0,
       "pop": 2,
-      "type": "dry",
-      "fb": false
-     },
-     {
-      "amt": 0.0,
-      "pop": 5,
       "type": "dry",
       "fb": false
      },
@@ -1174,6 +1163,12 @@
      {
       "amt": 0.0,
       "pop": 1,
+      "type": "dry",
+      "fb": false
+     },
+     {
+      "amt": 0.0,
+      "pop": 5,
       "type": "dry",
       "fb": false
      }
@@ -1204,10 +1199,10 @@
      null
     ],
     "NWS QPF": [
+     null,
      0.0,
-     0.0,
-     0.53,
-     0.13,
+     0.37,
+     0.25,
      0.0,
      0.0,
      0.0,
@@ -1226,10 +1221,10 @@
      null
     ],
     "NWS QPF": [
+     null,
      0.0,
-     0.0,
-     0.53,
-     0.09,
+     0.49,
+     0.17,
      0.0,
      0.0,
      0.0,
@@ -1501,19 +1496,19 @@
     ]
    }
   },
-  "summary": "Most guidance (2/2) brings precip in around Sat night; dry until then; NWS (gridpoint) faster. 7-day totals range 0.68\u20131.00\"."
+  "summary": "Most guidance (2/2) brings precip in around Sat night; dry until then. 7-day totals range 0.60\u20131.00\"."
  },
  "nws": {
   "alerts": [],
   "forecasts": {
    "Kansas City (KCI)": [
     {
-     "name": "Today",
+     "name": "This Afternoon",
      "temp": 69,
      "short": "Sunny",
      "wind": "6 to 9 mph S",
      "pop": 0,
-     "start": "2026-11-19T11:00:00-06:00",
+     "start": "2026-11-19T13:00:00-06:00",
      "end": "2026-11-19T18:00:00-06:00",
      "day": true
     },
@@ -1579,9 +1574,9 @@
     },
     {
      "name": "Sunday Night",
-     "temp": 29,
+     "temp": 28,
      "short": "Mostly Clear",
-     "wind": "7 mph N",
+     "wind": "5 to 8 mph N",
      "pop": 0,
      "start": "2026-11-22T18:00:00-06:00",
      "end": "2026-11-23T06:00:00-06:00",
@@ -1609,7 +1604,7 @@
     },
     {
      "name": "Tuesday",
-     "temp": 43,
+     "temp": 42,
      "short": "Partly Sunny",
      "wind": "7 mph ENE",
      "pop": 1,
@@ -1640,7 +1635,7 @@
     {
      "name": "Wednesday Night",
      "temp": 24,
-     "short": "Partly Cloudy",
+     "short": "Mostly Clear",
      "wind": "3 mph E",
      "pop": 1,
      "start": "2026-11-25T18:00:00-06:00",
@@ -1650,31 +1645,31 @@
    ],
    "St. Joseph": [
     {
-     "name": "Today",
+     "name": "This Afternoon",
      "temp": 69,
      "short": "Sunny",
-     "wind": "5 to 9 mph S",
+     "wind": "8 mph S",
      "pop": 0,
-     "start": "2026-11-19T06:00:00-06:00",
+     "start": "2026-11-19T13:00:00-06:00",
      "end": "2026-11-19T18:00:00-06:00",
      "day": true
     },
     {
      "name": "Tonight",
-     "temp": 49,
-     "short": "Mostly Clear",
+     "temp": 50,
+     "short": "Partly Cloudy",
      "wind": "8 mph SSE",
-     "pop": 0,
+     "pop": 1,
      "start": "2026-11-19T18:00:00-06:00",
      "end": "2026-11-20T06:00:00-06:00",
      "day": false
     },
     {
      "name": "Friday",
-     "temp": 70,
-     "short": "Mostly Sunny",
-     "wind": "8 to 22 mph S",
-     "pop": 0,
+     "temp": 71,
+     "short": "Sunny",
+     "wind": "9 to 22 mph S",
+     "pop": 1,
      "start": "2026-11-20T06:00:00-06:00",
      "end": "2026-11-20T18:00:00-06:00",
      "day": true
@@ -1683,7 +1678,7 @@
      "name": "Friday Night",
      "temp": 56,
      "short": "Partly Cloudy",
-     "wind": "15 mph S",
+     "wind": "13 to 16 mph S",
      "pop": 1,
      "start": "2026-11-20T18:00:00-06:00",
      "end": "2026-11-21T06:00:00-06:00",
@@ -1691,20 +1686,20 @@
     },
     {
      "name": "Saturday",
-     "temp": 67,
+     "temp": 68,
      "short": "Mostly Cloudy then Chance Light Rain",
      "wind": "9 to 15 mph SSW",
-     "pop": 51,
+     "pop": 34,
      "start": "2026-11-21T06:00:00-06:00",
      "end": "2026-11-21T18:00:00-06:00",
      "day": true
     },
     {
      "name": "Saturday Night",
-     "temp": 39,
+     "temp": 40,
      "short": "Rain",
-     "wind": "9 to 13 mph W",
-     "pop": 89,
+     "wind": "9 to 15 mph W",
+     "pop": 98,
      "start": "2026-11-21T18:00:00-06:00",
      "end": "2026-11-22T06:00:00-06:00",
      "day": false
@@ -1713,7 +1708,7 @@
      "name": "Sunday",
      "temp": 49,
      "short": "Mostly Sunny",
-     "wind": "7 to 13 mph NNW",
+     "wind": "8 to 14 mph NNW",
      "pop": 6,
      "start": "2026-11-22T06:00:00-06:00",
      "end": "2026-11-22T18:00:00-06:00",
@@ -1721,9 +1716,9 @@
     },
     {
      "name": "Sunday Night",
-     "temp": 26,
+     "temp": 27,
      "short": "Mostly Clear",
-     "wind": "5 mph N",
+     "wind": "2 to 6 mph N",
      "pop": 0,
      "start": "2026-11-22T18:00:00-06:00",
      "end": "2026-11-23T06:00:00-06:00",
@@ -1731,7 +1726,7 @@
     },
     {
      "name": "Monday",
-     "temp": 46,
+     "temp": 45,
      "short": "Sunny",
      "wind": "2 to 6 mph NE",
      "pop": 0,
@@ -1741,9 +1736,9 @@
     },
     {
      "name": "Monday Night",
-     "temp": 25,
-     "short": "Partly Cloudy",
-     "wind": "5 mph ENE",
+     "temp": 27,
+     "short": "Mostly Cloudy",
+     "wind": "5 mph NE",
      "pop": 0,
      "start": "2026-11-23T18:00:00-06:00",
      "end": "2026-11-24T06:00:00-06:00",
@@ -1753,7 +1748,7 @@
      "name": "Tuesday",
      "temp": 42,
      "short": "Partly Sunny",
-     "wind": "5 to 8 mph ENE",
+     "wind": "6 mph ENE",
      "pop": 2,
      "start": "2026-11-24T06:00:00-06:00",
      "end": "2026-11-24T18:00:00-06:00",
@@ -1761,10 +1756,10 @@
     },
     {
      "name": "Tuesday Night",
-     "temp": 23,
+     "temp": 24,
      "short": "Mostly Cloudy",
-     "wind": "2 to 6 mph ENE",
-     "pop": 7,
+     "wind": "1 to 5 mph ENE",
+     "pop": 3,
      "start": "2026-11-24T18:00:00-06:00",
      "end": "2026-11-25T06:00:00-06:00",
      "day": false
@@ -1773,18 +1768,18 @@
      "name": "Wednesday",
      "temp": 42,
      "short": "Mostly Sunny",
-     "wind": "5 mph ENE",
-     "pop": 2,
+     "wind": "1 to 5 mph E",
+     "pop": 1,
      "start": "2026-11-25T06:00:00-06:00",
      "end": "2026-11-25T18:00:00-06:00",
      "day": true
     },
     {
      "name": "Wednesday Night",
-     "temp": 22,
+     "temp": 23,
      "short": "Partly Cloudy",
-     "wind": "3 mph E",
-     "pop": 1,
+     "wind": "3 mph ESE",
+     "pop": 2,
      "start": "2026-11-25T18:00:00-06:00",
      "end": "2026-11-26T06:00:00-06:00",
      "day": false
@@ -1792,16 +1787,16 @@
    ]
   },
   "obs": {
-   "time": "2026-11-19T15:53:00+00:00",
-   "text": "",
-   "temp": null,
-   "dew": 49,
-   "wind": null,
+   "time": "2026-11-19T17:53:00+00:00",
+   "text": "Mostly Clear",
+   "temp": 65,
+   "dew": 51,
+   "wind": 10,
    "gust": null,
-   "dir": null
+   "dir": 200
   }
  },
- "afd_time": "2026-11-19T11:20:00+00:00",
+ "afd_time": "2026-11-19T17:44:00+00:00",
  "kc_daily_extra": {
   "GFS MOS (MAV)": {
    "2026-11-20": {
@@ -1824,62 +1819,56 @@
    }
   },
   "GFS MOS ext (MEX)": {
-   "2026-11-19": {
-    "hi": 68.0,
-    "lo": null,
-    "pop": 1.0,
-    "qcat": 0
-   },
    "2026-11-20": {
-    "hi": 70.0,
-    "lo": 51.0,
+    "hi": 71.0,
+    "lo": 50.0,
     "pop": 3.0,
     "qcat": 0
    },
    "2026-11-21": {
-    "hi": 66.0,
-    "lo": 54.0,
-    "pop": 88.0,
-    "qcat": 5
+    "hi": 69.0,
+    "lo": 55.0,
+    "pop": 92.0,
+    "qcat": 4
    },
    "2026-11-22": {
     "hi": 54.0,
     "lo": 45.0,
-    "pop": 19.0,
+    "pop": 18.0,
     "qcat": 0
    },
    "2026-11-23": {
-    "hi": 50.0,
-    "lo": 32.0,
-    "pop": 9.0,
+    "hi": 49.0,
+    "lo": 29.0,
+    "pop": 6.0,
     "qcat": 0
    },
    "2026-11-24": {
-    "hi": 48.0,
-    "lo": 32.0,
-    "pop": 11.0,
+    "hi": 43.0,
+    "lo": 26.0,
+    "pop": 9.0,
     "qcat": 0
    },
    "2026-11-25": {
-    "hi": 45.0,
-    "lo": 28.0,
-    "pop": 20.0,
-    "qcat": null
+    "hi": 47.0,
+    "lo": 22.0,
+    "pop": 5.0,
+    "qcat": 0
    },
    "2026-11-26": {
     "hi": 54.0,
-    "lo": 31.0,
-    "pop": 18.0,
+    "lo": 28.0,
+    "pop": 10.0,
+    "qcat": null
+   },
+   "2026-11-27": {
+    "hi": null,
+    "lo": 32.0,
+    "pop": null,
     "qcat": null
    }
   },
   "LAMP": {
-   "2026-11-19": {
-    "hi": 68.0,
-    "lo": null,
-    "pop": 1.0,
-    "qcat": null
-   },
    "2026-11-20": {
     "hi": 69.0,
     "lo": 51.0,
@@ -1912,8 +1901,8 @@
  },
  "mos_runs": {
   "GFS MOS (MAV)": "2026-11-19 12 UTC",
-  "GFS MOS ext (MEX)": "2026-11-19 00 UTC",
-  "LAMP": "2026-11-19 16 UTC"
+  "GFS MOS ext (MEX)": "2026-11-19 12 UTC",
+  "LAMP": "2026-11-19 18 UTC"
  },
  "homemos": {
   "window_days": 30,

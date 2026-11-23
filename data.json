@@ -1,15 +1,10 @@
 {
- "generated": "2026-11-23T03:02:48.146044-06:00",
+ "generated": "2026-11-23T03:05:46.127561-06:00",
  "status": [
   {
    "source": "SPC Day 1 outlook",
    "ok": true,
    "detail": "None"
-  },
-  {
-   "source": "Open-Meteo GFS",
-   "ok": true,
-   "detail": "run 2026-11-23 00 UTC via gfs_global"
   },
   {
    "source": "Open-Meteo HRRR",
@@ -27,9 +22,14 @@
    "detail": "run 2026-11-23 00 UTC via icon_seamless"
   },
   {
-   "source": "NWS EAX AFD",
+   "source": "Open-Meteo GFS",
    "ok": true,
-   "detail": "2026-11-23T08:18:00+00:00"
+   "detail": "run 2026-11-23 00 UTC via gfs_global"
+  },
+  {
+   "source": "Open-Meteo NBM",
+   "ok": true,
+   "detail": "run 2026-11-23 08 UTC via ncep_nbm_conus"
   },
   {
    "source": "SPC Day 4 outlook (15%/30% areas)",
@@ -42,14 +42,19 @@
    "detail": "None"
   },
   {
+   "source": "NWS gridpoint Kansas City (KCI)",
+   "ok": true,
+   "detail": "EAX/39,60"
+  },
+  {
    "source": "NWS gridpoint KCI (First Warn fields)",
    "ok": true,
    "detail": "EAX/39,60"
   },
   {
-   "source": "NWS gridpoint Kansas City (KCI)",
+   "source": "NWS EAX AFD",
    "ok": true,
-   "detail": "EAX/39,60"
+   "detail": "2026-11-23T08:18:00+00:00"
   },
   {
    "source": "SPC Day 3 outlook",
@@ -57,14 +62,14 @@
    "detail": "None"
   },
   {
-   "source": "Open-Meteo NBM",
-   "ok": true,
-   "detail": "run 2026-11-23 08 UTC via ncep_nbm_conus"
-  },
-  {
    "source": "SPC Day 5 outlook (15%/30% areas)",
    "ok": true,
    "detail": "no area over KC"
+  },
+  {
+   "source": "NWS KMCI observations (yesterday, First Warn day 1)",
+   "ok": true,
+   "detail": "22 obs; high 48\u00b0F"
   },
   {
    "source": "NWS gridpoint St. Joseph",
@@ -77,9 +82,9 @@
    "detail": "no area over KC"
   },
   {
-   "source": "NWS KMCI observations (yesterday, First Warn day 1)",
+   "source": "GFS MOS (MAV) (IEM MOS API)",
    "ok": true,
-   "detail": "22 obs; high 48\u00b0F"
+   "detail": "run 2026-11-23 00 UTC; 21 rows to Wed 11/25 6 PM CT; 3 days max/min"
   },
   {
    "source": "NWS gridpoint Lawrence",
@@ -102,14 +107,24 @@
    "detail": "no area over KC"
   },
   {
+   "source": "GFS MOS ext (MEX) (IEM MOS API)",
+   "ok": true,
+   "detail": "run 2026-11-23 00 UTC; 15 rows to Mon 11/30 6 PM CT; 8 days max/min"
+  },
+  {
    "source": "NWS gridpoint Sedalia",
    "ok": true,
    "detail": "EAX/91,33"
   },
   {
-   "source": "GFS MOS (MAV) (IEM MOS API)",
+   "source": "LAMP (IEM MOS API)",
    "ok": true,
-   "detail": "run 2026-11-23 00 UTC; 21 rows to Wed 11/25 6 PM CT; 3 days max/min"
+   "detail": "run 2026-11-23 08 UTC; 38 rows to Tue 11/24 4 PM CT; 2 days max/min"
+  },
+  {
+   "source": "NAM MOS (MET)",
+   "ok": true,
+   "detail": "not fetched: retired by NWS with the NAM on 2026-11-03 12Z (Service Change Notice 26-47); last IEM run 2026-11-03 00Z"
   },
   {
    "source": "NWS gridpoint Clinton",
@@ -127,29 +142,14 @@
    "detail": "EAX/35,41"
   },
   {
-   "source": "NWS gridpoint Lee's Summit",
-   "ok": true,
-   "detail": "EAX/51,42"
-  },
-  {
-   "source": "GFS MOS ext (MEX) (IEM MOS API)",
-   "ok": true,
-   "detail": "run 2026-11-23 00 UTC; 15 rows to Mon 11/30 6 PM CT; 8 days max/min"
-  },
-  {
    "source": "NWS active alerts (EAX+TOP via DMA points)",
    "ok": true,
    "detail": "0 active"
   },
   {
-   "source": "LAMP (IEM MOS API)",
+   "source": "NWS gridpoint Lee's Summit",
    "ok": true,
-   "detail": "run 2026-11-23 08 UTC; 38 rows to Tue 11/24 4 PM CT; 2 days max/min"
-  },
-  {
-   "source": "NAM MOS (MET)",
-   "ok": true,
-   "detail": "not fetched: retired by NWS with the NAM on 2026-11-03 12Z (Service Change Notice 26-47); last IEM run 2026-11-03 00Z"
+   "detail": "EAX/51,42"
   },
   {
    "source": "NWS point forecast Kansas City (KCI)",
@@ -167,19 +167,19 @@
    "detail": "2026-11-23T07:53:00+00:00"
   },
   {
-   "source": "Open-Meteo ECMWF IFS",
-   "ok": true,
-   "detail": "run 2026-11-23 00 UTC via ecmwf_ifs025"
-  },
-  {
    "source": "Open-Meteo ECMWF AIFS",
    "ok": true,
    "detail": "run 2026-11-23 00 UTC via ecmwf_aifs025_single"
   },
   {
+   "source": "Open-Meteo ECMWF IFS",
+   "ok": true,
+   "detail": "run 2026-11-23 00 UTC via ecmwf_ifs025"
+  },
+  {
    "source": "RRFS (NOMADS)",
    "ok": true,
-   "detail": "run 2026-11-23 06 UTC (v1.0, to f084; newest synoptic upstream 2026-11-23 06 UTC); 85 steps, 1130 MB, 172 hits, 92 s"
+   "detail": "run 2026-11-23 06 UTC (v1.0, to f084; newest synoptic upstream 2026-11-23 06 UTC); 85 steps, 1130 MB, 172 hits, 80 s"
   },
   {
    "source": "Homemade MOS (bias-corrected HRRR/RRFS)",
@@ -192,12 +192,12 @@
    "detail": "forecast-days added to the KMCI record: HRRR (bias-corrected) 51, RRFS (bias-corrected) 36, GFS MOS ext (MEX) 15"
   },
   {
-   "source": "KCTV Ensemble log",
+   "source": "KCTV Super Blend log",
    "ok": true,
    "detail": "issue 2026-11-23 (8 days) -> 2026-11-23.json"
   },
   {
-   "source": "KCTV Ensemble scoring",
+   "source": "KCTV Super Blend scoring",
    "ok": true,
    "detail": "forecast-days added: myfc 242, myfcpub 242"
   },
@@ -274,7 +274,7 @@
    "label": "RRFS",
    "run": "2026-11-23 06 UTC",
    "error": null,
-   "src": "NOMADS RRFS v1.0 3 km CONUS GRIB2 (nearest grid pt 0.45 km from KCI; 85 hourly steps, 1130 MB byte-ranges, 172 requests, 92 s)",
+   "src": "NOMADS RRFS v1.0 3 km CONUS GRIB2 (nearest grid pt 0.45 km from KCI; 85 hourly steps, 1130 MB byte-ranges, 172 requests, 80 s)",
    "upstream": "2026-11-23 06 UTC"
   }
  ],
@@ -1142,8 +1142,7 @@
      "visibility: beyond NWS grid",
      "peak gust NWS 17 / model median 19 mph",
      "high 51\u00b0F (NWS max temp) vs 44\u00b0F (NWS max temp)",
-     "daytime feels-like 41\u00b0F (NWS gridpoint apparent temp) vs 34\u00b0F",
-     "SPC Day 6: no area over KC"
+     "daytime feels-like 41\u00b0F (NWS gridpoint apparent temp) vs 34\u00b0F"
     ],
     "nws_grid": true,
     "hi": 51.0,
@@ -1163,7 +1162,7 @@
      "peak gust NWS 14 / model median 18 mph",
      "high 56\u00b0F (NWS max temp) vs 51\u00b0F (NWS max temp)",
      "daytime feels-like 49\u00b0F (NWS gridpoint apparent temp) vs 41\u00b0F",
-     "SPC Day 7: no area over KC"
+     "SPC Day 6: no area over KC"
     ],
     "nws_grid": true,
     "hi": 56.0,
@@ -4736,7 +4735,7 @@
   },
   "obs": {
    "time": "2026-11-23T07:53:00+00:00",
-   "text": "",
+   "text": "Clear",
    "temp": 29,
    "dew": 24,
    "wind": 7,

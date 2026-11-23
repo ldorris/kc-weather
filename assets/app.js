@@ -71,10 +71,10 @@ function chart(id,key,title){const el=document.getElementById(id);if(!window.Cha
 chart('cT','temp','Temperature (°F) · Kansas City');
 (function(){const M=window.MOSPOP||[],el=document.getElementById('cMP');if(!el)return;if(!M.length||!window.Chart){el.closest('.cbox').outerHTML='<p class="s">MOS PoP unavailable this build.</p>';return}
 const all=M.flatMap(X=>X.pts.map(p=>tms(p.t)));const xmin=Math.min(...all),xmax=Math.max(...all),D=864e5;
-function cfg(big){const f=KCX.fs(big);return {type:'line',plugins:[XHAIR],data:{datasets:M.map(X=>{const top=T.pcpn===X.label,col=top?'#39FF14':X.color;return {label:X.label+' ('+X.h+'-h PoP)'+(top?' ★ top performer':''),data:X.pts.map(p=>({x:tms(p.t),y:p.pop,q:p.q,h:p.h,lead:p.lead})),borderColor:col,backgroundColor:col+'33',fill:false,stepped:'before',pointRadius:c=>c.raw&&c.raw.lead?0:(big?4:3),pointHoverRadius:big?7:5,borderWidth:(top?3.5:2.2)*(big?1.3:1)}})},
+function cfg(big){const f=KCX.fs(big);return {type:'line',plugins:[XHAIR],data:{datasets:M.map(X=>{const top=T.pcpn===X.label,col=top?'#39FF14':X.color;return {label:X.label+' ('+X.h+'-h PoP)'+(top?' ★ top performer':''),data:X.pts.map(p=>({x:tms(p.t),y:p.pop,q:p.q,qin:p.qin,h:p.h,lead:p.lead})),borderColor:col,backgroundColor:col+'33',fill:false,stepped:'before',pointRadius:c=>c.raw&&c.raw.lead?0:(big?4:3),pointHoverRadius:big?7:5,borderWidth:(top?3.5:2.2)*(big?1.3:1)}})},
 options:{...KCX.opts('cMP',big),maintainAspectRatio:false,animation:big?false:undefined,interaction:{mode:'xsync',intersect:false},
 scales:{x:{type:'linear',min:xmin,max:xmax,afterBuildTicks:s=>{const t=[];for(let m=Math.ceil(s.min/D)*D;m<=s.max;m+=D)t.push({value:m});s.ticks=t},ticks:{font:{size:f},autoSkip:false,maxRotation:0,callback:v=>innerWidth<640&&!big?SDFMT.format(new Date(v)):DFMT.format(new Date(v))}},y:{min:0,max:100,ticks:{font:{size:f},callback:v=>v+'%'}}},
-plugins:{legend:{labels:{boxWidth:big?16:12,font:{size:f}}},tooltip:{titleFont:{size:f+1},bodyFont:{size:f},callbacks:{title:it=>it.length?'Period ending '+TFMT.format(new Date(it[0].parsed.x))+' CT':'',label:c=>{const r=c.raw||{};return ' '+c.dataset.label.replace(/ [(].*$/,'')+': '+r.h+'-h PoP '+c.formattedValue+'%'+(r.q!=null?' · QPF category '+r.q+' ('+(QCAT[r.q]||'?')+')':'')}}}}}}}
+plugins:{legend:{labels:{boxWidth:big?16:12,font:{size:f}}},tooltip:{titleFont:{size:f+1},bodyFont:{size:f},callbacks:{title:it=>it.length?'Period ending '+TFMT.format(new Date(it[0].parsed.x))+' CT':'',label:c=>{const r=c.raw||{};return ' '+c.dataset.label.replace(/ [(].*$/,'')+': '+r.h+'-h PoP '+c.formattedValue+'%'+(r.qin!=null?' · QPF '+Number(r.qin).toFixed(2)+'"':(r.q!=null?' · QPF category '+r.q+' ('+(QCAT[r.q]||'?')+')':''))}}}}}}}
 CH.cMP=new Chart(el,cfg(false));KCX.register('cMP','Precipitation chance (%) · KCI',big=>cfg(big),()=>CH.cMP)})();chart('cP','precip','Hourly precip (in) · Kansas City');chart('cG','gust','Wind gusts (mph) · Kansas City');
 /* Tabs: client-side switching, deep-linkable (#home #forecast #scores #tp #sw #nws #more, or any section id), #only-<id> view */
 (function(){const tabs=[...document.querySelectorAll('nav.tabs .tab')],panels=[...document.querySelectorAll('main>.panel')];if(!panels.length)return;
@@ -98,4 +98,208 @@ if(window.applyChartTheme)applyChartTheme();
 try{window.dispatchEvent(new CustomEvent('kc-theme',{detail:{theme:t}}))}catch(e){}}
 const tsel=document.getElementById('themeSel');
 if(tsel){applyTheme(document.documentElement.dataset.theme||'cyberpunk',false);tsel.onchange=()=>applyTheme(tsel.value,true)}
+})();
+(function(){
+const P=window.DAILYCMP; if(!P||!P.days||!P.days.length) return;
+const root=document.getElementById('dailymodel'); if(!root) return;
+const $ = (s,el=root)=>el.querySelector(s);
+const $$ = (s,el=root)=>[...el.querySelectorAll(s)];
+const KEY={tmax:'hi',tmin:'lo',pcpn:'precip'};
+const UNIT={tmax:'°',tmin:'°',pcpn:'"'};
+const fmt={
+  hi:v=>v==null?'–':String(Math.round(v)),
+  lo:v=>v==null?'–':String(Math.round(v)),
+  precip:v=>{
+    if(v==null) return '–';
+    if(typeof v==='number') return v<0.005&&v>0?'T':v.toFixed(2);
+    return String(v);
+  },
+  gust:v=>v==null?'–':String(Math.round(v)),
+  snow:v=>v==null||v===0?'–':(typeof v==='number'?(v<0.05?'T':v.toFixed(1)):String(v))
+};
+function num(v){return (typeof v==='number'&&isFinite(v))?v:null}
+function hasEl(rec,el){return rec && num(rec[KEY[el]])!=null}
+let view='day', day=P.days[0].d, el='tmax', showAll=false;
+try{const s=JSON.parse(localStorage.getItem('kcDailyCmp')||'{}');
+  if(s.view==='heat'||s.view==='day') view=s.view;
+  if(s.el&&P.metrics[s.el]) el=s.el;
+  if(typeof s.showAll==='boolean') showAll=s.showAll;
+  if(s.day&&P.days.some(x=>x.d===s.day)) day=s.day;
+}catch(e){}
+function save(){try{localStorage.setItem('kcDailyCmp',JSON.stringify({view,day,el,showAll}))}catch(e){}}
+function meta(d){return P.days.find(x=>x.d===d)||P.days[0]}
+function leadOf(d){return (meta(d)||{}).lead||1}
+function maeOf(name,d,e){const L=String(leadOf(d)); return ((P.mae||{})[e]||{})[L] ? P.mae[e][L][name] : null}
+function shortList(d,e){
+  const L=String(leadOf(d));
+  const ranked=((P.top5||{})[e]||{})[L]||[];
+  const names=[];
+  for(const n of ranked){
+    const rec=(P.rows.find(r=>r.name===n)||{}).vals||{};
+    if(hasEl(rec[d],e) || (e==='tmax'&&num((rec[d]||{}).hi)!=null) || (e==='tmin'&&num((rec[d]||{}).lo)!=null) || (e==='pcpn'&&num((rec[d]||{}).precip)!=null)){
+      if(!names.includes(n)) names.push(n);
+    }
+    if(names.length>=5) break;
+  }
+  // if fewer than 5 had data, still include remaining ranked (they render as –)
+  for(const n of ranked){ if(names.length>=5) break; if(!names.includes(n)) names.push(n); }
+  return names;
+}
+function visibleRows(d,e){
+  const refs=P.ref||[];
+  if(showAll) return P.rows;
+  const want=shortList(d,e);
+  const out=[];
+  const seen=new Set();
+  for(const n of refs.concat(want)){
+    const r=P.rows.find(x=>x.name===n);
+    if(r && !seen.has(r.name)){ out.push(r); seen.add(r.name); }
+  }
+  // keep any short-list / ref order: refs first (blend, nws), then top5 not already included
+  return out;
+}
+function pc(rec){
+  if(!rec) return '–';
+  if(rec.pop!=null && rec.qpf!=null) return 'PoP '+Math.round(rec.pop)+'% · '+fmt.precip(rec.qpf)+'"';
+  if(rec.pop!=null && rec.qcat!=null) return 'PoP '+Math.round(rec.pop)+'% · '+(window.QCAT&&QCAT[rec.qcat]||('cat '+rec.qcat));
+  if(rec.pop!=null && rec.precip==null) return 'PoP '+Math.round(rec.pop)+'%';
+  return fmt.precip(rec.precip);
+}
+function noteOf(rec){
+  if(!rec) return '';
+  let n=rec.note||'';
+  if(rec.complete===false && !/partial/i.test(n)) n=(n?n+' · ':'')+'partial';
+  return n;
+}
+function consensus(d){
+  const models=P.rows.filter(r=>!(P.ref||[]).includes(r.name));
+  function spread(k){
+    const xs=models.map(r=>num((r.vals[d]||{})[k])).filter(v=>v!=null);
+    if(!xs.length) return {n:0};
+    const mid=xs.slice().sort((a,b)=>a-b);
+    const med=mid.length%2?mid[(mid.length-1)/2]:(mid[mid.length/2-1]+mid[mid.length/2])/2;
+    return {n:xs.length, med, lo:Math.min(...xs), hi:Math.max(...xs)};
+  }
+  return {hi:spread('hi'), lo:spread('lo'), precip:spread('precip')};
+}
+function fmtCons(s, kind){
+  if(!s||!s.n) return '–';
+  if(kind==='precip') return fmt.precip(s.med)+' ('+fmt.precip(s.lo)+'–'+fmt.precip(s.hi)+', n='+s.n+')';
+  return Math.round(s.med)+'° ('+Math.round(s.lo)+'–'+Math.round(s.hi)+', n='+s.n+')';
+}
+function renderDay(){
+  $$('.dchip').forEach(b=>b.setAttribute('aria-pressed', b.dataset.day===day?'true':'false'));
+  $$('.mchip').forEach(b=>b.setAttribute('aria-pressed', b.dataset.el===el?'true':'false'));
+  const m=meta(day); const L=m.lead;
+  const names=shortList(day,el);
+  const leadTxt='Short list for '+P.metrics[el].toLowerCase()+' at lead D'+L+' (30-day KMCI MAE).';
+  $('#dllead').textContent=P.fallback
+    ? 'forecastscores.com weights unavailable this build — showing every source. Super Blend and NWS are still the reference rows.'
+    : leadTxt+(showAll?' Showing every source.':'');
+  $('#dlexplain').textContent=P.explain||'';
+  const tb=$('#mt tbody'); tb.innerHTML='';
+  const C=consensus(day);
+  const cr=document.createElement('tr'); cr.className='dlcons';
+  cr.innerHTML='<td>Consensus (median of models)</td><td>'+fmtCons(C.hi,'hi')+'</td><td>'+fmtCons(C.lo,'lo')+'</td><td>'+fmtCons(C.precip,'precip')+'</td><td>–</td><td>–</td><td>excludes Super Blend and NWS</td>';
+  tb.appendChild(cr);
+  for(const r of visibleRows(day,el)){
+    const v=r.vals[day]||{};
+    const tr=document.createElement('tr');
+    const cls=[r.cls||'','xrow'];
+    if((P.ref||[]).includes(r.name)) cls.push('dlref');
+    tr.className=cls.filter(Boolean).join(' ');
+    const mae=maeOf(r.name,day,el);
+    const maeS=mae!=null?('<div class="s">D'+L+' MAE '+(el==='pcpn'?mae.toFixed(2)+'"':mae.toFixed(1)+'°')+'</div>'):'';
+    const pcell=(v.pop!=null && v.precip==null && v.qpf==null && v.qcat==null)?('PoP '+Math.round(v.pop)+'%'):pc(v);
+    // If precip amount exists, show amount; append PoP in the note if present and amount is also there
+    let precipCell=fmt.precip(v.precip);
+    if(v.precip==null && (v.pop!=null||v.qpf!=null||v.qcat!=null)) precipCell=pc(v);
+    else if(v.precip!=null && v.pop!=null) precipCell=fmt.precip(v.precip)+' <span class="s">PoP '+Math.round(v.pop)+'%</span>';
+    const miss=!r.vals[day]?' dlmiss':'';
+    tr.innerHTML='<td>'+r.html+maeS+'</td>'
+      +'<td class="dlhi'+miss+'">'+fmt.hi(v.hi)+'</td>'
+      +'<td class="'+miss+'">'+fmt.lo(v.lo)+'</td>'
+      +'<td class="'+miss+'">'+precipCell+'</td>'
+      +'<td class="'+miss+'">'+fmt.gust(v.gust)+'</td>'
+      +'<td class="'+miss+'">'+fmt.snow(v.snow)+'</td>'
+      +'<td class="s">'+((noteOf(v)||'').replace(/</g,'&lt;'))+'</td>';
+    tb.appendChild(tr);
+  }
+}
+function blendVal(d,e){
+  const r=P.rows.find(x=>x.name===P.blend);
+  return r?num((r.vals[d]||{})[KEY[e]]):null;
+}
+function heatColor(dv, maxA){
+  if(dv==null||!maxA) return '';
+  const t=Math.max(-1,Math.min(1, dv/maxA));
+  if(t===0) return '';
+  const pos=t>0; const a=Math.abs(t);
+  // red = warmer/wetter than blend; blue = cooler/drier
+  const c=pos?('220,38,38'):('29,78,216');
+  return 'background:rgba('+c+','+(0.15+0.7*a).toFixed(2)+')';
+}
+function renderHeat(){
+  $$('.mchip', $('#dl-heat')).forEach(b=>b.setAttribute('aria-pressed', b.dataset.el===el?'true':'false'));
+  const box=$('#dlheatbox');
+  const maxA=(()=>{let m=0;
+    for(const r of P.rows){
+      if(r.name===P.blend) continue;
+      for(const d of P.days){
+        const b=blendVal(d.d,el), v=num((r.vals[d.d]||{})[KEY[el]]);
+        if(b!=null&&v!=null) m=Math.max(m, Math.abs(v-b));
+      }
+    }
+    return m||1;
+  })();
+  let hdr='<th class="rh">Model</th>'+P.days.map(d=>'<th>'+d.lab+'</th>').join('');
+  let body='';
+  const order=[...P.rows].sort((a,b)=>{
+    const ra=(P.ref||[]).indexOf(a.name), rb=(P.ref||[]).indexOf(b.name);
+    if(ra>=0||rb>=0) return (ra<0?99:ra)-(rb<0?99:rb);
+    return a.name.localeCompare(b.name);
+  });
+  for(const r of order){
+    let tds='';
+    for(const d of P.days){
+      const rec=r.vals[d.d]||{};
+      const v=num(rec[KEY[el]]);
+      if(v==null){ tds+='<td class="dlna" title="no data">–</td>'; continue; }
+      const b=blendVal(d.d,el);
+      const dv=(b==null||r.name===P.blend)?0:v-b;
+      const label=r.name===P.blend?'blend':((dv>0?'+':'')+(el==='pcpn'?dv.toFixed(2):Math.round(dv))+UNIT[el]);
+      const tip=r.name+' · '+d.lab+' · '+(el==='pcpn'?fmt.precip(v)+'"':Math.round(v)+'°')+(r.name===P.blend||b==null?'':' vs blend '+(el==='pcpn'?fmt.precip(b)+'"':Math.round(b)+'°')+' ('+label+')');
+      tds+='<td class="dlc" data-day="'+d.d+'" style="'+heatColor(r.name===P.blend?0:dv,maxA)+'" title="'+tip.replace(/"/g,'&quot;')+'">'+(el==='pcpn'?fmt.precip(v):Math.round(v))+(r.name===P.blend?'':' <span class="s">'+label+'</span>')+'</td>';
+    }
+    body+='<tr class="'+(r.cls||'')+'"><th class="rh">'+r.html+'</th>'+tds+'</tr>';
+  }
+  const scaleHi=el==='pcpn'?('+'+maxA.toFixed(2)+'"'):('+'+Math.round(maxA)+'°');
+  const scaleLo=el==='pcpn'?('−'+maxA.toFixed(2)+'"'):('−'+Math.round(maxA)+'°');
+  box.innerHTML='<div class="dlheat"><div class="dlscale"><span>'+scaleLo+' cooler / drier</span><span class="dlbar"></span><span>'+scaleHi+' warmer / wetter</span><span>vs KCTV Super Blend</span></div><table class="dlheat"><thead><tr>'+hdr+'</tr></thead><tbody>'+body+'</tbody></table></div>';
+  box.querySelectorAll('td.dlc').forEach(td=>td.onclick=()=>{day=td.dataset.day; view='day'; save(); applyView();});
+}
+function applyView(){
+  $$('.vbtn').forEach(b=>{const on=b.dataset.view===view; b.classList.toggle('on',on); b.setAttribute('aria-pressed',on?'true':'false')});
+  $('#dl-day').hidden=view!=='day';
+  $('#dl-heat').hidden=view!=='heat';
+  $('#dlexplain').textContent=P.explain||'';
+  if(view==='heat') renderHeat(); else renderDay();
+}
+$$('.vbtn').forEach(b=>b.onclick=()=>{view=b.dataset.view; save(); applyView()});
+$$('.dchip').forEach(b=>b.onclick=()=>{day=b.dataset.day; save(); renderDay()});
+function bindM(elroot){
+  // metric chips in day tools already exist; clone into heat map toolbar once
+}
+$$('.mchip').forEach(b=>b.onclick=()=>{el=b.dataset.el; save(); applyView()});
+const heatm=$('.mchips.heatm');
+if(heatm && !heatm.dataset.built){
+  heatm.innerHTML=$$('.mchips:not(.heatm) .mchip').map(b=>b.outerHTML).join('');
+  heatm.dataset.built='1';
+  $$('.mchip', heatm).forEach(b=>b.onclick=()=>{el=b.dataset.el; save(); applyView()});
+}
+const all=$('#dlAll'); if(all){all.checked=showAll; all.onchange=()=>{showAll=all.checked; save(); renderDay()}}
+// header sort on the day table
+document.querySelectorAll('#mt th').forEach((th,i)=>th.onclick=()=>{const tb=document.querySelector('#mt tbody');const rows=[...tb.rows];const dir=th.dataset.d=th.dataset.d==='a'?'d':'a';
+rows.sort((a,b)=>{let x=a.cells[i].dataset.sort||a.cells[i].innerText,y=b.cells[i].dataset.sort||b.cells[i].innerText;const nx=parseFloat(x),ny=parseFloat(y);const r=(!isNaN(nx)&&!isNaN(ny))?nx-ny:x.localeCompare(y);return dir==='a'?r:-r});rows.forEach(r=>tb.appendChild(r))});
+applyView();
 })();

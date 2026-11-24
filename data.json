@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24T09:02:47.564668-06:00",
+ "generated": "2026-11-24T09:05:56.401081-06:00",
  "status": [
   {
    "source": "SPC Day 1 outlook",
@@ -7,19 +7,9 @@
    "detail": "None"
   },
   {
-   "source": "NWS EAX AFD",
-   "ok": true,
-   "detail": "2026-11-24T10:56:00+00:00"
-  },
-  {
    "source": "Open-Meteo NOAA AI GFS",
    "ok": true,
    "detail": "run 2026-11-24 06 UTC via ncep_aigfs025"
-  },
-  {
-   "source": "Open-Meteo GFS",
-   "ok": true,
-   "detail": "run 2026-11-24 06 UTC via gfs_global"
   },
   {
    "source": "Open-Meteo HRRR",
@@ -27,14 +17,9 @@
    "detail": "run 2026-11-24 13 UTC via ncep_hrrr_conus"
   },
   {
-   "source": "SPC Day 2 outlook",
+   "source": "Open-Meteo GFS",
    "ok": true,
-   "detail": "None"
-  },
-  {
-   "source": "Open-Meteo NBM",
-   "ok": true,
-   "detail": "run 2026-11-24 14 UTC via ncep_nbm_conus"
+   "detail": "run 2026-11-24 06 UTC via gfs_global"
   },
   {
    "source": "Open-Meteo ICON",
@@ -42,12 +27,12 @@
    "detail": "run 2026-11-24 06 UTC via icon_seamless"
   },
   {
-   "source": "NWS gridpoint KCI (First Warn fields)",
+   "source": "Open-Meteo NBM",
    "ok": true,
-   "detail": "EAX/39,60"
+   "detail": "run 2026-11-24 14 UTC via ncep_nbm_conus"
   },
   {
-   "source": "SPC Day 3 outlook",
+   "source": "SPC Day 2 outlook",
    "ok": true,
    "detail": "None"
   },
@@ -62,9 +47,39 @@
    "detail": "EAX/39,60"
   },
   {
+   "source": "SPC Day 4 outlook (15%/30% areas)",
+   "ok": true,
+   "detail": "no area over KC"
+  },
+  {
+   "source": "NWS EAX AFD",
+   "ok": true,
+   "detail": "2026-11-24T10:56:00+00:00"
+  },
+  {
+   "source": "NWS gridpoint KCI (First Warn fields)",
+   "ok": true,
+   "detail": "EAX/39,60"
+  },
+  {
+   "source": "SPC Day 3 outlook",
+   "ok": true,
+   "detail": "None"
+  },
+  {
+   "source": "SPC Day 5 outlook (15%/30% areas)",
+   "ok": true,
+   "detail": "no area over KC"
+  },
+  {
    "source": "NWS KMCI observations (yesterday, First Warn day 1)",
    "ok": true,
    "detail": "14 obs; high 42\u00b0F"
+  },
+  {
+   "source": "SPC Day 6 outlook (15%/30% areas)",
+   "ok": true,
+   "detail": "no area over KC"
   },
   {
    "source": "NWS official daily St. Joseph",
@@ -77,7 +92,12 @@
    "detail": "EAX/34,81"
   },
   {
-   "source": "SPC Day 4 outlook (15%/30% areas)",
+   "source": "SPC Day 7 outlook (15%/30% areas)",
+   "ok": true,
+   "detail": "no area over KC"
+  },
+  {
+   "source": "SPC Day 8 outlook (15%/30% areas)",
    "ok": true,
    "detail": "no area over KC"
   },
@@ -92,6 +112,11 @@
    "detail": "TOP/97,45"
   },
   {
+   "source": "GFS MOS (MAV) (IEM MOS API)",
+   "ok": true,
+   "detail": "run 2026-11-24 06 UTC; 21 rows to Fri 11/27 12 AM CT; 3 days max/min"
+  },
+  {
    "source": "NWS official daily Chillicothe",
    "ok": true,
    "detail": "EAX/79,82 \u00b7 10 days max/min/QPF"
@@ -102,9 +127,9 @@
    "detail": "EAX/79,82"
   },
   {
-   "source": "GFS MOS (MAV) (IEM MOS API)",
+   "source": "GFS MOS ext (MEX) (IEM MOS API)",
    "ok": true,
-   "detail": "run 2026-11-24 06 UTC; 21 rows to Fri 11/27 12 AM CT; 3 days max/min"
+   "detail": "run 2026-11-24 00 UTC; 15 rows to Tue 12/1 6 PM CT; 8 days max/min"
   },
   {
    "source": "NWS official daily Sedalia",
@@ -117,9 +142,9 @@
    "detail": "EAX/91,33"
   },
   {
-   "source": "SPC Day 5 outlook (15%/30% areas)",
+   "source": "LAMP (IEM MOS API)",
    "ok": true,
-   "detail": "no area over KC"
+   "detail": "run 2026-11-24 14 UTC; 38 rows to Wed 11/25 10 PM CT; 2 days max/min"
   },
   {
    "source": "NWS official daily Clinton",
@@ -132,11 +157,6 @@
    "detail": "EAX/72,18"
   },
   {
-   "source": "GFS MOS ext (MEX) (IEM MOS API)",
-   "ok": true,
-   "detail": "run 2026-11-24 00 UTC; 15 rows to Tue 12/1 6 PM CT; 8 days max/min"
-  },
-  {
    "source": "NWS official daily Butler",
    "ok": true,
    "detail": "EAX/53,13 \u00b7 10 days max/min/QPF"
@@ -147,9 +167,9 @@
    "detail": "EAX/53,13"
   },
   {
-   "source": "SPC Day 6 outlook (15%/30% areas)",
+   "source": "NBM station (NBS) (IEM MOS API)",
    "ok": true,
-   "detail": "no area over KC"
+   "detail": "run 2026-11-24 12 UTC; 23 rows to Fri 11/27 6 AM CT; 4 days max/min"
   },
   {
    "source": "NWS official daily Olathe",
@@ -162,14 +182,14 @@
    "detail": "EAX/35,41"
   },
   {
-   "source": "LAMP (IEM MOS API)",
+   "source": "NBM station ext (NBE) (IEM MOS API)",
    "ok": true,
-   "detail": "run 2026-11-24 14 UTC; 38 rows to Wed 11/25 10 PM CT; 2 days max/min"
+   "detail": "run 2026-11-24 12 UTC; 21 rows to Sat 12/5 6 AM CT; 11 days max/min"
   },
   {
-   "source": "SPC Day 7 outlook (15%/30% areas)",
+   "source": "NAM MOS (MET)",
    "ok": true,
-   "detail": "no area over KC"
+   "detail": "not fetched: retired by NWS with the NAM on 2026-11-03 12Z (Service Change Notice 26-47); last IEM run 2026-11-03 00Z"
   },
   {
    "source": "NWS official daily Lee's Summit",
@@ -182,16 +202,6 @@
    "detail": "EAX/51,42"
   },
   {
-   "source": "NBM station (NBS) (IEM MOS API)",
-   "ok": true,
-   "detail": "run 2026-11-24 12 UTC; 23 rows to Fri 11/27 6 AM CT; 4 days max/min"
-  },
-  {
-   "source": "SPC Day 8 outlook (15%/30% areas)",
-   "ok": true,
-   "detail": "no area over KC"
-  },
-  {
    "source": "NWS active alerts (EAX+TOP via DMA points)",
    "ok": true,
    "detail": "0 active"
@@ -200,21 +210,6 @@
    "source": "NWS point forecast Kansas City (KCI)",
    "ok": true,
    "detail": "office EAX"
-  },
-  {
-   "source": "Open-Meteo ECMWF AIFS",
-   "ok": true,
-   "detail": "run 2026-11-24 06 UTC via ecmwf_aifs025_single"
-  },
-  {
-   "source": "NBM station ext (NBE) (IEM MOS API)",
-   "ok": true,
-   "detail": "run 2026-11-24 12 UTC; 21 rows to Sat 12/5 6 AM CT; 11 days max/min"
-  },
-  {
-   "source": "NAM MOS (MET)",
-   "ok": true,
-   "detail": "not fetched: retired by NWS with the NAM on 2026-11-03 12Z (Service Change Notice 26-47); last IEM run 2026-11-03 00Z"
   },
   {
    "source": "NWS point forecast St. Joseph",
@@ -227,6 +222,11 @@
    "detail": "2026-11-24T13:53:00+00:00"
   },
   {
+   "source": "Open-Meteo ECMWF AIFS",
+   "ok": true,
+   "detail": "run 2026-11-24 06 UTC via ecmwf_aifs025_single"
+  },
+  {
    "source": "Open-Meteo ECMWF IFS",
    "ok": true,
    "detail": "run 2026-11-24 06 UTC via ecmwf_ifs025"
@@ -234,7 +234,7 @@
   {
    "source": "RRFS (NOMADS)",
    "ok": true,
-   "detail": "run 2026-11-24 06 UTC (v1.0, to f084; newest synoptic upstream 2026-11-24 12 UTC); 85 steps, 1102 MB, 173 hits, 108 s"
+   "detail": "run 2026-11-24 06 UTC (v1.0, to f084; newest synoptic upstream 2026-11-24 12 UTC); 85 steps, 1102 MB, 173 hits, 74 s"
   },
   {
    "source": "Homemade MOS (bias-corrected HRRR/RRFS)",
@@ -329,7 +329,7 @@
    "label": "RRFS",
    "run": "2026-11-24 06 UTC",
    "error": null,
-   "src": "NOMADS RRFS v1.0 3 km CONUS GRIB2 (nearest grid pt 0.45 km from KCI; 85 hourly steps, 1102 MB byte-ranges, 173 requests, 108 s)",
+   "src": "NOMADS RRFS v1.0 3 km CONUS GRIB2 (nearest grid pt 0.45 km from KCI; 85 hourly steps, 1102 MB byte-ranges, 173 requests, 74 s)",
    "upstream": "2026-11-24 12 UTC"
   }
  ],

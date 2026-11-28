@@ -57,9 +57,12 @@ html[data-theme=cyberpunk] .vbtn.on,html[data-theme=cyberpunk] .dchip[aria-press
 .dltab tr.dlcons td{background:var(--soft,#f4f7fb);font-style:italic;font-weight:700}
 .dltab td.dlhi{font-weight:800}
 .dlmiss{opacity:.45}
-#dlheatbox table.dlheat{border-collapse:separate;border-spacing:2px;font-size:.78rem;font-variant-numeric:tabular-nums}
-.dlheat th,.dlheat td{padding:5px 6px;text-align:center;border-radius:5px;min-width:52px}
-.dlheat th.rh{text-align:left;position:sticky;left:0;background:var(--card,#fff);min-width:140px;z-index:1;font-weight:700}
+#dlheatbox table.dlheat{border-collapse:separate;border-spacing:2px;font-size:.78rem;font-variant-numeric:tabular-nums;width:auto}
+.dlheat th,.dlheat td{padding:5px 8px;text-align:center;border-radius:5px;min-width:6.5em}
+.dlheat th{white-space:nowrap;min-width:7.2em}
+.dlheat td.dlc .s{display:block;font-weight:600;font-size:.7rem}
+.dlheat th{font-weight:800;color:#13253a;background:#eef3f9}
+.dlheat th.rh{text-align:left;position:sticky;left:0;background:var(--card,#fff);min-width:160px;z-index:3;font-weight:800;box-shadow:4px 0 6px #0002}
 .dlheat td.dlc{cursor:pointer;font-weight:700;color:#13253a}
 .dlheat td.dlc:hover{outline:2px solid #0D7377;outline-offset:-1px}
 .dlheat td.dlna{background:repeating-linear-gradient(45deg,#f7f7f7,#f7f7f7 4px,#e4e4e4 4px,#e4e4e4 8px);color:#999;cursor:default}
@@ -69,6 +72,8 @@ html[data-scheme=dark] .mNWS{color:#9cc0ff}
 html[data-scheme=dark] tr.rNWS td,html[data-scheme=dark] tr.rNWS th{background-color:#152033}
 html[data-scheme=dark] tr.rMYFC td,html[data-scheme=dark] tr.rMYFC th{background-color:#0e2a2b}
 html[data-scheme=dark] .dltab tr.dlcons td{background:var(--soft,#182944)}
+html[data-scheme=dark] .dlheat th{background:#1b2d4b!important;color:#fff!important;font-weight:800}
+html[data-scheme=dark] .dlheat th.rh{background:#152033!important;color:#fff!important;box-shadow:4px 0 6px #0008}
 html[data-scheme=dark] .dlheat td.dlc{color:#e6eef8}
 html[data-scheme=dark] .dlheat td.dlna{background:repeating-linear-gradient(45deg,#1a2333,#1a2333 4px,#243044 4px,#243044 8px);color:#7a8796}
 html[data-scheme=dark] .dlheat .dlbar{background:linear-gradient(90deg,#60a5fa,#1a2333,#f87171)}

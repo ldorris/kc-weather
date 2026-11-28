@@ -118,7 +118,21 @@ const fmt={
   snow:v=>v==null||v===0?'–':(typeof v==='number'?(v<0.05?'T':v.toFixed(1)):String(v))
 };
 function num(v){return (typeof v==='number'&&isFinite(v))?v:null}
-function hasEl(rec,el){return rec && num(rec[KEY[el]])!=null}
+const QPF_CAT={0:'none',1:'0.01–0.09"',2:'0.10–0.24"',3:'0.25–0.49"',4:'0.50–0.99"',5:'1.00–1.99"',6:'≥2.00"'};
+function amt(rec,el){
+  if(!rec) return null;
+  const v=num(rec[KEY[el]]);
+  if(v!=null) return v;
+  return el==='pcpn'?num(rec.qpf):null;
+}
+function popHint(rec){
+  if(!rec) return '';
+  const cat=(rec.qcat!=null)?(QPF_CAT[rec.qcat]||('cat '+rec.qcat)):'';
+  if(rec.pop!=null && cat) return 'PoP '+Math.round(rec.pop)+'% · '+cat;
+  if(rec.pop!=null) return 'PoP '+Math.round(rec.pop)+'%';
+  return cat;
+}
+function hasEl(rec,el){return rec && amt(rec,el)!=null}
 let view='day', day=P.days[0].d, el='tmax', showAll=false;
 try{const s=JSON.parse(localStorage.getItem('kcDailyCmp')||'{}');
   if(s.view==='heat'||s.view==='day') view=s.view;
@@ -228,7 +242,7 @@ function renderDay(){
 }
 function blendVal(d,e){
   const r=P.rows.find(x=>x.name===P.blend);
-  return r?num((r.vals[d]||{})[KEY[e]]):null;
+  return r?amt(r.vals[d]||{},e):null;
 }
 function heatColor(dv, maxA){
   if(dv==null||!maxA) return '';
@@ -246,7 +260,7 @@ function renderHeat(){
     for(const r of P.rows){
       if(r.name===P.blend) continue;
       for(const d of P.days){
-        const b=blendVal(d.d,el), v=num((r.vals[d.d]||{})[KEY[el]]);
+        const b=blendVal(d.d,el), v=amt(r.vals[d.d]||{},el);
         if(b!=null&&v!=null) m=Math.max(m, Math.abs(v-b));
       }
     }
@@ -263,13 +277,18 @@ function renderHeat(){
     let tds='';
     for(const d of P.days){
       const rec=r.vals[d.d]||{};
-      const v=num(rec[KEY[el]]);
-      if(v==null){ tds+='<td class="dlna" title="no data">–</td>'; continue; }
+      const v=amt(rec,el);
+      if(v==null){
+        const hint=el==='pcpn'?popHint(rec):'';
+        tds+=hint?('<td class="dlna" title="'+hint.replace(/"/g,'&quot;')+'">'+hint+'</td>'):'<td class="dlna" title="no data">–</td>';
+        continue;
+      }
       const b=blendVal(d.d,el);
-      const dv=(b==null||r.name===P.blend)?0:v-b;
-      const label=r.name===P.blend?'blend':((dv>0?'+':'')+(el==='pcpn'?dv.toFixed(2):Math.round(dv))+UNIT[el]);
-      const tip=r.name+' · '+d.lab+' · '+(el==='pcpn'?fmt.precip(v)+'"':Math.round(v)+'°')+(r.name===P.blend||b==null?'':' vs blend '+(el==='pcpn'?fmt.precip(b)+'"':Math.round(b)+'°')+' ('+label+')');
-      tds+='<td class="dlc" data-day="'+d.d+'" style="'+heatColor(r.name===P.blend?0:dv,maxA)+'" title="'+tip.replace(/"/g,'&quot;')+'">'+(el==='pcpn'?fmt.precip(v):Math.round(v))+(r.name===P.blend?'':' <span class="s">'+label+'</span>')+'</td>';
+      const dv=(b==null||r.name===P.blend)?null:v-b;
+      const label=(dv==null)?'':((dv>0?'+':'')+(el==='pcpn'?dv.toFixed(2):Math.round(dv))+UNIT[el]);
+      const shown=el==='pcpn'?fmt.precip(v)+'"':String(Math.round(v));
+      const tip=r.name+' · '+d.lab+' · '+shown+(dv==null?'':' vs blend '+(el==='pcpn'?fmt.precip(b)+'"':Math.round(b)+'°')+' ('+label+')');
+      tds+='<td class="dlc" data-day="'+d.d+'" style="'+heatColor(dv,maxA)+'" title="'+tip.replace(/"/g,'&quot;')+'">'+shown+(label?' <span class="s">'+label+'</span>':'')+'</td>';
     }
     body+='<tr class="'+(r.cls||'')+'"><th class="rh">'+r.html+'</th>'+tds+'</tr>';
   }
